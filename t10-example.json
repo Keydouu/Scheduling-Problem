@@ -1,0 +1,15 @@
+{"nMachines": 3,
+ "nResources": 1,
+ "tests": [
+     {"duration": 2, "machines": [], "resources": []},
+     {"duration": 4, "machines": [], "resources": [0]},
+     {"duration": 3, "machines": [], "resources": [0]},
+     {"duration": 4, "machines": [], "resources": [0]},
+     {"duration": 3, "machines": [], "resources": []},
+     {"duration": 2, "machines": [], "resources": []},
+     {"duration": 1, "machines": [0], "resources": []},
+     {"duration": 2, "machines": [1], "resources": []},
+     {"duration": 3, "machines": [2], "resources": []},
+     {"duration": 5, "machines": [0,2], "resources": []}
+ ]
+}

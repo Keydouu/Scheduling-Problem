@@ -61,23 +61,9 @@ def get_worst_time():
     print(f'R{ressources_limit} - M{machines_limit} ')
     return ressources_limit, machines_limit, max({ressources_limit, machines_limit})
 
-def csp_greedy_machines_usage(limit):
-    tasks_machines = VarArray(size=[ntasks], dom=range(len(machines_array)))
-    tasks_starts=[]
-    for i in range(ntasks):
-        tasks_starts.append(Var(dom=range(limit-tasks_array[i][0]+1), id='start_task'+str(i)))
-    satisfy(
-        [machineAcceptable(i,tasks_machines[i]) for i in range(ntasks)],# tasks executed on valid machines
-        [ If(tasks_machines[i]==tasks_machines[j],
-        Then = ((tasks_starts[i]+tasks_array[i][0] <= tasks_starts[j])
-                | (tasks_starts[i]>= tasks_starts[j]+tasks_array[j][0])) )
-            for i in range(ntasks)
-            for j in range(i+1, ntasks)]
-    )
-    clear()
 #read_input('./t10-example.json')
-#read_input('./t20m10r3-1.json')
-read_input('./t40m10r3-2.json')
+read_input('./t20m10r3-1.json')
+#read_input('./t40m10r3-2.json')
 generate_incompatibilities_by_ressources()
 ntasks=len(tasks_array)
 ressources_limit, machines_limit, maxTime = get_worst_time()
@@ -85,54 +71,58 @@ print(f'First estimation of tasks execution time : {maxTime}')
 
 tasks_machines = VarArray(size=[ntasks], dom=range(len(machines_array)))
 tasks_starts= []
+tasks_ends=[]
+
 for i in range(ntasks):
-    tasks_starts.append(Var(dom=range(maxTime-tasks_array[i][0]+1), id='start_task'+str(i)))
+    tasks_starts.append(Var(dom=range(ntasks+1), id='start_task'+str(i)))
+    tasks_ends.append(Var(dom=range(tasks_array[i][0]-1,maxTime+1), id='end_task'+str(i)))
+tasks_ends.append(Var(dom={0}, id='myNull'))
+def getEnd(index):
+    if tasks_starts[index]<ntasks:
+        return getEnd(tasks_starts[index])
+    return duration(tasks_starts[index])
+def duration(i):
+    return tasks_array[i][0]
 #tasks_starts = VarArray(size=[ntasks], dom=range(maxTime))
 #Force a task To start at 0, after another task is done, or when ressource is free
-score = Var(dom=range(ressources_limit, maxTime+1))
 satisfy(
 
-    tasks_starts[0]>=tasks_starts[1],
-    Sum(tasks_starts[i]==0 for i in range(ntasks))>=1,
-
-    [ If(tasks_starts[i]!=0, Then=Sum((tasks_starts[i]==tasks_starts[j]+tasks_array[j][0]) for j in range(ntasks))>=1)
-       for i in range(ntasks)],# a task either start at t=0, or tight after the end of another task
+    tasks_starts[0]>=tasks_starts[1],#a poor man's attempt to break symmetry
 
     [machineAcceptable(i,tasks_machines[i])
      for i in range(ntasks)],# tasks executed on valid machines
     
-    [  ((tasks_starts[i]+tasks_array[i][0]-1 < tasks_starts[j])
-                | (tasks_starts[i]> tasks_starts[j]+tasks_array[j][0]-1))
+    [ ((tasks_ends[i] < tasks_ends[j]-tasks_array[j][0])
+                | (tasks_ends[i]-tasks_array[i][0]> tasks_ends[j]))
      for i in range(ntasks)
      for j in ressources_incompatibilities[i]],
     # no two incompatible tasks in same time
 
     [ If(tasks_machines[i]==tasks_machines[j],
-        Then = ((tasks_starts[i]+tasks_array[i][0] <= tasks_starts[j])
-                | (tasks_starts[i]>= tasks_starts[j]+tasks_array[j][0])) )
+        Then = (tasks_starts[i] != tasks_starts[j]) )
     for i in range(ntasks)
     for j in range(i+1, ntasks)],# no two tasks using same machine
-    score==Maximum((tasks_starts[i]+tasks_array[i][0])
-                for i in range(ntasks))
+
+    [If(tasks_starts[i]==j, Then=tasks_ends[i]==tasks_ends[j]+tasks_array[i][0]-1) for i in range(ntasks) for j in range(ntasks+1)],#define tasks ends
+
+    [ If(tasks_starts[i]!=ntasks, Then=(Sum((tasks_starts[i]==j) for j in range(ntasks))>=1))
+       for i in range(ntasks)],# a task either start at t=0, or tight after the end of another task
+    #[ If()]#
+    
 )
-if machines_limit>ressources_limit:
-    minimize(
-        score
-    )
+#minimize(
+#    Maximum(
+#        tasks_ends[i]
+#        for i in range(1,ntasks+1)
+#    )
+#)
 #how to break symetrie :
 # 1) assure one task is before another ( more than one pair may fuck up everything )
 # 2) force one machine to finish before another ?
 
-if solve() in (SAT, OPTIMUM):
-    optimal_time=0
-    for i in range(len(tasks_array)):
-        optimal_time=max(optimal_time,values(tasks_starts)[i]+tasks_array[i][0])
-    print(f'Execution Time = {optimal_time}')
-    machines_usages=[{} for _ in range(len(machines_array))]
-    for i in range(len(tasks_array)):
-        start=values(tasks_starts)[i]
-        str_start=str(start)
-        machines_usages[values(tasks_machines)[i]]['s'+str_start+' t'+str(i)+' d'+str(tasks_array[i][0])+ ' e'+str(start+tasks_array[i][0]-1)]=start
-    for machine in machines_usages:
-        #machine.sort()
-        print([key for key, value in sorted(machine.items(), key=lambda item: item[1])])
+result = solve()
+print(result)
+
+
+if result in (SAT, OPTIMUM):
+    print(values(tasks_starts))

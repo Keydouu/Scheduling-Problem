@@ -1,0 +1,1031 @@
+<instance format="XCSP3" type="COP">
+  <variables>
+    <array id="tasks_machines" size="[40]"> 0..9 </array>
+    <var id="start_task0"> 0..1350 </var>
+    <var id="start_task1"> 0..1249 </var>
+    <var id="start_task2"> 0..1230 </var>
+    <var id="start_task3"> 0..1209 </var>
+    <var id="start_task4"> 0..1413 </var>
+    <var id="start_task5"> 0..1235 </var>
+    <var id="start_task6"> 0..1898 </var>
+    <var id="start_task7"> 0..1668 </var>
+    <var id="start_task8"> 0..1683 </var>
+    <var id="start_task9"> 0..1267 </var>
+    <var id="start_task10"> 0..1441 </var>
+    <var id="start_task11"> 0..1691 </var>
+    <var id="start_task12"> 0..1454 </var>
+    <var id="start_task13"> 0..1661 </var>
+    <var id="start_task14"> 0..1838 </var>
+    <var id="start_task15"> 0..1326 </var>
+    <var id="start_task16"> 0..1542 </var>
+    <var id="start_task17"> 0..1377 </var>
+    <var id="start_task18"> 0..1703 </var>
+    <var id="start_task19"> 0..1273 </var>
+    <var id="start_task20"> 0..1294 </var>
+    <var id="start_task21"> 0..1455 </var>
+    <var id="start_task22"> 0..1369 </var>
+    <var id="start_task23"> 0..1271 </var>
+    <var id="start_task24"> 0..1557 </var>
+    <var id="start_task25"> 0..1861 </var>
+    <var id="start_task26"> 0..1496 </var>
+    <var id="start_task27"> 0..1388 </var>
+    <var id="start_task28"> 0..1426 </var>
+    <var id="start_task29"> 0..1612 </var>
+    <var id="start_task30"> 0..1399 </var>
+    <var id="start_task31"> 0..1742 </var>
+    <var id="start_task32"> 0..1564 </var>
+    <var id="start_task33"> 0..1236 </var>
+    <var id="start_task34"> 0..1490 </var>
+    <var id="start_task35"> 0..1578 </var>
+    <var id="start_task36"> 0..1799 </var>
+    <var id="start_task37"> 0..1127 </var>
+    <var id="start_task38"> 0..1751 </var>
+    <var id="start_task39"> 0..1555 </var>
+    <var id="score" note="tasks_starts = VarArray(size=[ntasks], dom=range(maxTime)) - Force a task To start at 0, after another task is done, or when ressource is free"> 1589..1918 </var>
+    <array id="aux_gb" note="aux_gb[i] is the ith auxiliary variable having been automatically introduced" size="[40]"> 0..40 </array>
+  </variables>
+  <constraints>
+    <intension> ge(start_task0,start_task1) </intension>
+    <sum>
+      <list> eq(start_task0,0) eq(start_task1,0) eq(start_task2,0) eq(start_task3,0) eq(start_task4,0) eq(start_task5,0) eq(start_task6,0) eq(start_task7,0) eq(start_task8,0) eq(start_task9,0) eq(start_task10,0) eq(start_task11,0) eq(start_task12,0) eq(start_task13,0) eq(start_task14,0) eq(start_task15,0) eq(start_task16,0) eq(start_task17,0) eq(start_task18,0) eq(start_task19,0) eq(start_task20,0) eq(start_task21,0) eq(start_task22,0) eq(start_task23,0) eq(start_task24,0) eq(start_task25,0) eq(start_task26,0) eq(start_task27,0) eq(start_task28,0) eq(start_task29,0) eq(start_task30,0) eq(start_task31,0) eq(start_task32,0) eq(start_task33,0) eq(start_task34,0) eq(start_task35,0) eq(start_task36,0) eq(start_task37,0) eq(start_task38,0) eq(start_task39,0) </list>
+      <condition> (ge,1) </condition>
+    </sum>
+    <group>
+      <intension> imp(ne(%0,0),ge(%1,1)) </intension>
+      <args> start_task0 aux_gb[0] </args>
+      <args> start_task1 aux_gb[1] </args>
+      <args> start_task2 aux_gb[2] </args>
+      <args> start_task3 aux_gb[3] </args>
+      <args> start_task4 aux_gb[4] </args>
+      <args> start_task5 aux_gb[5] </args>
+      <args> start_task6 aux_gb[6] </args>
+      <args> start_task7 aux_gb[7] </args>
+      <args> start_task8 aux_gb[8] </args>
+      <args> start_task9 aux_gb[9] </args>
+      <args> start_task10 aux_gb[10] </args>
+      <args> start_task11 aux_gb[11] </args>
+      <args> start_task12 aux_gb[12] </args>
+      <args> start_task13 aux_gb[13] </args>
+      <args> start_task14 aux_gb[14] </args>
+      <args> start_task15 aux_gb[15] </args>
+      <args> start_task16 aux_gb[16] </args>
+      <args> start_task17 aux_gb[17] </args>
+      <args> start_task18 aux_gb[18] </args>
+      <args> start_task19 aux_gb[19] </args>
+      <args> start_task20 aux_gb[20] </args>
+      <args> start_task21 aux_gb[21] </args>
+      <args> start_task22 aux_gb[22] </args>
+      <args> start_task23 aux_gb[23] </args>
+      <args> start_task24 aux_gb[24] </args>
+      <args> start_task25 aux_gb[25] </args>
+      <args> start_task26 aux_gb[26] </args>
+      <args> start_task27 aux_gb[27] </args>
+      <args> start_task28 aux_gb[28] </args>
+      <args> start_task29 aux_gb[29] </args>
+      <args> start_task30 aux_gb[30] </args>
+      <args> start_task31 aux_gb[31] </args>
+      <args> start_task32 aux_gb[32] </args>
+      <args> start_task33 aux_gb[33] </args>
+      <args> start_task34 aux_gb[34] </args>
+      <args> start_task35 aux_gb[35] </args>
+      <args> start_task36 aux_gb[36] </args>
+      <args> start_task37 aux_gb[37] </args>
+      <args> start_task38 aux_gb[38] </args>
+      <args> start_task39 aux_gb[39] </args>
+    </group>
+    <group>
+      <extension>
+        <list> %0 </list>
+        <supports> 0..9 </supports>
+      </extension>
+      <args> tasks_machines[0] </args>
+      <args> tasks_machines[1] </args>
+      <args> tasks_machines[2] </args>
+      <args> tasks_machines[5] </args>
+      <args> tasks_machines[6] </args>
+      <args> tasks_machines[8] </args>
+      <args> tasks_machines[9] </args>
+      <args> tasks_machines[11] </args>
+      <args> tasks_machines[12] </args>
+      <args> tasks_machines[13] </args>
+      <args> tasks_machines[15] </args>
+      <args> tasks_machines[17] </args>
+      <args> tasks_machines[18] </args>
+      <args> tasks_machines[19] </args>
+      <args> tasks_machines[20] </args>
+      <args> tasks_machines[22] </args>
+      <args> tasks_machines[23] </args>
+      <args> tasks_machines[24] </args>
+      <args> tasks_machines[25] </args>
+      <args> tasks_machines[26] </args>
+      <args> tasks_machines[28] </args>
+      <args> tasks_machines[30] </args>
+      <args> tasks_machines[31] </args>
+      <args> tasks_machines[32] </args>
+      <args> tasks_machines[33] </args>
+      <args> tasks_machines[34] </args>
+      <args> tasks_machines[35] </args>
+      <args> tasks_machines[37] </args>
+      <args> tasks_machines[39] </args>
+    </group>
+    <extension>
+      <list> tasks_machines[3] </list>
+      <supports> 6 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[4] </list>
+      <supports> 2 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[7] </list>
+      <supports> 5 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[10] </list>
+      <supports> 9 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[14] </list>
+      <supports> 1 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[16] </list>
+      <supports> 8 </supports>
+    </extension>
+    <group>
+      <extension>
+        <list> %0 </list>
+        <supports> 0 </supports>
+      </extension>
+      <args> tasks_machines[21] </args>
+      <args> tasks_machines[27] </args>
+    </group>
+    <extension>
+      <list> tasks_machines[29] </list>
+      <supports> 3 7 8 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[36] </list>
+      <supports> 0 3 5 </supports>
+    </extension>
+    <extension>
+      <list> tasks_machines[38] </list>
+      <supports> 0 3 8 </supports>
+    </extension>
+    <group>
+      <intension> or(lt(sub(add(%0,%1),1),%2),gt(%0,sub(add(%2,%3),1))) </intension>
+      <args> start_task1 669 start_task25 57 </args>
+      <args> start_task1 669 start_task29 306 </args>
+      <args> start_task1 669 start_task32 354 </args>
+      <args> start_task1 669 start_task36 119 </args>
+      <args> start_task20 624 start_task28 492 </args>
+      <args> start_task20 624 start_task32 354 </args>
+      <args> start_task20 624 start_task36 119 </args>
+      <args> start_task23 647 start_task32 354 </args>
+      <args> start_task25 57 start_task29 306 </args>
+      <args> start_task25 57 start_task32 354 </args>
+      <args> start_task25 57 start_task36 119 </args>
+      <args> start_task28 492 start_task32 354 </args>
+      <args> start_task28 492 start_task36 119 </args>
+      <args> start_task29 306 start_task32 354 </args>
+      <args> start_task29 306 start_task36 119 </args>
+      <args> start_task32 354 start_task36 119 </args>
+    </group>
+    <group>
+      <intension> or(ne(%0,%1),le(add(%2,%3),%4),ge(%2,add(%4,%5))) </intension>
+      <args> tasks_machines[0] tasks_machines[1] start_task0 568 start_task1 669 </args>
+      <args> tasks_machines[0] tasks_machines[2] start_task0 568 start_task2 688 </args>
+      <args> tasks_machines[0] tasks_machines[3] start_task0 568 start_task3 709 </args>
+      <args> tasks_machines[0] tasks_machines[4] start_task0 568 start_task4 505 </args>
+      <args> tasks_machines[0] tasks_machines[5] start_task0 568 start_task5 683 </args>
+      <args> tasks_machines[0] tasks_machines[6] start_task0 568 start_task6 20 </args>
+      <args> tasks_machines[0] tasks_machines[7] start_task0 568 start_task7 250 </args>
+      <args> tasks_machines[0] tasks_machines[8] start_task0 568 start_task8 235 </args>
+      <args> tasks_machines[0] tasks_machines[9] start_task0 568 start_task9 651 </args>
+      <args> tasks_machines[0] tasks_machines[10] start_task0 568 start_task10 477 </args>
+      <args> tasks_machines[0] tasks_machines[11] start_task0 568 start_task11 227 </args>
+      <args> tasks_machines[0] tasks_machines[12] start_task0 568 start_task12 464 </args>
+      <args> tasks_machines[0] tasks_machines[13] start_task0 568 start_task13 257 </args>
+      <args> tasks_machines[0] tasks_machines[14] start_task0 568 start_task14 80 </args>
+      <args> tasks_machines[0] tasks_machines[15] start_task0 568 start_task15 592 </args>
+      <args> tasks_machines[0] tasks_machines[16] start_task0 568 start_task16 376 </args>
+      <args> tasks_machines[0] tasks_machines[17] start_task0 568 start_task17 541 </args>
+      <args> tasks_machines[0] tasks_machines[18] start_task0 568 start_task18 215 </args>
+      <args> tasks_machines[0] tasks_machines[19] start_task0 568 start_task19 645 </args>
+      <args> tasks_machines[0] tasks_machines[20] start_task0 568 start_task20 624 </args>
+      <args> tasks_machines[0] tasks_machines[21] start_task0 568 start_task21 463 </args>
+      <args> tasks_machines[0] tasks_machines[22] start_task0 568 start_task22 549 </args>
+      <args> tasks_machines[0] tasks_machines[23] start_task0 568 start_task23 647 </args>
+      <args> tasks_machines[0] tasks_machines[24] start_task0 568 start_task24 361 </args>
+      <args> tasks_machines[0] tasks_machines[25] start_task0 568 start_task25 57 </args>
+      <args> tasks_machines[0] tasks_machines[26] start_task0 568 start_task26 422 </args>
+      <args> tasks_machines[0] tasks_machines[27] start_task0 568 start_task27 530 </args>
+      <args> tasks_machines[0] tasks_machines[28] start_task0 568 start_task28 492 </args>
+      <args> tasks_machines[0] tasks_machines[29] start_task0 568 start_task29 306 </args>
+      <args> tasks_machines[0] tasks_machines[30] start_task0 568 start_task30 519 </args>
+      <args> tasks_machines[0] tasks_machines[31] start_task0 568 start_task31 176 </args>
+      <args> tasks_machines[0] tasks_machines[32] start_task0 568 start_task32 354 </args>
+      <args> tasks_machines[0] tasks_machines[33] start_task0 568 start_task33 682 </args>
+      <args> tasks_machines[0] tasks_machines[34] start_task0 568 start_task34 428 </args>
+      <args> tasks_machines[0] tasks_machines[35] start_task0 568 start_task35 340 </args>
+      <args> tasks_machines[0] tasks_machines[36] start_task0 568 start_task36 119 </args>
+      <args> tasks_machines[0] tasks_machines[37] start_task0 568 start_task37 791 </args>
+      <args> tasks_machines[0] tasks_machines[38] start_task0 568 start_task38 167 </args>
+      <args> tasks_machines[0] tasks_machines[39] start_task0 568 start_task39 363 </args>
+      <args> tasks_machines[1] tasks_machines[2] start_task1 669 start_task2 688 </args>
+      <args> tasks_machines[1] tasks_machines[3] start_task1 669 start_task3 709 </args>
+      <args> tasks_machines[1] tasks_machines[4] start_task1 669 start_task4 505 </args>
+      <args> tasks_machines[1] tasks_machines[5] start_task1 669 start_task5 683 </args>
+      <args> tasks_machines[1] tasks_machines[6] start_task1 669 start_task6 20 </args>
+      <args> tasks_machines[1] tasks_machines[7] start_task1 669 start_task7 250 </args>
+      <args> tasks_machines[1] tasks_machines[8] start_task1 669 start_task8 235 </args>
+      <args> tasks_machines[1] tasks_machines[9] start_task1 669 start_task9 651 </args>
+      <args> tasks_machines[1] tasks_machines[10] start_task1 669 start_task10 477 </args>
+      <args> tasks_machines[1] tasks_machines[11] start_task1 669 start_task11 227 </args>
+      <args> tasks_machines[1] tasks_machines[12] start_task1 669 start_task12 464 </args>
+      <args> tasks_machines[1] tasks_machines[13] start_task1 669 start_task13 257 </args>
+      <args> tasks_machines[1] tasks_machines[14] start_task1 669 start_task14 80 </args>
+      <args> tasks_machines[1] tasks_machines[15] start_task1 669 start_task15 592 </args>
+      <args> tasks_machines[1] tasks_machines[16] start_task1 669 start_task16 376 </args>
+      <args> tasks_machines[1] tasks_machines[17] start_task1 669 start_task17 541 </args>
+      <args> tasks_machines[1] tasks_machines[18] start_task1 669 start_task18 215 </args>
+      <args> tasks_machines[1] tasks_machines[19] start_task1 669 start_task19 645 </args>
+      <args> tasks_machines[1] tasks_machines[20] start_task1 669 start_task20 624 </args>
+      <args> tasks_machines[1] tasks_machines[21] start_task1 669 start_task21 463 </args>
+      <args> tasks_machines[1] tasks_machines[22] start_task1 669 start_task22 549 </args>
+      <args> tasks_machines[1] tasks_machines[23] start_task1 669 start_task23 647 </args>
+      <args> tasks_machines[1] tasks_machines[24] start_task1 669 start_task24 361 </args>
+      <args> tasks_machines[1] tasks_machines[25] start_task1 669 start_task25 57 </args>
+      <args> tasks_machines[1] tasks_machines[26] start_task1 669 start_task26 422 </args>
+      <args> tasks_machines[1] tasks_machines[27] start_task1 669 start_task27 530 </args>
+      <args> tasks_machines[1] tasks_machines[28] start_task1 669 start_task28 492 </args>
+      <args> tasks_machines[1] tasks_machines[29] start_task1 669 start_task29 306 </args>
+      <args> tasks_machines[1] tasks_machines[30] start_task1 669 start_task30 519 </args>
+      <args> tasks_machines[1] tasks_machines[31] start_task1 669 start_task31 176 </args>
+      <args> tasks_machines[1] tasks_machines[32] start_task1 669 start_task32 354 </args>
+      <args> tasks_machines[1] tasks_machines[33] start_task1 669 start_task33 682 </args>
+      <args> tasks_machines[1] tasks_machines[34] start_task1 669 start_task34 428 </args>
+      <args> tasks_machines[1] tasks_machines[35] start_task1 669 start_task35 340 </args>
+      <args> tasks_machines[1] tasks_machines[36] start_task1 669 start_task36 119 </args>
+      <args> tasks_machines[1] tasks_machines[37] start_task1 669 start_task37 791 </args>
+      <args> tasks_machines[1] tasks_machines[38] start_task1 669 start_task38 167 </args>
+      <args> tasks_machines[1] tasks_machines[39] start_task1 669 start_task39 363 </args>
+      <args> tasks_machines[2] tasks_machines[3] start_task2 688 start_task3 709 </args>
+      <args> tasks_machines[2] tasks_machines[4] start_task2 688 start_task4 505 </args>
+      <args> tasks_machines[2] tasks_machines[5] start_task2 688 start_task5 683 </args>
+      <args> tasks_machines[2] tasks_machines[6] start_task2 688 start_task6 20 </args>
+      <args> tasks_machines[2] tasks_machines[7] start_task2 688 start_task7 250 </args>
+      <args> tasks_machines[2] tasks_machines[8] start_task2 688 start_task8 235 </args>
+      <args> tasks_machines[2] tasks_machines[9] start_task2 688 start_task9 651 </args>
+      <args> tasks_machines[2] tasks_machines[10] start_task2 688 start_task10 477 </args>
+      <args> tasks_machines[2] tasks_machines[11] start_task2 688 start_task11 227 </args>
+      <args> tasks_machines[2] tasks_machines[12] start_task2 688 start_task12 464 </args>
+      <args> tasks_machines[2] tasks_machines[13] start_task2 688 start_task13 257 </args>
+      <args> tasks_machines[2] tasks_machines[14] start_task2 688 start_task14 80 </args>
+      <args> tasks_machines[2] tasks_machines[15] start_task2 688 start_task15 592 </args>
+      <args> tasks_machines[2] tasks_machines[16] start_task2 688 start_task16 376 </args>
+      <args> tasks_machines[2] tasks_machines[17] start_task2 688 start_task17 541 </args>
+      <args> tasks_machines[2] tasks_machines[18] start_task2 688 start_task18 215 </args>
+      <args> tasks_machines[2] tasks_machines[19] start_task2 688 start_task19 645 </args>
+      <args> tasks_machines[2] tasks_machines[20] start_task2 688 start_task20 624 </args>
+      <args> tasks_machines[2] tasks_machines[21] start_task2 688 start_task21 463 </args>
+      <args> tasks_machines[2] tasks_machines[22] start_task2 688 start_task22 549 </args>
+      <args> tasks_machines[2] tasks_machines[23] start_task2 688 start_task23 647 </args>
+      <args> tasks_machines[2] tasks_machines[24] start_task2 688 start_task24 361 </args>
+      <args> tasks_machines[2] tasks_machines[25] start_task2 688 start_task25 57 </args>
+      <args> tasks_machines[2] tasks_machines[26] start_task2 688 start_task26 422 </args>
+      <args> tasks_machines[2] tasks_machines[27] start_task2 688 start_task27 530 </args>
+      <args> tasks_machines[2] tasks_machines[28] start_task2 688 start_task28 492 </args>
+      <args> tasks_machines[2] tasks_machines[29] start_task2 688 start_task29 306 </args>
+      <args> tasks_machines[2] tasks_machines[30] start_task2 688 start_task30 519 </args>
+      <args> tasks_machines[2] tasks_machines[31] start_task2 688 start_task31 176 </args>
+      <args> tasks_machines[2] tasks_machines[32] start_task2 688 start_task32 354 </args>
+      <args> tasks_machines[2] tasks_machines[33] start_task2 688 start_task33 682 </args>
+      <args> tasks_machines[2] tasks_machines[34] start_task2 688 start_task34 428 </args>
+      <args> tasks_machines[2] tasks_machines[35] start_task2 688 start_task35 340 </args>
+      <args> tasks_machines[2] tasks_machines[36] start_task2 688 start_task36 119 </args>
+      <args> tasks_machines[2] tasks_machines[37] start_task2 688 start_task37 791 </args>
+      <args> tasks_machines[2] tasks_machines[38] start_task2 688 start_task38 167 </args>
+      <args> tasks_machines[2] tasks_machines[39] start_task2 688 start_task39 363 </args>
+      <args> tasks_machines[3] tasks_machines[4] start_task3 709 start_task4 505 </args>
+      <args> tasks_machines[3] tasks_machines[5] start_task3 709 start_task5 683 </args>
+      <args> tasks_machines[3] tasks_machines[6] start_task3 709 start_task6 20 </args>
+      <args> tasks_machines[3] tasks_machines[7] start_task3 709 start_task7 250 </args>
+      <args> tasks_machines[3] tasks_machines[8] start_task3 709 start_task8 235 </args>
+      <args> tasks_machines[3] tasks_machines[9] start_task3 709 start_task9 651 </args>
+      <args> tasks_machines[3] tasks_machines[10] start_task3 709 start_task10 477 </args>
+      <args> tasks_machines[3] tasks_machines[11] start_task3 709 start_task11 227 </args>
+      <args> tasks_machines[3] tasks_machines[12] start_task3 709 start_task12 464 </args>
+      <args> tasks_machines[3] tasks_machines[13] start_task3 709 start_task13 257 </args>
+      <args> tasks_machines[3] tasks_machines[14] start_task3 709 start_task14 80 </args>
+      <args> tasks_machines[3] tasks_machines[15] start_task3 709 start_task15 592 </args>
+      <args> tasks_machines[3] tasks_machines[16] start_task3 709 start_task16 376 </args>
+      <args> tasks_machines[3] tasks_machines[17] start_task3 709 start_task17 541 </args>
+      <args> tasks_machines[3] tasks_machines[18] start_task3 709 start_task18 215 </args>
+      <args> tasks_machines[3] tasks_machines[19] start_task3 709 start_task19 645 </args>
+      <args> tasks_machines[3] tasks_machines[20] start_task3 709 start_task20 624 </args>
+      <args> tasks_machines[3] tasks_machines[21] start_task3 709 start_task21 463 </args>
+      <args> tasks_machines[3] tasks_machines[22] start_task3 709 start_task22 549 </args>
+      <args> tasks_machines[3] tasks_machines[23] start_task3 709 start_task23 647 </args>
+      <args> tasks_machines[3] tasks_machines[24] start_task3 709 start_task24 361 </args>
+      <args> tasks_machines[3] tasks_machines[25] start_task3 709 start_task25 57 </args>
+      <args> tasks_machines[3] tasks_machines[26] start_task3 709 start_task26 422 </args>
+      <args> tasks_machines[3] tasks_machines[27] start_task3 709 start_task27 530 </args>
+      <args> tasks_machines[3] tasks_machines[28] start_task3 709 start_task28 492 </args>
+      <args> tasks_machines[3] tasks_machines[29] start_task3 709 start_task29 306 </args>
+      <args> tasks_machines[3] tasks_machines[30] start_task3 709 start_task30 519 </args>
+      <args> tasks_machines[3] tasks_machines[31] start_task3 709 start_task31 176 </args>
+      <args> tasks_machines[3] tasks_machines[32] start_task3 709 start_task32 354 </args>
+      <args> tasks_machines[3] tasks_machines[33] start_task3 709 start_task33 682 </args>
+      <args> tasks_machines[3] tasks_machines[34] start_task3 709 start_task34 428 </args>
+      <args> tasks_machines[3] tasks_machines[35] start_task3 709 start_task35 340 </args>
+      <args> tasks_machines[3] tasks_machines[36] start_task3 709 start_task36 119 </args>
+      <args> tasks_machines[3] tasks_machines[37] start_task3 709 start_task37 791 </args>
+      <args> tasks_machines[3] tasks_machines[38] start_task3 709 start_task38 167 </args>
+      <args> tasks_machines[3] tasks_machines[39] start_task3 709 start_task39 363 </args>
+      <args> tasks_machines[4] tasks_machines[5] start_task4 505 start_task5 683 </args>
+      <args> tasks_machines[4] tasks_machines[6] start_task4 505 start_task6 20 </args>
+      <args> tasks_machines[4] tasks_machines[7] start_task4 505 start_task7 250 </args>
+      <args> tasks_machines[4] tasks_machines[8] start_task4 505 start_task8 235 </args>
+      <args> tasks_machines[4] tasks_machines[9] start_task4 505 start_task9 651 </args>
+      <args> tasks_machines[4] tasks_machines[10] start_task4 505 start_task10 477 </args>
+      <args> tasks_machines[4] tasks_machines[11] start_task4 505 start_task11 227 </args>
+      <args> tasks_machines[4] tasks_machines[12] start_task4 505 start_task12 464 </args>
+      <args> tasks_machines[4] tasks_machines[13] start_task4 505 start_task13 257 </args>
+      <args> tasks_machines[4] tasks_machines[14] start_task4 505 start_task14 80 </args>
+      <args> tasks_machines[4] tasks_machines[15] start_task4 505 start_task15 592 </args>
+      <args> tasks_machines[4] tasks_machines[16] start_task4 505 start_task16 376 </args>
+      <args> tasks_machines[4] tasks_machines[17] start_task4 505 start_task17 541 </args>
+      <args> tasks_machines[4] tasks_machines[18] start_task4 505 start_task18 215 </args>
+      <args> tasks_machines[4] tasks_machines[19] start_task4 505 start_task19 645 </args>
+      <args> tasks_machines[4] tasks_machines[20] start_task4 505 start_task20 624 </args>
+      <args> tasks_machines[4] tasks_machines[21] start_task4 505 start_task21 463 </args>
+      <args> tasks_machines[4] tasks_machines[22] start_task4 505 start_task22 549 </args>
+      <args> tasks_machines[4] tasks_machines[23] start_task4 505 start_task23 647 </args>
+      <args> tasks_machines[4] tasks_machines[24] start_task4 505 start_task24 361 </args>
+      <args> tasks_machines[4] tasks_machines[25] start_task4 505 start_task25 57 </args>
+      <args> tasks_machines[4] tasks_machines[26] start_task4 505 start_task26 422 </args>
+      <args> tasks_machines[4] tasks_machines[27] start_task4 505 start_task27 530 </args>
+      <args> tasks_machines[4] tasks_machines[28] start_task4 505 start_task28 492 </args>
+      <args> tasks_machines[4] tasks_machines[29] start_task4 505 start_task29 306 </args>
+      <args> tasks_machines[4] tasks_machines[30] start_task4 505 start_task30 519 </args>
+      <args> tasks_machines[4] tasks_machines[31] start_task4 505 start_task31 176 </args>
+      <args> tasks_machines[4] tasks_machines[32] start_task4 505 start_task32 354 </args>
+      <args> tasks_machines[4] tasks_machines[33] start_task4 505 start_task33 682 </args>
+      <args> tasks_machines[4] tasks_machines[34] start_task4 505 start_task34 428 </args>
+      <args> tasks_machines[4] tasks_machines[35] start_task4 505 start_task35 340 </args>
+      <args> tasks_machines[4] tasks_machines[36] start_task4 505 start_task36 119 </args>
+      <args> tasks_machines[4] tasks_machines[37] start_task4 505 start_task37 791 </args>
+      <args> tasks_machines[4] tasks_machines[38] start_task4 505 start_task38 167 </args>
+      <args> tasks_machines[4] tasks_machines[39] start_task4 505 start_task39 363 </args>
+      <args> tasks_machines[5] tasks_machines[6] start_task5 683 start_task6 20 </args>
+      <args> tasks_machines[5] tasks_machines[7] start_task5 683 start_task7 250 </args>
+      <args> tasks_machines[5] tasks_machines[8] start_task5 683 start_task8 235 </args>
+      <args> tasks_machines[5] tasks_machines[9] start_task5 683 start_task9 651 </args>
+      <args> tasks_machines[5] tasks_machines[10] start_task5 683 start_task10 477 </args>
+      <args> tasks_machines[5] tasks_machines[11] start_task5 683 start_task11 227 </args>
+      <args> tasks_machines[5] tasks_machines[12] start_task5 683 start_task12 464 </args>
+      <args> tasks_machines[5] tasks_machines[13] start_task5 683 start_task13 257 </args>
+      <args> tasks_machines[5] tasks_machines[14] start_task5 683 start_task14 80 </args>
+      <args> tasks_machines[5] tasks_machines[15] start_task5 683 start_task15 592 </args>
+      <args> tasks_machines[5] tasks_machines[16] start_task5 683 start_task16 376 </args>
+      <args> tasks_machines[5] tasks_machines[17] start_task5 683 start_task17 541 </args>
+      <args> tasks_machines[5] tasks_machines[18] start_task5 683 start_task18 215 </args>
+      <args> tasks_machines[5] tasks_machines[19] start_task5 683 start_task19 645 </args>
+      <args> tasks_machines[5] tasks_machines[20] start_task5 683 start_task20 624 </args>
+      <args> tasks_machines[5] tasks_machines[21] start_task5 683 start_task21 463 </args>
+      <args> tasks_machines[5] tasks_machines[22] start_task5 683 start_task22 549 </args>
+      <args> tasks_machines[5] tasks_machines[23] start_task5 683 start_task23 647 </args>
+      <args> tasks_machines[5] tasks_machines[24] start_task5 683 start_task24 361 </args>
+      <args> tasks_machines[5] tasks_machines[25] start_task5 683 start_task25 57 </args>
+      <args> tasks_machines[5] tasks_machines[26] start_task5 683 start_task26 422 </args>
+      <args> tasks_machines[5] tasks_machines[27] start_task5 683 start_task27 530 </args>
+      <args> tasks_machines[5] tasks_machines[28] start_task5 683 start_task28 492 </args>
+      <args> tasks_machines[5] tasks_machines[29] start_task5 683 start_task29 306 </args>
+      <args> tasks_machines[5] tasks_machines[30] start_task5 683 start_task30 519 </args>
+      <args> tasks_machines[5] tasks_machines[31] start_task5 683 start_task31 176 </args>
+      <args> tasks_machines[5] tasks_machines[32] start_task5 683 start_task32 354 </args>
+      <args> tasks_machines[5] tasks_machines[33] start_task5 683 start_task33 682 </args>
+      <args> tasks_machines[5] tasks_machines[34] start_task5 683 start_task34 428 </args>
+      <args> tasks_machines[5] tasks_machines[35] start_task5 683 start_task35 340 </args>
+      <args> tasks_machines[5] tasks_machines[36] start_task5 683 start_task36 119 </args>
+      <args> tasks_machines[5] tasks_machines[37] start_task5 683 start_task37 791 </args>
+      <args> tasks_machines[5] tasks_machines[38] start_task5 683 start_task38 167 </args>
+      <args> tasks_machines[5] tasks_machines[39] start_task5 683 start_task39 363 </args>
+      <args> tasks_machines[6] tasks_machines[7] start_task6 20 start_task7 250 </args>
+      <args> tasks_machines[6] tasks_machines[8] start_task6 20 start_task8 235 </args>
+      <args> tasks_machines[6] tasks_machines[9] start_task6 20 start_task9 651 </args>
+      <args> tasks_machines[6] tasks_machines[10] start_task6 20 start_task10 477 </args>
+      <args> tasks_machines[6] tasks_machines[11] start_task6 20 start_task11 227 </args>
+      <args> tasks_machines[6] tasks_machines[12] start_task6 20 start_task12 464 </args>
+      <args> tasks_machines[6] tasks_machines[13] start_task6 20 start_task13 257 </args>
+      <args> tasks_machines[6] tasks_machines[14] start_task6 20 start_task14 80 </args>
+      <args> tasks_machines[6] tasks_machines[15] start_task6 20 start_task15 592 </args>
+      <args> tasks_machines[6] tasks_machines[16] start_task6 20 start_task16 376 </args>
+      <args> tasks_machines[6] tasks_machines[17] start_task6 20 start_task17 541 </args>
+      <args> tasks_machines[6] tasks_machines[18] start_task6 20 start_task18 215 </args>
+      <args> tasks_machines[6] tasks_machines[19] start_task6 20 start_task19 645 </args>
+      <args> tasks_machines[6] tasks_machines[20] start_task6 20 start_task20 624 </args>
+      <args> tasks_machines[6] tasks_machines[21] start_task6 20 start_task21 463 </args>
+      <args> tasks_machines[6] tasks_machines[22] start_task6 20 start_task22 549 </args>
+      <args> tasks_machines[6] tasks_machines[23] start_task6 20 start_task23 647 </args>
+      <args> tasks_machines[6] tasks_machines[24] start_task6 20 start_task24 361 </args>
+      <args> tasks_machines[6] tasks_machines[25] start_task6 20 start_task25 57 </args>
+      <args> tasks_machines[6] tasks_machines[26] start_task6 20 start_task26 422 </args>
+      <args> tasks_machines[6] tasks_machines[27] start_task6 20 start_task27 530 </args>
+      <args> tasks_machines[6] tasks_machines[28] start_task6 20 start_task28 492 </args>
+      <args> tasks_machines[6] tasks_machines[29] start_task6 20 start_task29 306 </args>
+      <args> tasks_machines[6] tasks_machines[30] start_task6 20 start_task30 519 </args>
+      <args> tasks_machines[6] tasks_machines[31] start_task6 20 start_task31 176 </args>
+      <args> tasks_machines[6] tasks_machines[32] start_task6 20 start_task32 354 </args>
+      <args> tasks_machines[6] tasks_machines[33] start_task6 20 start_task33 682 </args>
+      <args> tasks_machines[6] tasks_machines[34] start_task6 20 start_task34 428 </args>
+      <args> tasks_machines[6] tasks_machines[35] start_task6 20 start_task35 340 </args>
+      <args> tasks_machines[6] tasks_machines[36] start_task6 20 start_task36 119 </args>
+      <args> tasks_machines[6] tasks_machines[37] start_task6 20 start_task37 791 </args>
+      <args> tasks_machines[6] tasks_machines[38] start_task6 20 start_task38 167 </args>
+      <args> tasks_machines[6] tasks_machines[39] start_task6 20 start_task39 363 </args>
+      <args> tasks_machines[7] tasks_machines[8] start_task7 250 start_task8 235 </args>
+      <args> tasks_machines[7] tasks_machines[9] start_task7 250 start_task9 651 </args>
+      <args> tasks_machines[7] tasks_machines[10] start_task7 250 start_task10 477 </args>
+      <args> tasks_machines[7] tasks_machines[11] start_task7 250 start_task11 227 </args>
+      <args> tasks_machines[7] tasks_machines[12] start_task7 250 start_task12 464 </args>
+      <args> tasks_machines[7] tasks_machines[13] start_task7 250 start_task13 257 </args>
+      <args> tasks_machines[7] tasks_machines[14] start_task7 250 start_task14 80 </args>
+      <args> tasks_machines[7] tasks_machines[15] start_task7 250 start_task15 592 </args>
+      <args> tasks_machines[7] tasks_machines[16] start_task7 250 start_task16 376 </args>
+      <args> tasks_machines[7] tasks_machines[17] start_task7 250 start_task17 541 </args>
+      <args> tasks_machines[7] tasks_machines[18] start_task7 250 start_task18 215 </args>
+      <args> tasks_machines[7] tasks_machines[19] start_task7 250 start_task19 645 </args>
+      <args> tasks_machines[7] tasks_machines[20] start_task7 250 start_task20 624 </args>
+      <args> tasks_machines[7] tasks_machines[21] start_task7 250 start_task21 463 </args>
+      <args> tasks_machines[7] tasks_machines[22] start_task7 250 start_task22 549 </args>
+      <args> tasks_machines[7] tasks_machines[23] start_task7 250 start_task23 647 </args>
+      <args> tasks_machines[7] tasks_machines[24] start_task7 250 start_task24 361 </args>
+      <args> tasks_machines[7] tasks_machines[25] start_task7 250 start_task25 57 </args>
+      <args> tasks_machines[7] tasks_machines[26] start_task7 250 start_task26 422 </args>
+      <args> tasks_machines[7] tasks_machines[27] start_task7 250 start_task27 530 </args>
+      <args> tasks_machines[7] tasks_machines[28] start_task7 250 start_task28 492 </args>
+      <args> tasks_machines[7] tasks_machines[29] start_task7 250 start_task29 306 </args>
+      <args> tasks_machines[7] tasks_machines[30] start_task7 250 start_task30 519 </args>
+      <args> tasks_machines[7] tasks_machines[31] start_task7 250 start_task31 176 </args>
+      <args> tasks_machines[7] tasks_machines[32] start_task7 250 start_task32 354 </args>
+      <args> tasks_machines[7] tasks_machines[33] start_task7 250 start_task33 682 </args>
+      <args> tasks_machines[7] tasks_machines[34] start_task7 250 start_task34 428 </args>
+      <args> tasks_machines[7] tasks_machines[35] start_task7 250 start_task35 340 </args>
+      <args> tasks_machines[7] tasks_machines[36] start_task7 250 start_task36 119 </args>
+      <args> tasks_machines[7] tasks_machines[37] start_task7 250 start_task37 791 </args>
+      <args> tasks_machines[7] tasks_machines[38] start_task7 250 start_task38 167 </args>
+      <args> tasks_machines[7] tasks_machines[39] start_task7 250 start_task39 363 </args>
+      <args> tasks_machines[8] tasks_machines[9] start_task8 235 start_task9 651 </args>
+      <args> tasks_machines[8] tasks_machines[10] start_task8 235 start_task10 477 </args>
+      <args> tasks_machines[8] tasks_machines[11] start_task8 235 start_task11 227 </args>
+      <args> tasks_machines[8] tasks_machines[12] start_task8 235 start_task12 464 </args>
+      <args> tasks_machines[8] tasks_machines[13] start_task8 235 start_task13 257 </args>
+      <args> tasks_machines[8] tasks_machines[14] start_task8 235 start_task14 80 </args>
+      <args> tasks_machines[8] tasks_machines[15] start_task8 235 start_task15 592 </args>
+      <args> tasks_machines[8] tasks_machines[16] start_task8 235 start_task16 376 </args>
+      <args> tasks_machines[8] tasks_machines[17] start_task8 235 start_task17 541 </args>
+      <args> tasks_machines[8] tasks_machines[18] start_task8 235 start_task18 215 </args>
+      <args> tasks_machines[8] tasks_machines[19] start_task8 235 start_task19 645 </args>
+      <args> tasks_machines[8] tasks_machines[20] start_task8 235 start_task20 624 </args>
+      <args> tasks_machines[8] tasks_machines[21] start_task8 235 start_task21 463 </args>
+      <args> tasks_machines[8] tasks_machines[22] start_task8 235 start_task22 549 </args>
+      <args> tasks_machines[8] tasks_machines[23] start_task8 235 start_task23 647 </args>
+      <args> tasks_machines[8] tasks_machines[24] start_task8 235 start_task24 361 </args>
+      <args> tasks_machines[8] tasks_machines[25] start_task8 235 start_task25 57 </args>
+      <args> tasks_machines[8] tasks_machines[26] start_task8 235 start_task26 422 </args>
+      <args> tasks_machines[8] tasks_machines[27] start_task8 235 start_task27 530 </args>
+      <args> tasks_machines[8] tasks_machines[28] start_task8 235 start_task28 492 </args>
+      <args> tasks_machines[8] tasks_machines[29] start_task8 235 start_task29 306 </args>
+      <args> tasks_machines[8] tasks_machines[30] start_task8 235 start_task30 519 </args>
+      <args> tasks_machines[8] tasks_machines[31] start_task8 235 start_task31 176 </args>
+      <args> tasks_machines[8] tasks_machines[32] start_task8 235 start_task32 354 </args>
+      <args> tasks_machines[8] tasks_machines[33] start_task8 235 start_task33 682 </args>
+      <args> tasks_machines[8] tasks_machines[34] start_task8 235 start_task34 428 </args>
+      <args> tasks_machines[8] tasks_machines[35] start_task8 235 start_task35 340 </args>
+      <args> tasks_machines[8] tasks_machines[36] start_task8 235 start_task36 119 </args>
+      <args> tasks_machines[8] tasks_machines[37] start_task8 235 start_task37 791 </args>
+      <args> tasks_machines[8] tasks_machines[38] start_task8 235 start_task38 167 </args>
+      <args> tasks_machines[8] tasks_machines[39] start_task8 235 start_task39 363 </args>
+      <args> tasks_machines[9] tasks_machines[10] start_task9 651 start_task10 477 </args>
+      <args> tasks_machines[9] tasks_machines[11] start_task9 651 start_task11 227 </args>
+      <args> tasks_machines[9] tasks_machines[12] start_task9 651 start_task12 464 </args>
+      <args> tasks_machines[9] tasks_machines[13] start_task9 651 start_task13 257 </args>
+      <args> tasks_machines[9] tasks_machines[14] start_task9 651 start_task14 80 </args>
+      <args> tasks_machines[9] tasks_machines[15] start_task9 651 start_task15 592 </args>
+      <args> tasks_machines[9] tasks_machines[16] start_task9 651 start_task16 376 </args>
+      <args> tasks_machines[9] tasks_machines[17] start_task9 651 start_task17 541 </args>
+      <args> tasks_machines[9] tasks_machines[18] start_task9 651 start_task18 215 </args>
+      <args> tasks_machines[9] tasks_machines[19] start_task9 651 start_task19 645 </args>
+      <args> tasks_machines[9] tasks_machines[20] start_task9 651 start_task20 624 </args>
+      <args> tasks_machines[9] tasks_machines[21] start_task9 651 start_task21 463 </args>
+      <args> tasks_machines[9] tasks_machines[22] start_task9 651 start_task22 549 </args>
+      <args> tasks_machines[9] tasks_machines[23] start_task9 651 start_task23 647 </args>
+      <args> tasks_machines[9] tasks_machines[24] start_task9 651 start_task24 361 </args>
+      <args> tasks_machines[9] tasks_machines[25] start_task9 651 start_task25 57 </args>
+      <args> tasks_machines[9] tasks_machines[26] start_task9 651 start_task26 422 </args>
+      <args> tasks_machines[9] tasks_machines[27] start_task9 651 start_task27 530 </args>
+      <args> tasks_machines[9] tasks_machines[28] start_task9 651 start_task28 492 </args>
+      <args> tasks_machines[9] tasks_machines[29] start_task9 651 start_task29 306 </args>
+      <args> tasks_machines[9] tasks_machines[30] start_task9 651 start_task30 519 </args>
+      <args> tasks_machines[9] tasks_machines[31] start_task9 651 start_task31 176 </args>
+      <args> tasks_machines[9] tasks_machines[32] start_task9 651 start_task32 354 </args>
+      <args> tasks_machines[9] tasks_machines[33] start_task9 651 start_task33 682 </args>
+      <args> tasks_machines[9] tasks_machines[34] start_task9 651 start_task34 428 </args>
+      <args> tasks_machines[9] tasks_machines[35] start_task9 651 start_task35 340 </args>
+      <args> tasks_machines[9] tasks_machines[36] start_task9 651 start_task36 119 </args>
+      <args> tasks_machines[9] tasks_machines[37] start_task9 651 start_task37 791 </args>
+      <args> tasks_machines[9] tasks_machines[38] start_task9 651 start_task38 167 </args>
+      <args> tasks_machines[9] tasks_machines[39] start_task9 651 start_task39 363 </args>
+      <args> tasks_machines[10] tasks_machines[11] start_task10 477 start_task11 227 </args>
+      <args> tasks_machines[10] tasks_machines[12] start_task10 477 start_task12 464 </args>
+      <args> tasks_machines[10] tasks_machines[13] start_task10 477 start_task13 257 </args>
+      <args> tasks_machines[10] tasks_machines[14] start_task10 477 start_task14 80 </args>
+      <args> tasks_machines[10] tasks_machines[15] start_task10 477 start_task15 592 </args>
+      <args> tasks_machines[10] tasks_machines[16] start_task10 477 start_task16 376 </args>
+      <args> tasks_machines[10] tasks_machines[17] start_task10 477 start_task17 541 </args>
+      <args> tasks_machines[10] tasks_machines[18] start_task10 477 start_task18 215 </args>
+      <args> tasks_machines[10] tasks_machines[19] start_task10 477 start_task19 645 </args>
+      <args> tasks_machines[10] tasks_machines[20] start_task10 477 start_task20 624 </args>
+      <args> tasks_machines[10] tasks_machines[21] start_task10 477 start_task21 463 </args>
+      <args> tasks_machines[10] tasks_machines[22] start_task10 477 start_task22 549 </args>
+      <args> tasks_machines[10] tasks_machines[23] start_task10 477 start_task23 647 </args>
+      <args> tasks_machines[10] tasks_machines[24] start_task10 477 start_task24 361 </args>
+      <args> tasks_machines[10] tasks_machines[25] start_task10 477 start_task25 57 </args>
+      <args> tasks_machines[10] tasks_machines[26] start_task10 477 start_task26 422 </args>
+      <args> tasks_machines[10] tasks_machines[27] start_task10 477 start_task27 530 </args>
+      <args> tasks_machines[10] tasks_machines[28] start_task10 477 start_task28 492 </args>
+      <args> tasks_machines[10] tasks_machines[29] start_task10 477 start_task29 306 </args>
+      <args> tasks_machines[10] tasks_machines[30] start_task10 477 start_task30 519 </args>
+      <args> tasks_machines[10] tasks_machines[31] start_task10 477 start_task31 176 </args>
+      <args> tasks_machines[10] tasks_machines[32] start_task10 477 start_task32 354 </args>
+      <args> tasks_machines[10] tasks_machines[33] start_task10 477 start_task33 682 </args>
+      <args> tasks_machines[10] tasks_machines[34] start_task10 477 start_task34 428 </args>
+      <args> tasks_machines[10] tasks_machines[35] start_task10 477 start_task35 340 </args>
+      <args> tasks_machines[10] tasks_machines[36] start_task10 477 start_task36 119 </args>
+      <args> tasks_machines[10] tasks_machines[37] start_task10 477 start_task37 791 </args>
+      <args> tasks_machines[10] tasks_machines[38] start_task10 477 start_task38 167 </args>
+      <args> tasks_machines[10] tasks_machines[39] start_task10 477 start_task39 363 </args>
+      <args> tasks_machines[11] tasks_machines[12] start_task11 227 start_task12 464 </args>
+      <args> tasks_machines[11] tasks_machines[13] start_task11 227 start_task13 257 </args>
+      <args> tasks_machines[11] tasks_machines[14] start_task11 227 start_task14 80 </args>
+      <args> tasks_machines[11] tasks_machines[15] start_task11 227 start_task15 592 </args>
+      <args> tasks_machines[11] tasks_machines[16] start_task11 227 start_task16 376 </args>
+      <args> tasks_machines[11] tasks_machines[17] start_task11 227 start_task17 541 </args>
+      <args> tasks_machines[11] tasks_machines[18] start_task11 227 start_task18 215 </args>
+      <args> tasks_machines[11] tasks_machines[19] start_task11 227 start_task19 645 </args>
+      <args> tasks_machines[11] tasks_machines[20] start_task11 227 start_task20 624 </args>
+      <args> tasks_machines[11] tasks_machines[21] start_task11 227 start_task21 463 </args>
+      <args> tasks_machines[11] tasks_machines[22] start_task11 227 start_task22 549 </args>
+      <args> tasks_machines[11] tasks_machines[23] start_task11 227 start_task23 647 </args>
+      <args> tasks_machines[11] tasks_machines[24] start_task11 227 start_task24 361 </args>
+      <args> tasks_machines[11] tasks_machines[25] start_task11 227 start_task25 57 </args>
+      <args> tasks_machines[11] tasks_machines[26] start_task11 227 start_task26 422 </args>
+      <args> tasks_machines[11] tasks_machines[27] start_task11 227 start_task27 530 </args>
+      <args> tasks_machines[11] tasks_machines[28] start_task11 227 start_task28 492 </args>
+      <args> tasks_machines[11] tasks_machines[29] start_task11 227 start_task29 306 </args>
+      <args> tasks_machines[11] tasks_machines[30] start_task11 227 start_task30 519 </args>
+      <args> tasks_machines[11] tasks_machines[31] start_task11 227 start_task31 176 </args>
+      <args> tasks_machines[11] tasks_machines[32] start_task11 227 start_task32 354 </args>
+      <args> tasks_machines[11] tasks_machines[33] start_task11 227 start_task33 682 </args>
+      <args> tasks_machines[11] tasks_machines[34] start_task11 227 start_task34 428 </args>
+      <args> tasks_machines[11] tasks_machines[35] start_task11 227 start_task35 340 </args>
+      <args> tasks_machines[11] tasks_machines[36] start_task11 227 start_task36 119 </args>
+      <args> tasks_machines[11] tasks_machines[37] start_task11 227 start_task37 791 </args>
+      <args> tasks_machines[11] tasks_machines[38] start_task11 227 start_task38 167 </args>
+      <args> tasks_machines[11] tasks_machines[39] start_task11 227 start_task39 363 </args>
+      <args> tasks_machines[12] tasks_machines[13] start_task12 464 start_task13 257 </args>
+      <args> tasks_machines[12] tasks_machines[14] start_task12 464 start_task14 80 </args>
+      <args> tasks_machines[12] tasks_machines[15] start_task12 464 start_task15 592 </args>
+      <args> tasks_machines[12] tasks_machines[16] start_task12 464 start_task16 376 </args>
+      <args> tasks_machines[12] tasks_machines[17] start_task12 464 start_task17 541 </args>
+      <args> tasks_machines[12] tasks_machines[18] start_task12 464 start_task18 215 </args>
+      <args> tasks_machines[12] tasks_machines[19] start_task12 464 start_task19 645 </args>
+      <args> tasks_machines[12] tasks_machines[20] start_task12 464 start_task20 624 </args>
+      <args> tasks_machines[12] tasks_machines[21] start_task12 464 start_task21 463 </args>
+      <args> tasks_machines[12] tasks_machines[22] start_task12 464 start_task22 549 </args>
+      <args> tasks_machines[12] tasks_machines[23] start_task12 464 start_task23 647 </args>
+      <args> tasks_machines[12] tasks_machines[24] start_task12 464 start_task24 361 </args>
+      <args> tasks_machines[12] tasks_machines[25] start_task12 464 start_task25 57 </args>
+      <args> tasks_machines[12] tasks_machines[26] start_task12 464 start_task26 422 </args>
+      <args> tasks_machines[12] tasks_machines[27] start_task12 464 start_task27 530 </args>
+      <args> tasks_machines[12] tasks_machines[28] start_task12 464 start_task28 492 </args>
+      <args> tasks_machines[12] tasks_machines[29] start_task12 464 start_task29 306 </args>
+      <args> tasks_machines[12] tasks_machines[30] start_task12 464 start_task30 519 </args>
+      <args> tasks_machines[12] tasks_machines[31] start_task12 464 start_task31 176 </args>
+      <args> tasks_machines[12] tasks_machines[32] start_task12 464 start_task32 354 </args>
+      <args> tasks_machines[12] tasks_machines[33] start_task12 464 start_task33 682 </args>
+      <args> tasks_machines[12] tasks_machines[34] start_task12 464 start_task34 428 </args>
+      <args> tasks_machines[12] tasks_machines[35] start_task12 464 start_task35 340 </args>
+      <args> tasks_machines[12] tasks_machines[36] start_task12 464 start_task36 119 </args>
+      <args> tasks_machines[12] tasks_machines[37] start_task12 464 start_task37 791 </args>
+      <args> tasks_machines[12] tasks_machines[38] start_task12 464 start_task38 167 </args>
+      <args> tasks_machines[12] tasks_machines[39] start_task12 464 start_task39 363 </args>
+      <args> tasks_machines[13] tasks_machines[14] start_task13 257 start_task14 80 </args>
+      <args> tasks_machines[13] tasks_machines[15] start_task13 257 start_task15 592 </args>
+      <args> tasks_machines[13] tasks_machines[16] start_task13 257 start_task16 376 </args>
+      <args> tasks_machines[13] tasks_machines[17] start_task13 257 start_task17 541 </args>
+      <args> tasks_machines[13] tasks_machines[18] start_task13 257 start_task18 215 </args>
+      <args> tasks_machines[13] tasks_machines[19] start_task13 257 start_task19 645 </args>
+      <args> tasks_machines[13] tasks_machines[20] start_task13 257 start_task20 624 </args>
+      <args> tasks_machines[13] tasks_machines[21] start_task13 257 start_task21 463 </args>
+      <args> tasks_machines[13] tasks_machines[22] start_task13 257 start_task22 549 </args>
+      <args> tasks_machines[13] tasks_machines[23] start_task13 257 start_task23 647 </args>
+      <args> tasks_machines[13] tasks_machines[24] start_task13 257 start_task24 361 </args>
+      <args> tasks_machines[13] tasks_machines[25] start_task13 257 start_task25 57 </args>
+      <args> tasks_machines[13] tasks_machines[26] start_task13 257 start_task26 422 </args>
+      <args> tasks_machines[13] tasks_machines[27] start_task13 257 start_task27 530 </args>
+      <args> tasks_machines[13] tasks_machines[28] start_task13 257 start_task28 492 </args>
+      <args> tasks_machines[13] tasks_machines[29] start_task13 257 start_task29 306 </args>
+      <args> tasks_machines[13] tasks_machines[30] start_task13 257 start_task30 519 </args>
+      <args> tasks_machines[13] tasks_machines[31] start_task13 257 start_task31 176 </args>
+      <args> tasks_machines[13] tasks_machines[32] start_task13 257 start_task32 354 </args>
+      <args> tasks_machines[13] tasks_machines[33] start_task13 257 start_task33 682 </args>
+      <args> tasks_machines[13] tasks_machines[34] start_task13 257 start_task34 428 </args>
+      <args> tasks_machines[13] tasks_machines[35] start_task13 257 start_task35 340 </args>
+      <args> tasks_machines[13] tasks_machines[36] start_task13 257 start_task36 119 </args>
+      <args> tasks_machines[13] tasks_machines[37] start_task13 257 start_task37 791 </args>
+      <args> tasks_machines[13] tasks_machines[38] start_task13 257 start_task38 167 </args>
+      <args> tasks_machines[13] tasks_machines[39] start_task13 257 start_task39 363 </args>
+      <args> tasks_machines[14] tasks_machines[15] start_task14 80 start_task15 592 </args>
+      <args> tasks_machines[14] tasks_machines[16] start_task14 80 start_task16 376 </args>
+      <args> tasks_machines[14] tasks_machines[17] start_task14 80 start_task17 541 </args>
+      <args> tasks_machines[14] tasks_machines[18] start_task14 80 start_task18 215 </args>
+      <args> tasks_machines[14] tasks_machines[19] start_task14 80 start_task19 645 </args>
+      <args> tasks_machines[14] tasks_machines[20] start_task14 80 start_task20 624 </args>
+      <args> tasks_machines[14] tasks_machines[21] start_task14 80 start_task21 463 </args>
+      <args> tasks_machines[14] tasks_machines[22] start_task14 80 start_task22 549 </args>
+      <args> tasks_machines[14] tasks_machines[23] start_task14 80 start_task23 647 </args>
+      <args> tasks_machines[14] tasks_machines[24] start_task14 80 start_task24 361 </args>
+      <args> tasks_machines[14] tasks_machines[25] start_task14 80 start_task25 57 </args>
+      <args> tasks_machines[14] tasks_machines[26] start_task14 80 start_task26 422 </args>
+      <args> tasks_machines[14] tasks_machines[27] start_task14 80 start_task27 530 </args>
+      <args> tasks_machines[14] tasks_machines[28] start_task14 80 start_task28 492 </args>
+      <args> tasks_machines[14] tasks_machines[29] start_task14 80 start_task29 306 </args>
+      <args> tasks_machines[14] tasks_machines[30] start_task14 80 start_task30 519 </args>
+      <args> tasks_machines[14] tasks_machines[31] start_task14 80 start_task31 176 </args>
+      <args> tasks_machines[14] tasks_machines[32] start_task14 80 start_task32 354 </args>
+      <args> tasks_machines[14] tasks_machines[33] start_task14 80 start_task33 682 </args>
+      <args> tasks_machines[14] tasks_machines[34] start_task14 80 start_task34 428 </args>
+      <args> tasks_machines[14] tasks_machines[35] start_task14 80 start_task35 340 </args>
+      <args> tasks_machines[14] tasks_machines[36] start_task14 80 start_task36 119 </args>
+      <args> tasks_machines[14] tasks_machines[37] start_task14 80 start_task37 791 </args>
+      <args> tasks_machines[14] tasks_machines[38] start_task14 80 start_task38 167 </args>
+      <args> tasks_machines[14] tasks_machines[39] start_task14 80 start_task39 363 </args>
+      <args> tasks_machines[15] tasks_machines[16] start_task15 592 start_task16 376 </args>
+      <args> tasks_machines[15] tasks_machines[17] start_task15 592 start_task17 541 </args>
+      <args> tasks_machines[15] tasks_machines[18] start_task15 592 start_task18 215 </args>
+      <args> tasks_machines[15] tasks_machines[19] start_task15 592 start_task19 645 </args>
+      <args> tasks_machines[15] tasks_machines[20] start_task15 592 start_task20 624 </args>
+      <args> tasks_machines[15] tasks_machines[21] start_task15 592 start_task21 463 </args>
+      <args> tasks_machines[15] tasks_machines[22] start_task15 592 start_task22 549 </args>
+      <args> tasks_machines[15] tasks_machines[23] start_task15 592 start_task23 647 </args>
+      <args> tasks_machines[15] tasks_machines[24] start_task15 592 start_task24 361 </args>
+      <args> tasks_machines[15] tasks_machines[25] start_task15 592 start_task25 57 </args>
+      <args> tasks_machines[15] tasks_machines[26] start_task15 592 start_task26 422 </args>
+      <args> tasks_machines[15] tasks_machines[27] start_task15 592 start_task27 530 </args>
+      <args> tasks_machines[15] tasks_machines[28] start_task15 592 start_task28 492 </args>
+      <args> tasks_machines[15] tasks_machines[29] start_task15 592 start_task29 306 </args>
+      <args> tasks_machines[15] tasks_machines[30] start_task15 592 start_task30 519 </args>
+      <args> tasks_machines[15] tasks_machines[31] start_task15 592 start_task31 176 </args>
+      <args> tasks_machines[15] tasks_machines[32] start_task15 592 start_task32 354 </args>
+      <args> tasks_machines[15] tasks_machines[33] start_task15 592 start_task33 682 </args>
+      <args> tasks_machines[15] tasks_machines[34] start_task15 592 start_task34 428 </args>
+      <args> tasks_machines[15] tasks_machines[35] start_task15 592 start_task35 340 </args>
+      <args> tasks_machines[15] tasks_machines[36] start_task15 592 start_task36 119 </args>
+      <args> tasks_machines[15] tasks_machines[37] start_task15 592 start_task37 791 </args>
+      <args> tasks_machines[15] tasks_machines[38] start_task15 592 start_task38 167 </args>
+      <args> tasks_machines[15] tasks_machines[39] start_task15 592 start_task39 363 </args>
+      <args> tasks_machines[16] tasks_machines[17] start_task16 376 start_task17 541 </args>
+      <args> tasks_machines[16] tasks_machines[18] start_task16 376 start_task18 215 </args>
+      <args> tasks_machines[16] tasks_machines[19] start_task16 376 start_task19 645 </args>
+      <args> tasks_machines[16] tasks_machines[20] start_task16 376 start_task20 624 </args>
+      <args> tasks_machines[16] tasks_machines[21] start_task16 376 start_task21 463 </args>
+      <args> tasks_machines[16] tasks_machines[22] start_task16 376 start_task22 549 </args>
+      <args> tasks_machines[16] tasks_machines[23] start_task16 376 start_task23 647 </args>
+      <args> tasks_machines[16] tasks_machines[24] start_task16 376 start_task24 361 </args>
+      <args> tasks_machines[16] tasks_machines[25] start_task16 376 start_task25 57 </args>
+      <args> tasks_machines[16] tasks_machines[26] start_task16 376 start_task26 422 </args>
+      <args> tasks_machines[16] tasks_machines[27] start_task16 376 start_task27 530 </args>
+      <args> tasks_machines[16] tasks_machines[28] start_task16 376 start_task28 492 </args>
+      <args> tasks_machines[16] tasks_machines[29] start_task16 376 start_task29 306 </args>
+      <args> tasks_machines[16] tasks_machines[30] start_task16 376 start_task30 519 </args>
+      <args> tasks_machines[16] tasks_machines[31] start_task16 376 start_task31 176 </args>
+      <args> tasks_machines[16] tasks_machines[32] start_task16 376 start_task32 354 </args>
+      <args> tasks_machines[16] tasks_machines[33] start_task16 376 start_task33 682 </args>
+      <args> tasks_machines[16] tasks_machines[34] start_task16 376 start_task34 428 </args>
+      <args> tasks_machines[16] tasks_machines[35] start_task16 376 start_task35 340 </args>
+      <args> tasks_machines[16] tasks_machines[36] start_task16 376 start_task36 119 </args>
+      <args> tasks_machines[16] tasks_machines[37] start_task16 376 start_task37 791 </args>
+      <args> tasks_machines[16] tasks_machines[38] start_task16 376 start_task38 167 </args>
+      <args> tasks_machines[16] tasks_machines[39] start_task16 376 start_task39 363 </args>
+      <args> tasks_machines[17] tasks_machines[18] start_task17 541 start_task18 215 </args>
+      <args> tasks_machines[17] tasks_machines[19] start_task17 541 start_task19 645 </args>
+      <args> tasks_machines[17] tasks_machines[20] start_task17 541 start_task20 624 </args>
+      <args> tasks_machines[17] tasks_machines[21] start_task17 541 start_task21 463 </args>
+      <args> tasks_machines[17] tasks_machines[22] start_task17 541 start_task22 549 </args>
+      <args> tasks_machines[17] tasks_machines[23] start_task17 541 start_task23 647 </args>
+      <args> tasks_machines[17] tasks_machines[24] start_task17 541 start_task24 361 </args>
+      <args> tasks_machines[17] tasks_machines[25] start_task17 541 start_task25 57 </args>
+      <args> tasks_machines[17] tasks_machines[26] start_task17 541 start_task26 422 </args>
+      <args> tasks_machines[17] tasks_machines[27] start_task17 541 start_task27 530 </args>
+      <args> tasks_machines[17] tasks_machines[28] start_task17 541 start_task28 492 </args>
+      <args> tasks_machines[17] tasks_machines[29] start_task17 541 start_task29 306 </args>
+      <args> tasks_machines[17] tasks_machines[30] start_task17 541 start_task30 519 </args>
+      <args> tasks_machines[17] tasks_machines[31] start_task17 541 start_task31 176 </args>
+      <args> tasks_machines[17] tasks_machines[32] start_task17 541 start_task32 354 </args>
+      <args> tasks_machines[17] tasks_machines[33] start_task17 541 start_task33 682 </args>
+      <args> tasks_machines[17] tasks_machines[34] start_task17 541 start_task34 428 </args>
+      <args> tasks_machines[17] tasks_machines[35] start_task17 541 start_task35 340 </args>
+      <args> tasks_machines[17] tasks_machines[36] start_task17 541 start_task36 119 </args>
+      <args> tasks_machines[17] tasks_machines[37] start_task17 541 start_task37 791 </args>
+      <args> tasks_machines[17] tasks_machines[38] start_task17 541 start_task38 167 </args>
+      <args> tasks_machines[17] tasks_machines[39] start_task17 541 start_task39 363 </args>
+      <args> tasks_machines[18] tasks_machines[19] start_task18 215 start_task19 645 </args>
+      <args> tasks_machines[18] tasks_machines[20] start_task18 215 start_task20 624 </args>
+      <args> tasks_machines[18] tasks_machines[21] start_task18 215 start_task21 463 </args>
+      <args> tasks_machines[18] tasks_machines[22] start_task18 215 start_task22 549 </args>
+      <args> tasks_machines[18] tasks_machines[23] start_task18 215 start_task23 647 </args>
+      <args> tasks_machines[18] tasks_machines[24] start_task18 215 start_task24 361 </args>
+      <args> tasks_machines[18] tasks_machines[25] start_task18 215 start_task25 57 </args>
+      <args> tasks_machines[18] tasks_machines[26] start_task18 215 start_task26 422 </args>
+      <args> tasks_machines[18] tasks_machines[27] start_task18 215 start_task27 530 </args>
+      <args> tasks_machines[18] tasks_machines[28] start_task18 215 start_task28 492 </args>
+      <args> tasks_machines[18] tasks_machines[29] start_task18 215 start_task29 306 </args>
+      <args> tasks_machines[18] tasks_machines[30] start_task18 215 start_task30 519 </args>
+      <args> tasks_machines[18] tasks_machines[31] start_task18 215 start_task31 176 </args>
+      <args> tasks_machines[18] tasks_machines[32] start_task18 215 start_task32 354 </args>
+      <args> tasks_machines[18] tasks_machines[33] start_task18 215 start_task33 682 </args>
+      <args> tasks_machines[18] tasks_machines[34] start_task18 215 start_task34 428 </args>
+      <args> tasks_machines[18] tasks_machines[35] start_task18 215 start_task35 340 </args>
+      <args> tasks_machines[18] tasks_machines[36] start_task18 215 start_task36 119 </args>
+      <args> tasks_machines[18] tasks_machines[37] start_task18 215 start_task37 791 </args>
+      <args> tasks_machines[18] tasks_machines[38] start_task18 215 start_task38 167 </args>
+      <args> tasks_machines[18] tasks_machines[39] start_task18 215 start_task39 363 </args>
+      <args> tasks_machines[19] tasks_machines[20] start_task19 645 start_task20 624 </args>
+      <args> tasks_machines[19] tasks_machines[21] start_task19 645 start_task21 463 </args>
+      <args> tasks_machines[19] tasks_machines[22] start_task19 645 start_task22 549 </args>
+      <args> tasks_machines[19] tasks_machines[23] start_task19 645 start_task23 647 </args>
+      <args> tasks_machines[19] tasks_machines[24] start_task19 645 start_task24 361 </args>
+      <args> tasks_machines[19] tasks_machines[25] start_task19 645 start_task25 57 </args>
+      <args> tasks_machines[19] tasks_machines[26] start_task19 645 start_task26 422 </args>
+      <args> tasks_machines[19] tasks_machines[27] start_task19 645 start_task27 530 </args>
+      <args> tasks_machines[19] tasks_machines[28] start_task19 645 start_task28 492 </args>
+      <args> tasks_machines[19] tasks_machines[29] start_task19 645 start_task29 306 </args>
+      <args> tasks_machines[19] tasks_machines[30] start_task19 645 start_task30 519 </args>
+      <args> tasks_machines[19] tasks_machines[31] start_task19 645 start_task31 176 </args>
+      <args> tasks_machines[19] tasks_machines[32] start_task19 645 start_task32 354 </args>
+      <args> tasks_machines[19] tasks_machines[33] start_task19 645 start_task33 682 </args>
+      <args> tasks_machines[19] tasks_machines[34] start_task19 645 start_task34 428 </args>
+      <args> tasks_machines[19] tasks_machines[35] start_task19 645 start_task35 340 </args>
+      <args> tasks_machines[19] tasks_machines[36] start_task19 645 start_task36 119 </args>
+      <args> tasks_machines[19] tasks_machines[37] start_task19 645 start_task37 791 </args>
+      <args> tasks_machines[19] tasks_machines[38] start_task19 645 start_task38 167 </args>
+      <args> tasks_machines[19] tasks_machines[39] start_task19 645 start_task39 363 </args>
+      <args> tasks_machines[20] tasks_machines[21] start_task20 624 start_task21 463 </args>
+      <args> tasks_machines[20] tasks_machines[22] start_task20 624 start_task22 549 </args>
+      <args> tasks_machines[20] tasks_machines[23] start_task20 624 start_task23 647 </args>
+      <args> tasks_machines[20] tasks_machines[24] start_task20 624 start_task24 361 </args>
+      <args> tasks_machines[20] tasks_machines[25] start_task20 624 start_task25 57 </args>
+      <args> tasks_machines[20] tasks_machines[26] start_task20 624 start_task26 422 </args>
+      <args> tasks_machines[20] tasks_machines[27] start_task20 624 start_task27 530 </args>
+      <args> tasks_machines[20] tasks_machines[28] start_task20 624 start_task28 492 </args>
+      <args> tasks_machines[20] tasks_machines[29] start_task20 624 start_task29 306 </args>
+      <args> tasks_machines[20] tasks_machines[30] start_task20 624 start_task30 519 </args>
+      <args> tasks_machines[20] tasks_machines[31] start_task20 624 start_task31 176 </args>
+      <args> tasks_machines[20] tasks_machines[32] start_task20 624 start_task32 354 </args>
+      <args> tasks_machines[20] tasks_machines[33] start_task20 624 start_task33 682 </args>
+      <args> tasks_machines[20] tasks_machines[34] start_task20 624 start_task34 428 </args>
+      <args> tasks_machines[20] tasks_machines[35] start_task20 624 start_task35 340 </args>
+      <args> tasks_machines[20] tasks_machines[36] start_task20 624 start_task36 119 </args>
+      <args> tasks_machines[20] tasks_machines[37] start_task20 624 start_task37 791 </args>
+      <args> tasks_machines[20] tasks_machines[38] start_task20 624 start_task38 167 </args>
+      <args> tasks_machines[20] tasks_machines[39] start_task20 624 start_task39 363 </args>
+      <args> tasks_machines[21] tasks_machines[22] start_task21 463 start_task22 549 </args>
+      <args> tasks_machines[21] tasks_machines[23] start_task21 463 start_task23 647 </args>
+      <args> tasks_machines[21] tasks_machines[24] start_task21 463 start_task24 361 </args>
+      <args> tasks_machines[21] tasks_machines[25] start_task21 463 start_task25 57 </args>
+      <args> tasks_machines[21] tasks_machines[26] start_task21 463 start_task26 422 </args>
+      <args> tasks_machines[21] tasks_machines[27] start_task21 463 start_task27 530 </args>
+      <args> tasks_machines[21] tasks_machines[28] start_task21 463 start_task28 492 </args>
+      <args> tasks_machines[21] tasks_machines[29] start_task21 463 start_task29 306 </args>
+      <args> tasks_machines[21] tasks_machines[30] start_task21 463 start_task30 519 </args>
+      <args> tasks_machines[21] tasks_machines[31] start_task21 463 start_task31 176 </args>
+      <args> tasks_machines[21] tasks_machines[32] start_task21 463 start_task32 354 </args>
+      <args> tasks_machines[21] tasks_machines[33] start_task21 463 start_task33 682 </args>
+      <args> tasks_machines[21] tasks_machines[34] start_task21 463 start_task34 428 </args>
+      <args> tasks_machines[21] tasks_machines[35] start_task21 463 start_task35 340 </args>
+      <args> tasks_machines[21] tasks_machines[36] start_task21 463 start_task36 119 </args>
+      <args> tasks_machines[21] tasks_machines[37] start_task21 463 start_task37 791 </args>
+      <args> tasks_machines[21] tasks_machines[38] start_task21 463 start_task38 167 </args>
+      <args> tasks_machines[21] tasks_machines[39] start_task21 463 start_task39 363 </args>
+      <args> tasks_machines[22] tasks_machines[23] start_task22 549 start_task23 647 </args>
+      <args> tasks_machines[22] tasks_machines[24] start_task22 549 start_task24 361 </args>
+      <args> tasks_machines[22] tasks_machines[25] start_task22 549 start_task25 57 </args>
+      <args> tasks_machines[22] tasks_machines[26] start_task22 549 start_task26 422 </args>
+      <args> tasks_machines[22] tasks_machines[27] start_task22 549 start_task27 530 </args>
+      <args> tasks_machines[22] tasks_machines[28] start_task22 549 start_task28 492 </args>
+      <args> tasks_machines[22] tasks_machines[29] start_task22 549 start_task29 306 </args>
+      <args> tasks_machines[22] tasks_machines[30] start_task22 549 start_task30 519 </args>
+      <args> tasks_machines[22] tasks_machines[31] start_task22 549 start_task31 176 </args>
+      <args> tasks_machines[22] tasks_machines[32] start_task22 549 start_task32 354 </args>
+      <args> tasks_machines[22] tasks_machines[33] start_task22 549 start_task33 682 </args>
+      <args> tasks_machines[22] tasks_machines[34] start_task22 549 start_task34 428 </args>
+      <args> tasks_machines[22] tasks_machines[35] start_task22 549 start_task35 340 </args>
+      <args> tasks_machines[22] tasks_machines[36] start_task22 549 start_task36 119 </args>
+      <args> tasks_machines[22] tasks_machines[37] start_task22 549 start_task37 791 </args>
+      <args> tasks_machines[22] tasks_machines[38] start_task22 549 start_task38 167 </args>
+      <args> tasks_machines[22] tasks_machines[39] start_task22 549 start_task39 363 </args>
+      <args> tasks_machines[23] tasks_machines[24] start_task23 647 start_task24 361 </args>
+      <args> tasks_machines[23] tasks_machines[25] start_task23 647 start_task25 57 </args>
+      <args> tasks_machines[23] tasks_machines[26] start_task23 647 start_task26 422 </args>
+      <args> tasks_machines[23] tasks_machines[27] start_task23 647 start_task27 530 </args>
+      <args> tasks_machines[23] tasks_machines[28] start_task23 647 start_task28 492 </args>
+      <args> tasks_machines[23] tasks_machines[29] start_task23 647 start_task29 306 </args>
+      <args> tasks_machines[23] tasks_machines[30] start_task23 647 start_task30 519 </args>
+      <args> tasks_machines[23] tasks_machines[31] start_task23 647 start_task31 176 </args>
+      <args> tasks_machines[23] tasks_machines[32] start_task23 647 start_task32 354 </args>
+      <args> tasks_machines[23] tasks_machines[33] start_task23 647 start_task33 682 </args>
+      <args> tasks_machines[23] tasks_machines[34] start_task23 647 start_task34 428 </args>
+      <args> tasks_machines[23] tasks_machines[35] start_task23 647 start_task35 340 </args>
+      <args> tasks_machines[23] tasks_machines[36] start_task23 647 start_task36 119 </args>
+      <args> tasks_machines[23] tasks_machines[37] start_task23 647 start_task37 791 </args>
+      <args> tasks_machines[23] tasks_machines[38] start_task23 647 start_task38 167 </args>
+      <args> tasks_machines[23] tasks_machines[39] start_task23 647 start_task39 363 </args>
+      <args> tasks_machines[24] tasks_machines[25] start_task24 361 start_task25 57 </args>
+      <args> tasks_machines[24] tasks_machines[26] start_task24 361 start_task26 422 </args>
+      <args> tasks_machines[24] tasks_machines[27] start_task24 361 start_task27 530 </args>
+      <args> tasks_machines[24] tasks_machines[28] start_task24 361 start_task28 492 </args>
+      <args> tasks_machines[24] tasks_machines[29] start_task24 361 start_task29 306 </args>
+      <args> tasks_machines[24] tasks_machines[30] start_task24 361 start_task30 519 </args>
+      <args> tasks_machines[24] tasks_machines[31] start_task24 361 start_task31 176 </args>
+      <args> tasks_machines[24] tasks_machines[32] start_task24 361 start_task32 354 </args>
+      <args> tasks_machines[24] tasks_machines[33] start_task24 361 start_task33 682 </args>
+      <args> tasks_machines[24] tasks_machines[34] start_task24 361 start_task34 428 </args>
+      <args> tasks_machines[24] tasks_machines[35] start_task24 361 start_task35 340 </args>
+      <args> tasks_machines[24] tasks_machines[36] start_task24 361 start_task36 119 </args>
+      <args> tasks_machines[24] tasks_machines[37] start_task24 361 start_task37 791 </args>
+      <args> tasks_machines[24] tasks_machines[38] start_task24 361 start_task38 167 </args>
+      <args> tasks_machines[24] tasks_machines[39] start_task24 361 start_task39 363 </args>
+      <args> tasks_machines[25] tasks_machines[26] start_task25 57 start_task26 422 </args>
+      <args> tasks_machines[25] tasks_machines[27] start_task25 57 start_task27 530 </args>
+      <args> tasks_machines[25] tasks_machines[28] start_task25 57 start_task28 492 </args>
+      <args> tasks_machines[25] tasks_machines[29] start_task25 57 start_task29 306 </args>
+      <args> tasks_machines[25] tasks_machines[30] start_task25 57 start_task30 519 </args>
+      <args> tasks_machines[25] tasks_machines[31] start_task25 57 start_task31 176 </args>
+      <args> tasks_machines[25] tasks_machines[32] start_task25 57 start_task32 354 </args>
+      <args> tasks_machines[25] tasks_machines[33] start_task25 57 start_task33 682 </args>
+      <args> tasks_machines[25] tasks_machines[34] start_task25 57 start_task34 428 </args>
+      <args> tasks_machines[25] tasks_machines[35] start_task25 57 start_task35 340 </args>
+      <args> tasks_machines[25] tasks_machines[36] start_task25 57 start_task36 119 </args>
+      <args> tasks_machines[25] tasks_machines[37] start_task25 57 start_task37 791 </args>
+      <args> tasks_machines[25] tasks_machines[38] start_task25 57 start_task38 167 </args>
+      <args> tasks_machines[25] tasks_machines[39] start_task25 57 start_task39 363 </args>
+      <args> tasks_machines[26] tasks_machines[27] start_task26 422 start_task27 530 </args>
+      <args> tasks_machines[26] tasks_machines[28] start_task26 422 start_task28 492 </args>
+      <args> tasks_machines[26] tasks_machines[29] start_task26 422 start_task29 306 </args>
+      <args> tasks_machines[26] tasks_machines[30] start_task26 422 start_task30 519 </args>
+      <args> tasks_machines[26] tasks_machines[31] start_task26 422 start_task31 176 </args>
+      <args> tasks_machines[26] tasks_machines[32] start_task26 422 start_task32 354 </args>
+      <args> tasks_machines[26] tasks_machines[33] start_task26 422 start_task33 682 </args>
+      <args> tasks_machines[26] tasks_machines[34] start_task26 422 start_task34 428 </args>
+      <args> tasks_machines[26] tasks_machines[35] start_task26 422 start_task35 340 </args>
+      <args> tasks_machines[26] tasks_machines[36] start_task26 422 start_task36 119 </args>
+      <args> tasks_machines[26] tasks_machines[37] start_task26 422 start_task37 791 </args>
+      <args> tasks_machines[26] tasks_machines[38] start_task26 422 start_task38 167 </args>
+      <args> tasks_machines[26] tasks_machines[39] start_task26 422 start_task39 363 </args>
+      <args> tasks_machines[27] tasks_machines[28] start_task27 530 start_task28 492 </args>
+      <args> tasks_machines[27] tasks_machines[29] start_task27 530 start_task29 306 </args>
+      <args> tasks_machines[27] tasks_machines[30] start_task27 530 start_task30 519 </args>
+      <args> tasks_machines[27] tasks_machines[31] start_task27 530 start_task31 176 </args>
+      <args> tasks_machines[27] tasks_machines[32] start_task27 530 start_task32 354 </args>
+      <args> tasks_machines[27] tasks_machines[33] start_task27 530 start_task33 682 </args>
+      <args> tasks_machines[27] tasks_machines[34] start_task27 530 start_task34 428 </args>
+      <args> tasks_machines[27] tasks_machines[35] start_task27 530 start_task35 340 </args>
+      <args> tasks_machines[27] tasks_machines[36] start_task27 530 start_task36 119 </args>
+      <args> tasks_machines[27] tasks_machines[37] start_task27 530 start_task37 791 </args>
+      <args> tasks_machines[27] tasks_machines[38] start_task27 530 start_task38 167 </args>
+      <args> tasks_machines[27] tasks_machines[39] start_task27 530 start_task39 363 </args>
+      <args> tasks_machines[28] tasks_machines[29] start_task28 492 start_task29 306 </args>
+      <args> tasks_machines[28] tasks_machines[30] start_task28 492 start_task30 519 </args>
+      <args> tasks_machines[28] tasks_machines[31] start_task28 492 start_task31 176 </args>
+      <args> tasks_machines[28] tasks_machines[32] start_task28 492 start_task32 354 </args>
+      <args> tasks_machines[28] tasks_machines[33] start_task28 492 start_task33 682 </args>
+      <args> tasks_machines[28] tasks_machines[34] start_task28 492 start_task34 428 </args>
+      <args> tasks_machines[28] tasks_machines[35] start_task28 492 start_task35 340 </args>
+      <args> tasks_machines[28] tasks_machines[36] start_task28 492 start_task36 119 </args>
+      <args> tasks_machines[28] tasks_machines[37] start_task28 492 start_task37 791 </args>
+      <args> tasks_machines[28] tasks_machines[38] start_task28 492 start_task38 167 </args>
+      <args> tasks_machines[28] tasks_machines[39] start_task28 492 start_task39 363 </args>
+      <args> tasks_machines[29] tasks_machines[30] start_task29 306 start_task30 519 </args>
+      <args> tasks_machines[29] tasks_machines[31] start_task29 306 start_task31 176 </args>
+      <args> tasks_machines[29] tasks_machines[32] start_task29 306 start_task32 354 </args>
+      <args> tasks_machines[29] tasks_machines[33] start_task29 306 start_task33 682 </args>
+      <args> tasks_machines[29] tasks_machines[34] start_task29 306 start_task34 428 </args>
+      <args> tasks_machines[29] tasks_machines[35] start_task29 306 start_task35 340 </args>
+      <args> tasks_machines[29] tasks_machines[36] start_task29 306 start_task36 119 </args>
+      <args> tasks_machines[29] tasks_machines[37] start_task29 306 start_task37 791 </args>
+      <args> tasks_machines[29] tasks_machines[38] start_task29 306 start_task38 167 </args>
+      <args> tasks_machines[29] tasks_machines[39] start_task29 306 start_task39 363 </args>
+      <args> tasks_machines[30] tasks_machines[31] start_task30 519 start_task31 176 </args>
+      <args> tasks_machines[30] tasks_machines[32] start_task30 519 start_task32 354 </args>
+      <args> tasks_machines[30] tasks_machines[33] start_task30 519 start_task33 682 </args>
+      <args> tasks_machines[30] tasks_machines[34] start_task30 519 start_task34 428 </args>
+      <args> tasks_machines[30] tasks_machines[35] start_task30 519 start_task35 340 </args>
+      <args> tasks_machines[30] tasks_machines[36] start_task30 519 start_task36 119 </args>
+      <args> tasks_machines[30] tasks_machines[37] start_task30 519 start_task37 791 </args>
+      <args> tasks_machines[30] tasks_machines[38] start_task30 519 start_task38 167 </args>
+      <args> tasks_machines[30] tasks_machines[39] start_task30 519 start_task39 363 </args>
+      <args> tasks_machines[31] tasks_machines[32] start_task31 176 start_task32 354 </args>
+      <args> tasks_machines[31] tasks_machines[33] start_task31 176 start_task33 682 </args>
+      <args> tasks_machines[31] tasks_machines[34] start_task31 176 start_task34 428 </args>
+      <args> tasks_machines[31] tasks_machines[35] start_task31 176 start_task35 340 </args>
+      <args> tasks_machines[31] tasks_machines[36] start_task31 176 start_task36 119 </args>
+      <args> tasks_machines[31] tasks_machines[37] start_task31 176 start_task37 791 </args>
+      <args> tasks_machines[31] tasks_machines[38] start_task31 176 start_task38 167 </args>
+      <args> tasks_machines[31] tasks_machines[39] start_task31 176 start_task39 363 </args>
+      <args> tasks_machines[32] tasks_machines[33] start_task32 354 start_task33 682 </args>
+      <args> tasks_machines[32] tasks_machines[34] start_task32 354 start_task34 428 </args>
+      <args> tasks_machines[32] tasks_machines[35] start_task32 354 start_task35 340 </args>
+      <args> tasks_machines[32] tasks_machines[36] start_task32 354 start_task36 119 </args>
+      <args> tasks_machines[32] tasks_machines[37] start_task32 354 start_task37 791 </args>
+      <args> tasks_machines[32] tasks_machines[38] start_task32 354 start_task38 167 </args>
+      <args> tasks_machines[32] tasks_machines[39] start_task32 354 start_task39 363 </args>
+      <args> tasks_machines[33] tasks_machines[34] start_task33 682 start_task34 428 </args>
+      <args> tasks_machines[33] tasks_machines[35] start_task33 682 start_task35 340 </args>
+      <args> tasks_machines[33] tasks_machines[36] start_task33 682 start_task36 119 </args>
+      <args> tasks_machines[33] tasks_machines[37] start_task33 682 start_task37 791 </args>
+      <args> tasks_machines[33] tasks_machines[38] start_task33 682 start_task38 167 </args>
+      <args> tasks_machines[33] tasks_machines[39] start_task33 682 start_task39 363 </args>
+      <args> tasks_machines[34] tasks_machines[35] start_task34 428 start_task35 340 </args>
+      <args> tasks_machines[34] tasks_machines[36] start_task34 428 start_task36 119 </args>
+      <args> tasks_machines[34] tasks_machines[37] start_task34 428 start_task37 791 </args>
+      <args> tasks_machines[34] tasks_machines[38] start_task34 428 start_task38 167 </args>
+      <args> tasks_machines[34] tasks_machines[39] start_task34 428 start_task39 363 </args>
+      <args> tasks_machines[35] tasks_machines[36] start_task35 340 start_task36 119 </args>
+      <args> tasks_machines[35] tasks_machines[37] start_task35 340 start_task37 791 </args>
+      <args> tasks_machines[35] tasks_machines[38] start_task35 340 start_task38 167 </args>
+      <args> tasks_machines[35] tasks_machines[39] start_task35 340 start_task39 363 </args>
+      <args> tasks_machines[36] tasks_machines[37] start_task36 119 start_task37 791 </args>
+      <args> tasks_machines[36] tasks_machines[38] start_task36 119 start_task38 167 </args>
+      <args> tasks_machines[36] tasks_machines[39] start_task36 119 start_task39 363 </args>
+      <args> tasks_machines[37] tasks_machines[38] start_task37 791 start_task38 167 </args>
+      <args> tasks_machines[37] tasks_machines[39] start_task37 791 start_task39 363 </args>
+      <args> tasks_machines[38] tasks_machines[39] start_task38 167 start_task39 363 </args>
+    </group>
+    <maximum>
+      <list> add(start_task0,568) add(start_task1,669) add(start_task2,688) add(start_task3,709) add(start_task4,505) add(start_task5,683) add(start_task6,20) add(start_task7,250) add(start_task8,235) add(start_task9,651) add(start_task10,477) add(start_task11,227) add(start_task12,464) add(start_task13,257) add(start_task14,80) add(start_task15,592) add(start_task16,376) add(start_task17,541) add(start_task18,215) add(start_task19,645) add(start_task20,624) add(start_task21,463) add(start_task22,549) add(start_task23,647) add(start_task24,361) add(start_task25,57) add(start_task26,422) add(start_task27,530) add(start_task28,492) add(start_task29,306) add(start_task30,519) add(start_task31,176) add(start_task32,354) add(start_task33,682) add(start_task34,428) add(start_task35,340) add(start_task36,119) add(start_task37,791) add(start_task38,167) add(start_task39,363) </list>
+      <condition> (eq,score) </condition>
+    </maximum>
+    <group>
+      <sum>
+        <list> %... </list>
+        <condition> (eq,%0) </condition>
+      </sum>
+      <args> aux_gb[0] eq(start_task0,add(start_task0,568)) eq(start_task0,add(start_task1,669)) eq(start_task0,add(start_task2,688)) eq(start_task0,add(start_task3,709)) eq(start_task0,add(start_task4,505)) eq(start_task0,add(start_task5,683)) eq(start_task0,add(start_task6,20)) eq(start_task0,add(start_task7,250)) eq(start_task0,add(start_task8,235)) eq(start_task0,add(start_task9,651)) eq(start_task0,add(start_task10,477)) eq(start_task0,add(start_task11,227)) eq(start_task0,add(start_task12,464)) eq(start_task0,add(start_task13,257)) eq(start_task0,add(start_task14,80)) eq(start_task0,add(start_task15,592)) eq(start_task0,add(start_task16,376)) eq(start_task0,add(start_task17,541)) eq(start_task0,add(start_task18,215)) eq(start_task0,add(start_task19,645)) eq(start_task0,add(start_task20,624)) eq(start_task0,add(start_task21,463)) eq(start_task0,add(start_task22,549)) eq(start_task0,add(start_task23,647)) eq(start_task0,add(start_task24,361)) eq(start_task0,add(start_task25,57)) eq(start_task0,add(start_task26,422)) eq(start_task0,add(start_task27,530)) eq(start_task0,add(start_task28,492)) eq(start_task0,add(start_task29,306)) eq(start_task0,add(start_task30,519)) eq(start_task0,add(start_task31,176)) eq(start_task0,add(start_task32,354)) eq(start_task0,add(start_task33,682)) eq(start_task0,add(start_task34,428)) eq(start_task0,add(start_task35,340)) eq(start_task0,add(start_task36,119)) eq(start_task0,add(start_task37,791)) eq(start_task0,add(start_task38,167)) eq(start_task0,add(start_task39,363)) </args>
+      <args> aux_gb[1] eq(start_task1,add(start_task0,568)) eq(start_task1,add(start_task1,669)) eq(start_task1,add(start_task2,688)) eq(start_task1,add(start_task3,709)) eq(start_task1,add(start_task4,505)) eq(start_task1,add(start_task5,683)) eq(start_task1,add(start_task6,20)) eq(start_task1,add(start_task7,250)) eq(start_task1,add(start_task8,235)) eq(start_task1,add(start_task9,651)) eq(start_task1,add(start_task10,477)) eq(start_task1,add(start_task11,227)) eq(start_task1,add(start_task12,464)) eq(start_task1,add(start_task13,257)) eq(start_task1,add(start_task14,80)) eq(start_task1,add(start_task15,592)) eq(start_task1,add(start_task16,376)) eq(start_task1,add(start_task17,541)) eq(start_task1,add(start_task18,215)) eq(start_task1,add(start_task19,645)) eq(start_task1,add(start_task20,624)) eq(start_task1,add(start_task21,463)) eq(start_task1,add(start_task22,549)) eq(start_task1,add(start_task23,647)) eq(start_task1,add(start_task24,361)) eq(start_task1,add(start_task25,57)) eq(start_task1,add(start_task26,422)) eq(start_task1,add(start_task27,530)) eq(start_task1,add(start_task28,492)) eq(start_task1,add(start_task29,306)) eq(start_task1,add(start_task30,519)) eq(start_task1,add(start_task31,176)) eq(start_task1,add(start_task32,354)) eq(start_task1,add(start_task33,682)) eq(start_task1,add(start_task34,428)) eq(start_task1,add(start_task35,340)) eq(start_task1,add(start_task36,119)) eq(start_task1,add(start_task37,791)) eq(start_task1,add(start_task38,167)) eq(start_task1,add(start_task39,363)) </args>
+      <args> aux_gb[2] eq(start_task2,add(start_task0,568)) eq(start_task2,add(start_task1,669)) eq(start_task2,add(start_task2,688)) eq(start_task2,add(start_task3,709)) eq(start_task2,add(start_task4,505)) eq(start_task2,add(start_task5,683)) eq(start_task2,add(start_task6,20)) eq(start_task2,add(start_task7,250)) eq(start_task2,add(start_task8,235)) eq(start_task2,add(start_task9,651)) eq(start_task2,add(start_task10,477)) eq(start_task2,add(start_task11,227)) eq(start_task2,add(start_task12,464)) eq(start_task2,add(start_task13,257)) eq(start_task2,add(start_task14,80)) eq(start_task2,add(start_task15,592)) eq(start_task2,add(start_task16,376)) eq(start_task2,add(start_task17,541)) eq(start_task2,add(start_task18,215)) eq(start_task2,add(start_task19,645)) eq(start_task2,add(start_task20,624)) eq(start_task2,add(start_task21,463)) eq(start_task2,add(start_task22,549)) eq(start_task2,add(start_task23,647)) eq(start_task2,add(start_task24,361)) eq(start_task2,add(start_task25,57)) eq(start_task2,add(start_task26,422)) eq(start_task2,add(start_task27,530)) eq(start_task2,add(start_task28,492)) eq(start_task2,add(start_task29,306)) eq(start_task2,add(start_task30,519)) eq(start_task2,add(start_task31,176)) eq(start_task2,add(start_task32,354)) eq(start_task2,add(start_task33,682)) eq(start_task2,add(start_task34,428)) eq(start_task2,add(start_task35,340)) eq(start_task2,add(start_task36,119)) eq(start_task2,add(start_task37,791)) eq(start_task2,add(start_task38,167)) eq(start_task2,add(start_task39,363)) </args>
+      <args> aux_gb[3] eq(start_task3,add(start_task0,568)) eq(start_task3,add(start_task1,669)) eq(start_task3,add(start_task2,688)) eq(start_task3,add(start_task3,709)) eq(start_task3,add(start_task4,505)) eq(start_task3,add(start_task5,683)) eq(start_task3,add(start_task6,20)) eq(start_task3,add(start_task7,250)) eq(start_task3,add(start_task8,235)) eq(start_task3,add(start_task9,651)) eq(start_task3,add(start_task10,477)) eq(start_task3,add(start_task11,227)) eq(start_task3,add(start_task12,464)) eq(start_task3,add(start_task13,257)) eq(start_task3,add(start_task14,80)) eq(start_task3,add(start_task15,592)) eq(start_task3,add(start_task16,376)) eq(start_task3,add(start_task17,541)) eq(start_task3,add(start_task18,215)) eq(start_task3,add(start_task19,645)) eq(start_task3,add(start_task20,624)) eq(start_task3,add(start_task21,463)) eq(start_task3,add(start_task22,549)) eq(start_task3,add(start_task23,647)) eq(start_task3,add(start_task24,361)) eq(start_task3,add(start_task25,57)) eq(start_task3,add(start_task26,422)) eq(start_task3,add(start_task27,530)) eq(start_task3,add(start_task28,492)) eq(start_task3,add(start_task29,306)) eq(start_task3,add(start_task30,519)) eq(start_task3,add(start_task31,176)) eq(start_task3,add(start_task32,354)) eq(start_task3,add(start_task33,682)) eq(start_task3,add(start_task34,428)) eq(start_task3,add(start_task35,340)) eq(start_task3,add(start_task36,119)) eq(start_task3,add(start_task37,791)) eq(start_task3,add(start_task38,167)) eq(start_task3,add(start_task39,363)) </args>
+      <args> aux_gb[4] eq(start_task4,add(start_task0,568)) eq(start_task4,add(start_task1,669)) eq(start_task4,add(start_task2,688)) eq(start_task4,add(start_task3,709)) eq(start_task4,add(start_task4,505)) eq(start_task4,add(start_task5,683)) eq(start_task4,add(start_task6,20)) eq(start_task4,add(start_task7,250)) eq(start_task4,add(start_task8,235)) eq(start_task4,add(start_task9,651)) eq(start_task4,add(start_task10,477)) eq(start_task4,add(start_task11,227)) eq(start_task4,add(start_task12,464)) eq(start_task4,add(start_task13,257)) eq(start_task4,add(start_task14,80)) eq(start_task4,add(start_task15,592)) eq(start_task4,add(start_task16,376)) eq(start_task4,add(start_task17,541)) eq(start_task4,add(start_task18,215)) eq(start_task4,add(start_task19,645)) eq(start_task4,add(start_task20,624)) eq(start_task4,add(start_task21,463)) eq(start_task4,add(start_task22,549)) eq(start_task4,add(start_task23,647)) eq(start_task4,add(start_task24,361)) eq(start_task4,add(start_task25,57)) eq(start_task4,add(start_task26,422)) eq(start_task4,add(start_task27,530)) eq(start_task4,add(start_task28,492)) eq(start_task4,add(start_task29,306)) eq(start_task4,add(start_task30,519)) eq(start_task4,add(start_task31,176)) eq(start_task4,add(start_task32,354)) eq(start_task4,add(start_task33,682)) eq(start_task4,add(start_task34,428)) eq(start_task4,add(start_task35,340)) eq(start_task4,add(start_task36,119)) eq(start_task4,add(start_task37,791)) eq(start_task4,add(start_task38,167)) eq(start_task4,add(start_task39,363)) </args>
+      <args> aux_gb[5] eq(start_task5,add(start_task0,568)) eq(start_task5,add(start_task1,669)) eq(start_task5,add(start_task2,688)) eq(start_task5,add(start_task3,709)) eq(start_task5,add(start_task4,505)) eq(start_task5,add(start_task5,683)) eq(start_task5,add(start_task6,20)) eq(start_task5,add(start_task7,250)) eq(start_task5,add(start_task8,235)) eq(start_task5,add(start_task9,651)) eq(start_task5,add(start_task10,477)) eq(start_task5,add(start_task11,227)) eq(start_task5,add(start_task12,464)) eq(start_task5,add(start_task13,257)) eq(start_task5,add(start_task14,80)) eq(start_task5,add(start_task15,592)) eq(start_task5,add(start_task16,376)) eq(start_task5,add(start_task17,541)) eq(start_task5,add(start_task18,215)) eq(start_task5,add(start_task19,645)) eq(start_task5,add(start_task20,624)) eq(start_task5,add(start_task21,463)) eq(start_task5,add(start_task22,549)) eq(start_task5,add(start_task23,647)) eq(start_task5,add(start_task24,361)) eq(start_task5,add(start_task25,57)) eq(start_task5,add(start_task26,422)) eq(start_task5,add(start_task27,530)) eq(start_task5,add(start_task28,492)) eq(start_task5,add(start_task29,306)) eq(start_task5,add(start_task30,519)) eq(start_task5,add(start_task31,176)) eq(start_task5,add(start_task32,354)) eq(start_task5,add(start_task33,682)) eq(start_task5,add(start_task34,428)) eq(start_task5,add(start_task35,340)) eq(start_task5,add(start_task36,119)) eq(start_task5,add(start_task37,791)) eq(start_task5,add(start_task38,167)) eq(start_task5,add(start_task39,363)) </args>
+      <args> aux_gb[6] eq(start_task6,add(start_task0,568)) eq(start_task6,add(start_task1,669)) eq(start_task6,add(start_task2,688)) eq(start_task6,add(start_task3,709)) eq(start_task6,add(start_task4,505)) eq(start_task6,add(start_task5,683)) eq(start_task6,add(start_task6,20)) eq(start_task6,add(start_task7,250)) eq(start_task6,add(start_task8,235)) eq(start_task6,add(start_task9,651)) eq(start_task6,add(start_task10,477)) eq(start_task6,add(start_task11,227)) eq(start_task6,add(start_task12,464)) eq(start_task6,add(start_task13,257)) eq(start_task6,add(start_task14,80)) eq(start_task6,add(start_task15,592)) eq(start_task6,add(start_task16,376)) eq(start_task6,add(start_task17,541)) eq(start_task6,add(start_task18,215)) eq(start_task6,add(start_task19,645)) eq(start_task6,add(start_task20,624)) eq(start_task6,add(start_task21,463)) eq(start_task6,add(start_task22,549)) eq(start_task6,add(start_task23,647)) eq(start_task6,add(start_task24,361)) eq(start_task6,add(start_task25,57)) eq(start_task6,add(start_task26,422)) eq(start_task6,add(start_task27,530)) eq(start_task6,add(start_task28,492)) eq(start_task6,add(start_task29,306)) eq(start_task6,add(start_task30,519)) eq(start_task6,add(start_task31,176)) eq(start_task6,add(start_task32,354)) eq(start_task6,add(start_task33,682)) eq(start_task6,add(start_task34,428)) eq(start_task6,add(start_task35,340)) eq(start_task6,add(start_task36,119)) eq(start_task6,add(start_task37,791)) eq(start_task6,add(start_task38,167)) eq(start_task6,add(start_task39,363)) </args>
+      <args> aux_gb[7] eq(start_task7,add(start_task0,568)) eq(start_task7,add(start_task1,669)) eq(start_task7,add(start_task2,688)) eq(start_task7,add(start_task3,709)) eq(start_task7,add(start_task4,505)) eq(start_task7,add(start_task5,683)) eq(start_task7,add(start_task6,20)) eq(start_task7,add(start_task7,250)) eq(start_task7,add(start_task8,235)) eq(start_task7,add(start_task9,651)) eq(start_task7,add(start_task10,477)) eq(start_task7,add(start_task11,227)) eq(start_task7,add(start_task12,464)) eq(start_task7,add(start_task13,257)) eq(start_task7,add(start_task14,80)) eq(start_task7,add(start_task15,592)) eq(start_task7,add(start_task16,376)) eq(start_task7,add(start_task17,541)) eq(start_task7,add(start_task18,215)) eq(start_task7,add(start_task19,645)) eq(start_task7,add(start_task20,624)) eq(start_task7,add(start_task21,463)) eq(start_task7,add(start_task22,549)) eq(start_task7,add(start_task23,647)) eq(start_task7,add(start_task24,361)) eq(start_task7,add(start_task25,57)) eq(start_task7,add(start_task26,422)) eq(start_task7,add(start_task27,530)) eq(start_task7,add(start_task28,492)) eq(start_task7,add(start_task29,306)) eq(start_task7,add(start_task30,519)) eq(start_task7,add(start_task31,176)) eq(start_task7,add(start_task32,354)) eq(start_task7,add(start_task33,682)) eq(start_task7,add(start_task34,428)) eq(start_task7,add(start_task35,340)) eq(start_task7,add(start_task36,119)) eq(start_task7,add(start_task37,791)) eq(start_task7,add(start_task38,167)) eq(start_task7,add(start_task39,363)) </args>
+      <args> aux_gb[8] eq(start_task8,add(start_task0,568)) eq(start_task8,add(start_task1,669)) eq(start_task8,add(start_task2,688)) eq(start_task8,add(start_task3,709)) eq(start_task8,add(start_task4,505)) eq(start_task8,add(start_task5,683)) eq(start_task8,add(start_task6,20)) eq(start_task8,add(start_task7,250)) eq(start_task8,add(start_task8,235)) eq(start_task8,add(start_task9,651)) eq(start_task8,add(start_task10,477)) eq(start_task8,add(start_task11,227)) eq(start_task8,add(start_task12,464)) eq(start_task8,add(start_task13,257)) eq(start_task8,add(start_task14,80)) eq(start_task8,add(start_task15,592)) eq(start_task8,add(start_task16,376)) eq(start_task8,add(start_task17,541)) eq(start_task8,add(start_task18,215)) eq(start_task8,add(start_task19,645)) eq(start_task8,add(start_task20,624)) eq(start_task8,add(start_task21,463)) eq(start_task8,add(start_task22,549)) eq(start_task8,add(start_task23,647)) eq(start_task8,add(start_task24,361)) eq(start_task8,add(start_task25,57)) eq(start_task8,add(start_task26,422)) eq(start_task8,add(start_task27,530)) eq(start_task8,add(start_task28,492)) eq(start_task8,add(start_task29,306)) eq(start_task8,add(start_task30,519)) eq(start_task8,add(start_task31,176)) eq(start_task8,add(start_task32,354)) eq(start_task8,add(start_task33,682)) eq(start_task8,add(start_task34,428)) eq(start_task8,add(start_task35,340)) eq(start_task8,add(start_task36,119)) eq(start_task8,add(start_task37,791)) eq(start_task8,add(start_task38,167)) eq(start_task8,add(start_task39,363)) </args>
+      <args> aux_gb[9] eq(start_task9,add(start_task0,568)) eq(start_task9,add(start_task1,669)) eq(start_task9,add(start_task2,688)) eq(start_task9,add(start_task3,709)) eq(start_task9,add(start_task4,505)) eq(start_task9,add(start_task5,683)) eq(start_task9,add(start_task6,20)) eq(start_task9,add(start_task7,250)) eq(start_task9,add(start_task8,235)) eq(start_task9,add(start_task9,651)) eq(start_task9,add(start_task10,477)) eq(start_task9,add(start_task11,227)) eq(start_task9,add(start_task12,464)) eq(start_task9,add(start_task13,257)) eq(start_task9,add(start_task14,80)) eq(start_task9,add(start_task15,592)) eq(start_task9,add(start_task16,376)) eq(start_task9,add(start_task17,541)) eq(start_task9,add(start_task18,215)) eq(start_task9,add(start_task19,645)) eq(start_task9,add(start_task20,624)) eq(start_task9,add(start_task21,463)) eq(start_task9,add(start_task22,549)) eq(start_task9,add(start_task23,647)) eq(start_task9,add(start_task24,361)) eq(start_task9,add(start_task25,57)) eq(start_task9,add(start_task26,422)) eq(start_task9,add(start_task27,530)) eq(start_task9,add(start_task28,492)) eq(start_task9,add(start_task29,306)) eq(start_task9,add(start_task30,519)) eq(start_task9,add(start_task31,176)) eq(start_task9,add(start_task32,354)) eq(start_task9,add(start_task33,682)) eq(start_task9,add(start_task34,428)) eq(start_task9,add(start_task35,340)) eq(start_task9,add(start_task36,119)) eq(start_task9,add(start_task37,791)) eq(start_task9,add(start_task38,167)) eq(start_task9,add(start_task39,363)) </args>
+      <args> aux_gb[10] eq(start_task10,add(start_task0,568)) eq(start_task10,add(start_task1,669)) eq(start_task10,add(start_task2,688)) eq(start_task10,add(start_task3,709)) eq(start_task10,add(start_task4,505)) eq(start_task10,add(start_task5,683)) eq(start_task10,add(start_task6,20)) eq(start_task10,add(start_task7,250)) eq(start_task10,add(start_task8,235)) eq(start_task10,add(start_task9,651)) eq(start_task10,add(start_task10,477)) eq(start_task10,add(start_task11,227)) eq(start_task10,add(start_task12,464)) eq(start_task10,add(start_task13,257)) eq(start_task10,add(start_task14,80)) eq(start_task10,add(start_task15,592)) eq(start_task10,add(start_task16,376)) eq(start_task10,add(start_task17,541)) eq(start_task10,add(start_task18,215)) eq(start_task10,add(start_task19,645)) eq(start_task10,add(start_task20,624)) eq(start_task10,add(start_task21,463)) eq(start_task10,add(start_task22,549)) eq(start_task10,add(start_task23,647)) eq(start_task10,add(start_task24,361)) eq(start_task10,add(start_task25,57)) eq(start_task10,add(start_task26,422)) eq(start_task10,add(start_task27,530)) eq(start_task10,add(start_task28,492)) eq(start_task10,add(start_task29,306)) eq(start_task10,add(start_task30,519)) eq(start_task10,add(start_task31,176)) eq(start_task10,add(start_task32,354)) eq(start_task10,add(start_task33,682)) eq(start_task10,add(start_task34,428)) eq(start_task10,add(start_task35,340)) eq(start_task10,add(start_task36,119)) eq(start_task10,add(start_task37,791)) eq(start_task10,add(start_task38,167)) eq(start_task10,add(start_task39,363)) </args>
+      <args> aux_gb[11] eq(start_task11,add(start_task0,568)) eq(start_task11,add(start_task1,669)) eq(start_task11,add(start_task2,688)) eq(start_task11,add(start_task3,709)) eq(start_task11,add(start_task4,505)) eq(start_task11,add(start_task5,683)) eq(start_task11,add(start_task6,20)) eq(start_task11,add(start_task7,250)) eq(start_task11,add(start_task8,235)) eq(start_task11,add(start_task9,651)) eq(start_task11,add(start_task10,477)) eq(start_task11,add(start_task11,227)) eq(start_task11,add(start_task12,464)) eq(start_task11,add(start_task13,257)) eq(start_task11,add(start_task14,80)) eq(start_task11,add(start_task15,592)) eq(start_task11,add(start_task16,376)) eq(start_task11,add(start_task17,541)) eq(start_task11,add(start_task18,215)) eq(start_task11,add(start_task19,645)) eq(start_task11,add(start_task20,624)) eq(start_task11,add(start_task21,463)) eq(start_task11,add(start_task22,549)) eq(start_task11,add(start_task23,647)) eq(start_task11,add(start_task24,361)) eq(start_task11,add(start_task25,57)) eq(start_task11,add(start_task26,422)) eq(start_task11,add(start_task27,530)) eq(start_task11,add(start_task28,492)) eq(start_task11,add(start_task29,306)) eq(start_task11,add(start_task30,519)) eq(start_task11,add(start_task31,176)) eq(start_task11,add(start_task32,354)) eq(start_task11,add(start_task33,682)) eq(start_task11,add(start_task34,428)) eq(start_task11,add(start_task35,340)) eq(start_task11,add(start_task36,119)) eq(start_task11,add(start_task37,791)) eq(start_task11,add(start_task38,167)) eq(start_task11,add(start_task39,363)) </args>
+      <args> aux_gb[12] eq(start_task12,add(start_task0,568)) eq(start_task12,add(start_task1,669)) eq(start_task12,add(start_task2,688)) eq(start_task12,add(start_task3,709)) eq(start_task12,add(start_task4,505)) eq(start_task12,add(start_task5,683)) eq(start_task12,add(start_task6,20)) eq(start_task12,add(start_task7,250)) eq(start_task12,add(start_task8,235)) eq(start_task12,add(start_task9,651)) eq(start_task12,add(start_task10,477)) eq(start_task12,add(start_task11,227)) eq(start_task12,add(start_task12,464)) eq(start_task12,add(start_task13,257)) eq(start_task12,add(start_task14,80)) eq(start_task12,add(start_task15,592)) eq(start_task12,add(start_task16,376)) eq(start_task12,add(start_task17,541)) eq(start_task12,add(start_task18,215)) eq(start_task12,add(start_task19,645)) eq(start_task12,add(start_task20,624)) eq(start_task12,add(start_task21,463)) eq(start_task12,add(start_task22,549)) eq(start_task12,add(start_task23,647)) eq(start_task12,add(start_task24,361)) eq(start_task12,add(start_task25,57)) eq(start_task12,add(start_task26,422)) eq(start_task12,add(start_task27,530)) eq(start_task12,add(start_task28,492)) eq(start_task12,add(start_task29,306)) eq(start_task12,add(start_task30,519)) eq(start_task12,add(start_task31,176)) eq(start_task12,add(start_task32,354)) eq(start_task12,add(start_task33,682)) eq(start_task12,add(start_task34,428)) eq(start_task12,add(start_task35,340)) eq(start_task12,add(start_task36,119)) eq(start_task12,add(start_task37,791)) eq(start_task12,add(start_task38,167)) eq(start_task12,add(start_task39,363)) </args>
+      <args> aux_gb[13] eq(start_task13,add(start_task0,568)) eq(start_task13,add(start_task1,669)) eq(start_task13,add(start_task2,688)) eq(start_task13,add(start_task3,709)) eq(start_task13,add(start_task4,505)) eq(start_task13,add(start_task5,683)) eq(start_task13,add(start_task6,20)) eq(start_task13,add(start_task7,250)) eq(start_task13,add(start_task8,235)) eq(start_task13,add(start_task9,651)) eq(start_task13,add(start_task10,477)) eq(start_task13,add(start_task11,227)) eq(start_task13,add(start_task12,464)) eq(start_task13,add(start_task13,257)) eq(start_task13,add(start_task14,80)) eq(start_task13,add(start_task15,592)) eq(start_task13,add(start_task16,376)) eq(start_task13,add(start_task17,541)) eq(start_task13,add(start_task18,215)) eq(start_task13,add(start_task19,645)) eq(start_task13,add(start_task20,624)) eq(start_task13,add(start_task21,463)) eq(start_task13,add(start_task22,549)) eq(start_task13,add(start_task23,647)) eq(start_task13,add(start_task24,361)) eq(start_task13,add(start_task25,57)) eq(start_task13,add(start_task26,422)) eq(start_task13,add(start_task27,530)) eq(start_task13,add(start_task28,492)) eq(start_task13,add(start_task29,306)) eq(start_task13,add(start_task30,519)) eq(start_task13,add(start_task31,176)) eq(start_task13,add(start_task32,354)) eq(start_task13,add(start_task33,682)) eq(start_task13,add(start_task34,428)) eq(start_task13,add(start_task35,340)) eq(start_task13,add(start_task36,119)) eq(start_task13,add(start_task37,791)) eq(start_task13,add(start_task38,167)) eq(start_task13,add(start_task39,363)) </args>
+      <args> aux_gb[14] eq(start_task14,add(start_task0,568)) eq(start_task14,add(start_task1,669)) eq(start_task14,add(start_task2,688)) eq(start_task14,add(start_task3,709)) eq(start_task14,add(start_task4,505)) eq(start_task14,add(start_task5,683)) eq(start_task14,add(start_task6,20)) eq(start_task14,add(start_task7,250)) eq(start_task14,add(start_task8,235)) eq(start_task14,add(start_task9,651)) eq(start_task14,add(start_task10,477)) eq(start_task14,add(start_task11,227)) eq(start_task14,add(start_task12,464)) eq(start_task14,add(start_task13,257)) eq(start_task14,add(start_task14,80)) eq(start_task14,add(start_task15,592)) eq(start_task14,add(start_task16,376)) eq(start_task14,add(start_task17,541)) eq(start_task14,add(start_task18,215)) eq(start_task14,add(start_task19,645)) eq(start_task14,add(start_task20,624)) eq(start_task14,add(start_task21,463)) eq(start_task14,add(start_task22,549)) eq(start_task14,add(start_task23,647)) eq(start_task14,add(start_task24,361)) eq(start_task14,add(start_task25,57)) eq(start_task14,add(start_task26,422)) eq(start_task14,add(start_task27,530)) eq(start_task14,add(start_task28,492)) eq(start_task14,add(start_task29,306)) eq(start_task14,add(start_task30,519)) eq(start_task14,add(start_task31,176)) eq(start_task14,add(start_task32,354)) eq(start_task14,add(start_task33,682)) eq(start_task14,add(start_task34,428)) eq(start_task14,add(start_task35,340)) eq(start_task14,add(start_task36,119)) eq(start_task14,add(start_task37,791)) eq(start_task14,add(start_task38,167)) eq(start_task14,add(start_task39,363)) </args>
+      <args> aux_gb[15] eq(start_task15,add(start_task0,568)) eq(start_task15,add(start_task1,669)) eq(start_task15,add(start_task2,688)) eq(start_task15,add(start_task3,709)) eq(start_task15,add(start_task4,505)) eq(start_task15,add(start_task5,683)) eq(start_task15,add(start_task6,20)) eq(start_task15,add(start_task7,250)) eq(start_task15,add(start_task8,235)) eq(start_task15,add(start_task9,651)) eq(start_task15,add(start_task10,477)) eq(start_task15,add(start_task11,227)) eq(start_task15,add(start_task12,464)) eq(start_task15,add(start_task13,257)) eq(start_task15,add(start_task14,80)) eq(start_task15,add(start_task15,592)) eq(start_task15,add(start_task16,376)) eq(start_task15,add(start_task17,541)) eq(start_task15,add(start_task18,215)) eq(start_task15,add(start_task19,645)) eq(start_task15,add(start_task20,624)) eq(start_task15,add(start_task21,463)) eq(start_task15,add(start_task22,549)) eq(start_task15,add(start_task23,647)) eq(start_task15,add(start_task24,361)) eq(start_task15,add(start_task25,57)) eq(start_task15,add(start_task26,422)) eq(start_task15,add(start_task27,530)) eq(start_task15,add(start_task28,492)) eq(start_task15,add(start_task29,306)) eq(start_task15,add(start_task30,519)) eq(start_task15,add(start_task31,176)) eq(start_task15,add(start_task32,354)) eq(start_task15,add(start_task33,682)) eq(start_task15,add(start_task34,428)) eq(start_task15,add(start_task35,340)) eq(start_task15,add(start_task36,119)) eq(start_task15,add(start_task37,791)) eq(start_task15,add(start_task38,167)) eq(start_task15,add(start_task39,363)) </args>
+      <args> aux_gb[16] eq(start_task16,add(start_task0,568)) eq(start_task16,add(start_task1,669)) eq(start_task16,add(start_task2,688)) eq(start_task16,add(start_task3,709)) eq(start_task16,add(start_task4,505)) eq(start_task16,add(start_task5,683)) eq(start_task16,add(start_task6,20)) eq(start_task16,add(start_task7,250)) eq(start_task16,add(start_task8,235)) eq(start_task16,add(start_task9,651)) eq(start_task16,add(start_task10,477)) eq(start_task16,add(start_task11,227)) eq(start_task16,add(start_task12,464)) eq(start_task16,add(start_task13,257)) eq(start_task16,add(start_task14,80)) eq(start_task16,add(start_task15,592)) eq(start_task16,add(start_task16,376)) eq(start_task16,add(start_task17,541)) eq(start_task16,add(start_task18,215)) eq(start_task16,add(start_task19,645)) eq(start_task16,add(start_task20,624)) eq(start_task16,add(start_task21,463)) eq(start_task16,add(start_task22,549)) eq(start_task16,add(start_task23,647)) eq(start_task16,add(start_task24,361)) eq(start_task16,add(start_task25,57)) eq(start_task16,add(start_task26,422)) eq(start_task16,add(start_task27,530)) eq(start_task16,add(start_task28,492)) eq(start_task16,add(start_task29,306)) eq(start_task16,add(start_task30,519)) eq(start_task16,add(start_task31,176)) eq(start_task16,add(start_task32,354)) eq(start_task16,add(start_task33,682)) eq(start_task16,add(start_task34,428)) eq(start_task16,add(start_task35,340)) eq(start_task16,add(start_task36,119)) eq(start_task16,add(start_task37,791)) eq(start_task16,add(start_task38,167)) eq(start_task16,add(start_task39,363)) </args>
+      <args> aux_gb[17] eq(start_task17,add(start_task0,568)) eq(start_task17,add(start_task1,669)) eq(start_task17,add(start_task2,688)) eq(start_task17,add(start_task3,709)) eq(start_task17,add(start_task4,505)) eq(start_task17,add(start_task5,683)) eq(start_task17,add(start_task6,20)) eq(start_task17,add(start_task7,250)) eq(start_task17,add(start_task8,235)) eq(start_task17,add(start_task9,651)) eq(start_task17,add(start_task10,477)) eq(start_task17,add(start_task11,227)) eq(start_task17,add(start_task12,464)) eq(start_task17,add(start_task13,257)) eq(start_task17,add(start_task14,80)) eq(start_task17,add(start_task15,592)) eq(start_task17,add(start_task16,376)) eq(start_task17,add(start_task17,541)) eq(start_task17,add(start_task18,215)) eq(start_task17,add(start_task19,645)) eq(start_task17,add(start_task20,624)) eq(start_task17,add(start_task21,463)) eq(start_task17,add(start_task22,549)) eq(start_task17,add(start_task23,647)) eq(start_task17,add(start_task24,361)) eq(start_task17,add(start_task25,57)) eq(start_task17,add(start_task26,422)) eq(start_task17,add(start_task27,530)) eq(start_task17,add(start_task28,492)) eq(start_task17,add(start_task29,306)) eq(start_task17,add(start_task30,519)) eq(start_task17,add(start_task31,176)) eq(start_task17,add(start_task32,354)) eq(start_task17,add(start_task33,682)) eq(start_task17,add(start_task34,428)) eq(start_task17,add(start_task35,340)) eq(start_task17,add(start_task36,119)) eq(start_task17,add(start_task37,791)) eq(start_task17,add(start_task38,167)) eq(start_task17,add(start_task39,363)) </args>
+      <args> aux_gb[18] eq(start_task18,add(start_task0,568)) eq(start_task18,add(start_task1,669)) eq(start_task18,add(start_task2,688)) eq(start_task18,add(start_task3,709)) eq(start_task18,add(start_task4,505)) eq(start_task18,add(start_task5,683)) eq(start_task18,add(start_task6,20)) eq(start_task18,add(start_task7,250)) eq(start_task18,add(start_task8,235)) eq(start_task18,add(start_task9,651)) eq(start_task18,add(start_task10,477)) eq(start_task18,add(start_task11,227)) eq(start_task18,add(start_task12,464)) eq(start_task18,add(start_task13,257)) eq(start_task18,add(start_task14,80)) eq(start_task18,add(start_task15,592)) eq(start_task18,add(start_task16,376)) eq(start_task18,add(start_task17,541)) eq(start_task18,add(start_task18,215)) eq(start_task18,add(start_task19,645)) eq(start_task18,add(start_task20,624)) eq(start_task18,add(start_task21,463)) eq(start_task18,add(start_task22,549)) eq(start_task18,add(start_task23,647)) eq(start_task18,add(start_task24,361)) eq(start_task18,add(start_task25,57)) eq(start_task18,add(start_task26,422)) eq(start_task18,add(start_task27,530)) eq(start_task18,add(start_task28,492)) eq(start_task18,add(start_task29,306)) eq(start_task18,add(start_task30,519)) eq(start_task18,add(start_task31,176)) eq(start_task18,add(start_task32,354)) eq(start_task18,add(start_task33,682)) eq(start_task18,add(start_task34,428)) eq(start_task18,add(start_task35,340)) eq(start_task18,add(start_task36,119)) eq(start_task18,add(start_task37,791)) eq(start_task18,add(start_task38,167)) eq(start_task18,add(start_task39,363)) </args>
+      <args> aux_gb[19] eq(start_task19,add(start_task0,568)) eq(start_task19,add(start_task1,669)) eq(start_task19,add(start_task2,688)) eq(start_task19,add(start_task3,709)) eq(start_task19,add(start_task4,505)) eq(start_task19,add(start_task5,683)) eq(start_task19,add(start_task6,20)) eq(start_task19,add(start_task7,250)) eq(start_task19,add(start_task8,235)) eq(start_task19,add(start_task9,651)) eq(start_task19,add(start_task10,477)) eq(start_task19,add(start_task11,227)) eq(start_task19,add(start_task12,464)) eq(start_task19,add(start_task13,257)) eq(start_task19,add(start_task14,80)) eq(start_task19,add(start_task15,592)) eq(start_task19,add(start_task16,376)) eq(start_task19,add(start_task17,541)) eq(start_task19,add(start_task18,215)) eq(start_task19,add(start_task19,645)) eq(start_task19,add(start_task20,624)) eq(start_task19,add(start_task21,463)) eq(start_task19,add(start_task22,549)) eq(start_task19,add(start_task23,647)) eq(start_task19,add(start_task24,361)) eq(start_task19,add(start_task25,57)) eq(start_task19,add(start_task26,422)) eq(start_task19,add(start_task27,530)) eq(start_task19,add(start_task28,492)) eq(start_task19,add(start_task29,306)) eq(start_task19,add(start_task30,519)) eq(start_task19,add(start_task31,176)) eq(start_task19,add(start_task32,354)) eq(start_task19,add(start_task33,682)) eq(start_task19,add(start_task34,428)) eq(start_task19,add(start_task35,340)) eq(start_task19,add(start_task36,119)) eq(start_task19,add(start_task37,791)) eq(start_task19,add(start_task38,167)) eq(start_task19,add(start_task39,363)) </args>
+      <args> aux_gb[20] eq(start_task20,add(start_task0,568)) eq(start_task20,add(start_task1,669)) eq(start_task20,add(start_task2,688)) eq(start_task20,add(start_task3,709)) eq(start_task20,add(start_task4,505)) eq(start_task20,add(start_task5,683)) eq(start_task20,add(start_task6,20)) eq(start_task20,add(start_task7,250)) eq(start_task20,add(start_task8,235)) eq(start_task20,add(start_task9,651)) eq(start_task20,add(start_task10,477)) eq(start_task20,add(start_task11,227)) eq(start_task20,add(start_task12,464)) eq(start_task20,add(start_task13,257)) eq(start_task20,add(start_task14,80)) eq(start_task20,add(start_task15,592)) eq(start_task20,add(start_task16,376)) eq(start_task20,add(start_task17,541)) eq(start_task20,add(start_task18,215)) eq(start_task20,add(start_task19,645)) eq(start_task20,add(start_task20,624)) eq(start_task20,add(start_task21,463)) eq(start_task20,add(start_task22,549)) eq(start_task20,add(start_task23,647)) eq(start_task20,add(start_task24,361)) eq(start_task20,add(start_task25,57)) eq(start_task20,add(start_task26,422)) eq(start_task20,add(start_task27,530)) eq(start_task20,add(start_task28,492)) eq(start_task20,add(start_task29,306)) eq(start_task20,add(start_task30,519)) eq(start_task20,add(start_task31,176)) eq(start_task20,add(start_task32,354)) eq(start_task20,add(start_task33,682)) eq(start_task20,add(start_task34,428)) eq(start_task20,add(start_task35,340)) eq(start_task20,add(start_task36,119)) eq(start_task20,add(start_task37,791)) eq(start_task20,add(start_task38,167)) eq(start_task20,add(start_task39,363)) </args>
+      <args> aux_gb[21] eq(start_task21,add(start_task0,568)) eq(start_task21,add(start_task1,669)) eq(start_task21,add(start_task2,688)) eq(start_task21,add(start_task3,709)) eq(start_task21,add(start_task4,505)) eq(start_task21,add(start_task5,683)) eq(start_task21,add(start_task6,20)) eq(start_task21,add(start_task7,250)) eq(start_task21,add(start_task8,235)) eq(start_task21,add(start_task9,651)) eq(start_task21,add(start_task10,477)) eq(start_task21,add(start_task11,227)) eq(start_task21,add(start_task12,464)) eq(start_task21,add(start_task13,257)) eq(start_task21,add(start_task14,80)) eq(start_task21,add(start_task15,592)) eq(start_task21,add(start_task16,376)) eq(start_task21,add(start_task17,541)) eq(start_task21,add(start_task18,215)) eq(start_task21,add(start_task19,645)) eq(start_task21,add(start_task20,624)) eq(start_task21,add(start_task21,463)) eq(start_task21,add(start_task22,549)) eq(start_task21,add(start_task23,647)) eq(start_task21,add(start_task24,361)) eq(start_task21,add(start_task25,57)) eq(start_task21,add(start_task26,422)) eq(start_task21,add(start_task27,530)) eq(start_task21,add(start_task28,492)) eq(start_task21,add(start_task29,306)) eq(start_task21,add(start_task30,519)) eq(start_task21,add(start_task31,176)) eq(start_task21,add(start_task32,354)) eq(start_task21,add(start_task33,682)) eq(start_task21,add(start_task34,428)) eq(start_task21,add(start_task35,340)) eq(start_task21,add(start_task36,119)) eq(start_task21,add(start_task37,791)) eq(start_task21,add(start_task38,167)) eq(start_task21,add(start_task39,363)) </args>
+      <args> aux_gb[22] eq(start_task22,add(start_task0,568)) eq(start_task22,add(start_task1,669)) eq(start_task22,add(start_task2,688)) eq(start_task22,add(start_task3,709)) eq(start_task22,add(start_task4,505)) eq(start_task22,add(start_task5,683)) eq(start_task22,add(start_task6,20)) eq(start_task22,add(start_task7,250)) eq(start_task22,add(start_task8,235)) eq(start_task22,add(start_task9,651)) eq(start_task22,add(start_task10,477)) eq(start_task22,add(start_task11,227)) eq(start_task22,add(start_task12,464)) eq(start_task22,add(start_task13,257)) eq(start_task22,add(start_task14,80)) eq(start_task22,add(start_task15,592)) eq(start_task22,add(start_task16,376)) eq(start_task22,add(start_task17,541)) eq(start_task22,add(start_task18,215)) eq(start_task22,add(start_task19,645)) eq(start_task22,add(start_task20,624)) eq(start_task22,add(start_task21,463)) eq(start_task22,add(start_task22,549)) eq(start_task22,add(start_task23,647)) eq(start_task22,add(start_task24,361)) eq(start_task22,add(start_task25,57)) eq(start_task22,add(start_task26,422)) eq(start_task22,add(start_task27,530)) eq(start_task22,add(start_task28,492)) eq(start_task22,add(start_task29,306)) eq(start_task22,add(start_task30,519)) eq(start_task22,add(start_task31,176)) eq(start_task22,add(start_task32,354)) eq(start_task22,add(start_task33,682)) eq(start_task22,add(start_task34,428)) eq(start_task22,add(start_task35,340)) eq(start_task22,add(start_task36,119)) eq(start_task22,add(start_task37,791)) eq(start_task22,add(start_task38,167)) eq(start_task22,add(start_task39,363)) </args>
+      <args> aux_gb[23] eq(start_task23,add(start_task0,568)) eq(start_task23,add(start_task1,669)) eq(start_task23,add(start_task2,688)) eq(start_task23,add(start_task3,709)) eq(start_task23,add(start_task4,505)) eq(start_task23,add(start_task5,683)) eq(start_task23,add(start_task6,20)) eq(start_task23,add(start_task7,250)) eq(start_task23,add(start_task8,235)) eq(start_task23,add(start_task9,651)) eq(start_task23,add(start_task10,477)) eq(start_task23,add(start_task11,227)) eq(start_task23,add(start_task12,464)) eq(start_task23,add(start_task13,257)) eq(start_task23,add(start_task14,80)) eq(start_task23,add(start_task15,592)) eq(start_task23,add(start_task16,376)) eq(start_task23,add(start_task17,541)) eq(start_task23,add(start_task18,215)) eq(start_task23,add(start_task19,645)) eq(start_task23,add(start_task20,624)) eq(start_task23,add(start_task21,463)) eq(start_task23,add(start_task22,549)) eq(start_task23,add(start_task23,647)) eq(start_task23,add(start_task24,361)) eq(start_task23,add(start_task25,57)) eq(start_task23,add(start_task26,422)) eq(start_task23,add(start_task27,530)) eq(start_task23,add(start_task28,492)) eq(start_task23,add(start_task29,306)) eq(start_task23,add(start_task30,519)) eq(start_task23,add(start_task31,176)) eq(start_task23,add(start_task32,354)) eq(start_task23,add(start_task33,682)) eq(start_task23,add(start_task34,428)) eq(start_task23,add(start_task35,340)) eq(start_task23,add(start_task36,119)) eq(start_task23,add(start_task37,791)) eq(start_task23,add(start_task38,167)) eq(start_task23,add(start_task39,363)) </args>
+      <args> aux_gb[24] eq(start_task24,add(start_task0,568)) eq(start_task24,add(start_task1,669)) eq(start_task24,add(start_task2,688)) eq(start_task24,add(start_task3,709)) eq(start_task24,add(start_task4,505)) eq(start_task24,add(start_task5,683)) eq(start_task24,add(start_task6,20)) eq(start_task24,add(start_task7,250)) eq(start_task24,add(start_task8,235)) eq(start_task24,add(start_task9,651)) eq(start_task24,add(start_task10,477)) eq(start_task24,add(start_task11,227)) eq(start_task24,add(start_task12,464)) eq(start_task24,add(start_task13,257)) eq(start_task24,add(start_task14,80)) eq(start_task24,add(start_task15,592)) eq(start_task24,add(start_task16,376)) eq(start_task24,add(start_task17,541)) eq(start_task24,add(start_task18,215)) eq(start_task24,add(start_task19,645)) eq(start_task24,add(start_task20,624)) eq(start_task24,add(start_task21,463)) eq(start_task24,add(start_task22,549)) eq(start_task24,add(start_task23,647)) eq(start_task24,add(start_task24,361)) eq(start_task24,add(start_task25,57)) eq(start_task24,add(start_task26,422)) eq(start_task24,add(start_task27,530)) eq(start_task24,add(start_task28,492)) eq(start_task24,add(start_task29,306)) eq(start_task24,add(start_task30,519)) eq(start_task24,add(start_task31,176)) eq(start_task24,add(start_task32,354)) eq(start_task24,add(start_task33,682)) eq(start_task24,add(start_task34,428)) eq(start_task24,add(start_task35,340)) eq(start_task24,add(start_task36,119)) eq(start_task24,add(start_task37,791)) eq(start_task24,add(start_task38,167)) eq(start_task24,add(start_task39,363)) </args>
+      <args> aux_gb[25] eq(start_task25,add(start_task0,568)) eq(start_task25,add(start_task1,669)) eq(start_task25,add(start_task2,688)) eq(start_task25,add(start_task3,709)) eq(start_task25,add(start_task4,505)) eq(start_task25,add(start_task5,683)) eq(start_task25,add(start_task6,20)) eq(start_task25,add(start_task7,250)) eq(start_task25,add(start_task8,235)) eq(start_task25,add(start_task9,651)) eq(start_task25,add(start_task10,477)) eq(start_task25,add(start_task11,227)) eq(start_task25,add(start_task12,464)) eq(start_task25,add(start_task13,257)) eq(start_task25,add(start_task14,80)) eq(start_task25,add(start_task15,592)) eq(start_task25,add(start_task16,376)) eq(start_task25,add(start_task17,541)) eq(start_task25,add(start_task18,215)) eq(start_task25,add(start_task19,645)) eq(start_task25,add(start_task20,624)) eq(start_task25,add(start_task21,463)) eq(start_task25,add(start_task22,549)) eq(start_task25,add(start_task23,647)) eq(start_task25,add(start_task24,361)) eq(start_task25,add(start_task25,57)) eq(start_task25,add(start_task26,422)) eq(start_task25,add(start_task27,530)) eq(start_task25,add(start_task28,492)) eq(start_task25,add(start_task29,306)) eq(start_task25,add(start_task30,519)) eq(start_task25,add(start_task31,176)) eq(start_task25,add(start_task32,354)) eq(start_task25,add(start_task33,682)) eq(start_task25,add(start_task34,428)) eq(start_task25,add(start_task35,340)) eq(start_task25,add(start_task36,119)) eq(start_task25,add(start_task37,791)) eq(start_task25,add(start_task38,167)) eq(start_task25,add(start_task39,363)) </args>
+      <args> aux_gb[26] eq(start_task26,add(start_task0,568)) eq(start_task26,add(start_task1,669)) eq(start_task26,add(start_task2,688)) eq(start_task26,add(start_task3,709)) eq(start_task26,add(start_task4,505)) eq(start_task26,add(start_task5,683)) eq(start_task26,add(start_task6,20)) eq(start_task26,add(start_task7,250)) eq(start_task26,add(start_task8,235)) eq(start_task26,add(start_task9,651)) eq(start_task26,add(start_task10,477)) eq(start_task26,add(start_task11,227)) eq(start_task26,add(start_task12,464)) eq(start_task26,add(start_task13,257)) eq(start_task26,add(start_task14,80)) eq(start_task26,add(start_task15,592)) eq(start_task26,add(start_task16,376)) eq(start_task26,add(start_task17,541)) eq(start_task26,add(start_task18,215)) eq(start_task26,add(start_task19,645)) eq(start_task26,add(start_task20,624)) eq(start_task26,add(start_task21,463)) eq(start_task26,add(start_task22,549)) eq(start_task26,add(start_task23,647)) eq(start_task26,add(start_task24,361)) eq(start_task26,add(start_task25,57)) eq(start_task26,add(start_task26,422)) eq(start_task26,add(start_task27,530)) eq(start_task26,add(start_task28,492)) eq(start_task26,add(start_task29,306)) eq(start_task26,add(start_task30,519)) eq(start_task26,add(start_task31,176)) eq(start_task26,add(start_task32,354)) eq(start_task26,add(start_task33,682)) eq(start_task26,add(start_task34,428)) eq(start_task26,add(start_task35,340)) eq(start_task26,add(start_task36,119)) eq(start_task26,add(start_task37,791)) eq(start_task26,add(start_task38,167)) eq(start_task26,add(start_task39,363)) </args>
+      <args> aux_gb[27] eq(start_task27,add(start_task0,568)) eq(start_task27,add(start_task1,669)) eq(start_task27,add(start_task2,688)) eq(start_task27,add(start_task3,709)) eq(start_task27,add(start_task4,505)) eq(start_task27,add(start_task5,683)) eq(start_task27,add(start_task6,20)) eq(start_task27,add(start_task7,250)) eq(start_task27,add(start_task8,235)) eq(start_task27,add(start_task9,651)) eq(start_task27,add(start_task10,477)) eq(start_task27,add(start_task11,227)) eq(start_task27,add(start_task12,464)) eq(start_task27,add(start_task13,257)) eq(start_task27,add(start_task14,80)) eq(start_task27,add(start_task15,592)) eq(start_task27,add(start_task16,376)) eq(start_task27,add(start_task17,541)) eq(start_task27,add(start_task18,215)) eq(start_task27,add(start_task19,645)) eq(start_task27,add(start_task20,624)) eq(start_task27,add(start_task21,463)) eq(start_task27,add(start_task22,549)) eq(start_task27,add(start_task23,647)) eq(start_task27,add(start_task24,361)) eq(start_task27,add(start_task25,57)) eq(start_task27,add(start_task26,422)) eq(start_task27,add(start_task27,530)) eq(start_task27,add(start_task28,492)) eq(start_task27,add(start_task29,306)) eq(start_task27,add(start_task30,519)) eq(start_task27,add(start_task31,176)) eq(start_task27,add(start_task32,354)) eq(start_task27,add(start_task33,682)) eq(start_task27,add(start_task34,428)) eq(start_task27,add(start_task35,340)) eq(start_task27,add(start_task36,119)) eq(start_task27,add(start_task37,791)) eq(start_task27,add(start_task38,167)) eq(start_task27,add(start_task39,363)) </args>
+      <args> aux_gb[28] eq(start_task28,add(start_task0,568)) eq(start_task28,add(start_task1,669)) eq(start_task28,add(start_task2,688)) eq(start_task28,add(start_task3,709)) eq(start_task28,add(start_task4,505)) eq(start_task28,add(start_task5,683)) eq(start_task28,add(start_task6,20)) eq(start_task28,add(start_task7,250)) eq(start_task28,add(start_task8,235)) eq(start_task28,add(start_task9,651)) eq(start_task28,add(start_task10,477)) eq(start_task28,add(start_task11,227)) eq(start_task28,add(start_task12,464)) eq(start_task28,add(start_task13,257)) eq(start_task28,add(start_task14,80)) eq(start_task28,add(start_task15,592)) eq(start_task28,add(start_task16,376)) eq(start_task28,add(start_task17,541)) eq(start_task28,add(start_task18,215)) eq(start_task28,add(start_task19,645)) eq(start_task28,add(start_task20,624)) eq(start_task28,add(start_task21,463)) eq(start_task28,add(start_task22,549)) eq(start_task28,add(start_task23,647)) eq(start_task28,add(start_task24,361)) eq(start_task28,add(start_task25,57)) eq(start_task28,add(start_task26,422)) eq(start_task28,add(start_task27,530)) eq(start_task28,add(start_task28,492)) eq(start_task28,add(start_task29,306)) eq(start_task28,add(start_task30,519)) eq(start_task28,add(start_task31,176)) eq(start_task28,add(start_task32,354)) eq(start_task28,add(start_task33,682)) eq(start_task28,add(start_task34,428)) eq(start_task28,add(start_task35,340)) eq(start_task28,add(start_task36,119)) eq(start_task28,add(start_task37,791)) eq(start_task28,add(start_task38,167)) eq(start_task28,add(start_task39,363)) </args>
+      <args> aux_gb[29] eq(start_task29,add(start_task0,568)) eq(start_task29,add(start_task1,669)) eq(start_task29,add(start_task2,688)) eq(start_task29,add(start_task3,709)) eq(start_task29,add(start_task4,505)) eq(start_task29,add(start_task5,683)) eq(start_task29,add(start_task6,20)) eq(start_task29,add(start_task7,250)) eq(start_task29,add(start_task8,235)) eq(start_task29,add(start_task9,651)) eq(start_task29,add(start_task10,477)) eq(start_task29,add(start_task11,227)) eq(start_task29,add(start_task12,464)) eq(start_task29,add(start_task13,257)) eq(start_task29,add(start_task14,80)) eq(start_task29,add(start_task15,592)) eq(start_task29,add(start_task16,376)) eq(start_task29,add(start_task17,541)) eq(start_task29,add(start_task18,215)) eq(start_task29,add(start_task19,645)) eq(start_task29,add(start_task20,624)) eq(start_task29,add(start_task21,463)) eq(start_task29,add(start_task22,549)) eq(start_task29,add(start_task23,647)) eq(start_task29,add(start_task24,361)) eq(start_task29,add(start_task25,57)) eq(start_task29,add(start_task26,422)) eq(start_task29,add(start_task27,530)) eq(start_task29,add(start_task28,492)) eq(start_task29,add(start_task29,306)) eq(start_task29,add(start_task30,519)) eq(start_task29,add(start_task31,176)) eq(start_task29,add(start_task32,354)) eq(start_task29,add(start_task33,682)) eq(start_task29,add(start_task34,428)) eq(start_task29,add(start_task35,340)) eq(start_task29,add(start_task36,119)) eq(start_task29,add(start_task37,791)) eq(start_task29,add(start_task38,167)) eq(start_task29,add(start_task39,363)) </args>
+      <args> aux_gb[30] eq(start_task30,add(start_task0,568)) eq(start_task30,add(start_task1,669)) eq(start_task30,add(start_task2,688)) eq(start_task30,add(start_task3,709)) eq(start_task30,add(start_task4,505)) eq(start_task30,add(start_task5,683)) eq(start_task30,add(start_task6,20)) eq(start_task30,add(start_task7,250)) eq(start_task30,add(start_task8,235)) eq(start_task30,add(start_task9,651)) eq(start_task30,add(start_task10,477)) eq(start_task30,add(start_task11,227)) eq(start_task30,add(start_task12,464)) eq(start_task30,add(start_task13,257)) eq(start_task30,add(start_task14,80)) eq(start_task30,add(start_task15,592)) eq(start_task30,add(start_task16,376)) eq(start_task30,add(start_task17,541)) eq(start_task30,add(start_task18,215)) eq(start_task30,add(start_task19,645)) eq(start_task30,add(start_task20,624)) eq(start_task30,add(start_task21,463)) eq(start_task30,add(start_task22,549)) eq(start_task30,add(start_task23,647)) eq(start_task30,add(start_task24,361)) eq(start_task30,add(start_task25,57)) eq(start_task30,add(start_task26,422)) eq(start_task30,add(start_task27,530)) eq(start_task30,add(start_task28,492)) eq(start_task30,add(start_task29,306)) eq(start_task30,add(start_task30,519)) eq(start_task30,add(start_task31,176)) eq(start_task30,add(start_task32,354)) eq(start_task30,add(start_task33,682)) eq(start_task30,add(start_task34,428)) eq(start_task30,add(start_task35,340)) eq(start_task30,add(start_task36,119)) eq(start_task30,add(start_task37,791)) eq(start_task30,add(start_task38,167)) eq(start_task30,add(start_task39,363)) </args>
+      <args> aux_gb[31] eq(start_task31,add(start_task0,568)) eq(start_task31,add(start_task1,669)) eq(start_task31,add(start_task2,688)) eq(start_task31,add(start_task3,709)) eq(start_task31,add(start_task4,505)) eq(start_task31,add(start_task5,683)) eq(start_task31,add(start_task6,20)) eq(start_task31,add(start_task7,250)) eq(start_task31,add(start_task8,235)) eq(start_task31,add(start_task9,651)) eq(start_task31,add(start_task10,477)) eq(start_task31,add(start_task11,227)) eq(start_task31,add(start_task12,464)) eq(start_task31,add(start_task13,257)) eq(start_task31,add(start_task14,80)) eq(start_task31,add(start_task15,592)) eq(start_task31,add(start_task16,376)) eq(start_task31,add(start_task17,541)) eq(start_task31,add(start_task18,215)) eq(start_task31,add(start_task19,645)) eq(start_task31,add(start_task20,624)) eq(start_task31,add(start_task21,463)) eq(start_task31,add(start_task22,549)) eq(start_task31,add(start_task23,647)) eq(start_task31,add(start_task24,361)) eq(start_task31,add(start_task25,57)) eq(start_task31,add(start_task26,422)) eq(start_task31,add(start_task27,530)) eq(start_task31,add(start_task28,492)) eq(start_task31,add(start_task29,306)) eq(start_task31,add(start_task30,519)) eq(start_task31,add(start_task31,176)) eq(start_task31,add(start_task32,354)) eq(start_task31,add(start_task33,682)) eq(start_task31,add(start_task34,428)) eq(start_task31,add(start_task35,340)) eq(start_task31,add(start_task36,119)) eq(start_task31,add(start_task37,791)) eq(start_task31,add(start_task38,167)) eq(start_task31,add(start_task39,363)) </args>
+      <args> aux_gb[32] eq(start_task32,add(start_task0,568)) eq(start_task32,add(start_task1,669)) eq(start_task32,add(start_task2,688)) eq(start_task32,add(start_task3,709)) eq(start_task32,add(start_task4,505)) eq(start_task32,add(start_task5,683)) eq(start_task32,add(start_task6,20)) eq(start_task32,add(start_task7,250)) eq(start_task32,add(start_task8,235)) eq(start_task32,add(start_task9,651)) eq(start_task32,add(start_task10,477)) eq(start_task32,add(start_task11,227)) eq(start_task32,add(start_task12,464)) eq(start_task32,add(start_task13,257)) eq(start_task32,add(start_task14,80)) eq(start_task32,add(start_task15,592)) eq(start_task32,add(start_task16,376)) eq(start_task32,add(start_task17,541)) eq(start_task32,add(start_task18,215)) eq(start_task32,add(start_task19,645)) eq(start_task32,add(start_task20,624)) eq(start_task32,add(start_task21,463)) eq(start_task32,add(start_task22,549)) eq(start_task32,add(start_task23,647)) eq(start_task32,add(start_task24,361)) eq(start_task32,add(start_task25,57)) eq(start_task32,add(start_task26,422)) eq(start_task32,add(start_task27,530)) eq(start_task32,add(start_task28,492)) eq(start_task32,add(start_task29,306)) eq(start_task32,add(start_task30,519)) eq(start_task32,add(start_task31,176)) eq(start_task32,add(start_task32,354)) eq(start_task32,add(start_task33,682)) eq(start_task32,add(start_task34,428)) eq(start_task32,add(start_task35,340)) eq(start_task32,add(start_task36,119)) eq(start_task32,add(start_task37,791)) eq(start_task32,add(start_task38,167)) eq(start_task32,add(start_task39,363)) </args>
+      <args> aux_gb[33] eq(start_task33,add(start_task0,568)) eq(start_task33,add(start_task1,669)) eq(start_task33,add(start_task2,688)) eq(start_task33,add(start_task3,709)) eq(start_task33,add(start_task4,505)) eq(start_task33,add(start_task5,683)) eq(start_task33,add(start_task6,20)) eq(start_task33,add(start_task7,250)) eq(start_task33,add(start_task8,235)) eq(start_task33,add(start_task9,651)) eq(start_task33,add(start_task10,477)) eq(start_task33,add(start_task11,227)) eq(start_task33,add(start_task12,464)) eq(start_task33,add(start_task13,257)) eq(start_task33,add(start_task14,80)) eq(start_task33,add(start_task15,592)) eq(start_task33,add(start_task16,376)) eq(start_task33,add(start_task17,541)) eq(start_task33,add(start_task18,215)) eq(start_task33,add(start_task19,645)) eq(start_task33,add(start_task20,624)) eq(start_task33,add(start_task21,463)) eq(start_task33,add(start_task22,549)) eq(start_task33,add(start_task23,647)) eq(start_task33,add(start_task24,361)) eq(start_task33,add(start_task25,57)) eq(start_task33,add(start_task26,422)) eq(start_task33,add(start_task27,530)) eq(start_task33,add(start_task28,492)) eq(start_task33,add(start_task29,306)) eq(start_task33,add(start_task30,519)) eq(start_task33,add(start_task31,176)) eq(start_task33,add(start_task32,354)) eq(start_task33,add(start_task33,682)) eq(start_task33,add(start_task34,428)) eq(start_task33,add(start_task35,340)) eq(start_task33,add(start_task36,119)) eq(start_task33,add(start_task37,791)) eq(start_task33,add(start_task38,167)) eq(start_task33,add(start_task39,363)) </args>
+      <args> aux_gb[34] eq(start_task34,add(start_task0,568)) eq(start_task34,add(start_task1,669)) eq(start_task34,add(start_task2,688)) eq(start_task34,add(start_task3,709)) eq(start_task34,add(start_task4,505)) eq(start_task34,add(start_task5,683)) eq(start_task34,add(start_task6,20)) eq(start_task34,add(start_task7,250)) eq(start_task34,add(start_task8,235)) eq(start_task34,add(start_task9,651)) eq(start_task34,add(start_task10,477)) eq(start_task34,add(start_task11,227)) eq(start_task34,add(start_task12,464)) eq(start_task34,add(start_task13,257)) eq(start_task34,add(start_task14,80)) eq(start_task34,add(start_task15,592)) eq(start_task34,add(start_task16,376)) eq(start_task34,add(start_task17,541)) eq(start_task34,add(start_task18,215)) eq(start_task34,add(start_task19,645)) eq(start_task34,add(start_task20,624)) eq(start_task34,add(start_task21,463)) eq(start_task34,add(start_task22,549)) eq(start_task34,add(start_task23,647)) eq(start_task34,add(start_task24,361)) eq(start_task34,add(start_task25,57)) eq(start_task34,add(start_task26,422)) eq(start_task34,add(start_task27,530)) eq(start_task34,add(start_task28,492)) eq(start_task34,add(start_task29,306)) eq(start_task34,add(start_task30,519)) eq(start_task34,add(start_task31,176)) eq(start_task34,add(start_task32,354)) eq(start_task34,add(start_task33,682)) eq(start_task34,add(start_task34,428)) eq(start_task34,add(start_task35,340)) eq(start_task34,add(start_task36,119)) eq(start_task34,add(start_task37,791)) eq(start_task34,add(start_task38,167)) eq(start_task34,add(start_task39,363)) </args>
+      <args> aux_gb[35] eq(start_task35,add(start_task0,568)) eq(start_task35,add(start_task1,669)) eq(start_task35,add(start_task2,688)) eq(start_task35,add(start_task3,709)) eq(start_task35,add(start_task4,505)) eq(start_task35,add(start_task5,683)) eq(start_task35,add(start_task6,20)) eq(start_task35,add(start_task7,250)) eq(start_task35,add(start_task8,235)) eq(start_task35,add(start_task9,651)) eq(start_task35,add(start_task10,477)) eq(start_task35,add(start_task11,227)) eq(start_task35,add(start_task12,464)) eq(start_task35,add(start_task13,257)) eq(start_task35,add(start_task14,80)) eq(start_task35,add(start_task15,592)) eq(start_task35,add(start_task16,376)) eq(start_task35,add(start_task17,541)) eq(start_task35,add(start_task18,215)) eq(start_task35,add(start_task19,645)) eq(start_task35,add(start_task20,624)) eq(start_task35,add(start_task21,463)) eq(start_task35,add(start_task22,549)) eq(start_task35,add(start_task23,647)) eq(start_task35,add(start_task24,361)) eq(start_task35,add(start_task25,57)) eq(start_task35,add(start_task26,422)) eq(start_task35,add(start_task27,530)) eq(start_task35,add(start_task28,492)) eq(start_task35,add(start_task29,306)) eq(start_task35,add(start_task30,519)) eq(start_task35,add(start_task31,176)) eq(start_task35,add(start_task32,354)) eq(start_task35,add(start_task33,682)) eq(start_task35,add(start_task34,428)) eq(start_task35,add(start_task35,340)) eq(start_task35,add(start_task36,119)) eq(start_task35,add(start_task37,791)) eq(start_task35,add(start_task38,167)) eq(start_task35,add(start_task39,363)) </args>
+      <args> aux_gb[36] eq(start_task36,add(start_task0,568)) eq(start_task36,add(start_task1,669)) eq(start_task36,add(start_task2,688)) eq(start_task36,add(start_task3,709)) eq(start_task36,add(start_task4,505)) eq(start_task36,add(start_task5,683)) eq(start_task36,add(start_task6,20)) eq(start_task36,add(start_task7,250)) eq(start_task36,add(start_task8,235)) eq(start_task36,add(start_task9,651)) eq(start_task36,add(start_task10,477)) eq(start_task36,add(start_task11,227)) eq(start_task36,add(start_task12,464)) eq(start_task36,add(start_task13,257)) eq(start_task36,add(start_task14,80)) eq(start_task36,add(start_task15,592)) eq(start_task36,add(start_task16,376)) eq(start_task36,add(start_task17,541)) eq(start_task36,add(start_task18,215)) eq(start_task36,add(start_task19,645)) eq(start_task36,add(start_task20,624)) eq(start_task36,add(start_task21,463)) eq(start_task36,add(start_task22,549)) eq(start_task36,add(start_task23,647)) eq(start_task36,add(start_task24,361)) eq(start_task36,add(start_task25,57)) eq(start_task36,add(start_task26,422)) eq(start_task36,add(start_task27,530)) eq(start_task36,add(start_task28,492)) eq(start_task36,add(start_task29,306)) eq(start_task36,add(start_task30,519)) eq(start_task36,add(start_task31,176)) eq(start_task36,add(start_task32,354)) eq(start_task36,add(start_task33,682)) eq(start_task36,add(start_task34,428)) eq(start_task36,add(start_task35,340)) eq(start_task36,add(start_task36,119)) eq(start_task36,add(start_task37,791)) eq(start_task36,add(start_task38,167)) eq(start_task36,add(start_task39,363)) </args>
+      <args> aux_gb[37] eq(start_task37,add(start_task0,568)) eq(start_task37,add(start_task1,669)) eq(start_task37,add(start_task2,688)) eq(start_task37,add(start_task3,709)) eq(start_task37,add(start_task4,505)) eq(start_task37,add(start_task5,683)) eq(start_task37,add(start_task6,20)) eq(start_task37,add(start_task7,250)) eq(start_task37,add(start_task8,235)) eq(start_task37,add(start_task9,651)) eq(start_task37,add(start_task10,477)) eq(start_task37,add(start_task11,227)) eq(start_task37,add(start_task12,464)) eq(start_task37,add(start_task13,257)) eq(start_task37,add(start_task14,80)) eq(start_task37,add(start_task15,592)) eq(start_task37,add(start_task16,376)) eq(start_task37,add(start_task17,541)) eq(start_task37,add(start_task18,215)) eq(start_task37,add(start_task19,645)) eq(start_task37,add(start_task20,624)) eq(start_task37,add(start_task21,463)) eq(start_task37,add(start_task22,549)) eq(start_task37,add(start_task23,647)) eq(start_task37,add(start_task24,361)) eq(start_task37,add(start_task25,57)) eq(start_task37,add(start_task26,422)) eq(start_task37,add(start_task27,530)) eq(start_task37,add(start_task28,492)) eq(start_task37,add(start_task29,306)) eq(start_task37,add(start_task30,519)) eq(start_task37,add(start_task31,176)) eq(start_task37,add(start_task32,354)) eq(start_task37,add(start_task33,682)) eq(start_task37,add(start_task34,428)) eq(start_task37,add(start_task35,340)) eq(start_task37,add(start_task36,119)) eq(start_task37,add(start_task37,791)) eq(start_task37,add(start_task38,167)) eq(start_task37,add(start_task39,363)) </args>
+      <args> aux_gb[38] eq(start_task38,add(start_task0,568)) eq(start_task38,add(start_task1,669)) eq(start_task38,add(start_task2,688)) eq(start_task38,add(start_task3,709)) eq(start_task38,add(start_task4,505)) eq(start_task38,add(start_task5,683)) eq(start_task38,add(start_task6,20)) eq(start_task38,add(start_task7,250)) eq(start_task38,add(start_task8,235)) eq(start_task38,add(start_task9,651)) eq(start_task38,add(start_task10,477)) eq(start_task38,add(start_task11,227)) eq(start_task38,add(start_task12,464)) eq(start_task38,add(start_task13,257)) eq(start_task38,add(start_task14,80)) eq(start_task38,add(start_task15,592)) eq(start_task38,add(start_task16,376)) eq(start_task38,add(start_task17,541)) eq(start_task38,add(start_task18,215)) eq(start_task38,add(start_task19,645)) eq(start_task38,add(start_task20,624)) eq(start_task38,add(start_task21,463)) eq(start_task38,add(start_task22,549)) eq(start_task38,add(start_task23,647)) eq(start_task38,add(start_task24,361)) eq(start_task38,add(start_task25,57)) eq(start_task38,add(start_task26,422)) eq(start_task38,add(start_task27,530)) eq(start_task38,add(start_task28,492)) eq(start_task38,add(start_task29,306)) eq(start_task38,add(start_task30,519)) eq(start_task38,add(start_task31,176)) eq(start_task38,add(start_task32,354)) eq(start_task38,add(start_task33,682)) eq(start_task38,add(start_task34,428)) eq(start_task38,add(start_task35,340)) eq(start_task38,add(start_task36,119)) eq(start_task38,add(start_task37,791)) eq(start_task38,add(start_task38,167)) eq(start_task38,add(start_task39,363)) </args>
+      <args> aux_gb[39] eq(start_task39,add(start_task0,568)) eq(start_task39,add(start_task1,669)) eq(start_task39,add(start_task2,688)) eq(start_task39,add(start_task3,709)) eq(start_task39,add(start_task4,505)) eq(start_task39,add(start_task5,683)) eq(start_task39,add(start_task6,20)) eq(start_task39,add(start_task7,250)) eq(start_task39,add(start_task8,235)) eq(start_task39,add(start_task9,651)) eq(start_task39,add(start_task10,477)) eq(start_task39,add(start_task11,227)) eq(start_task39,add(start_task12,464)) eq(start_task39,add(start_task13,257)) eq(start_task39,add(start_task14,80)) eq(start_task39,add(start_task15,592)) eq(start_task39,add(start_task16,376)) eq(start_task39,add(start_task17,541)) eq(start_task39,add(start_task18,215)) eq(start_task39,add(start_task19,645)) eq(start_task39,add(start_task20,624)) eq(start_task39,add(start_task21,463)) eq(start_task39,add(start_task22,549)) eq(start_task39,add(start_task23,647)) eq(start_task39,add(start_task24,361)) eq(start_task39,add(start_task25,57)) eq(start_task39,add(start_task26,422)) eq(start_task39,add(start_task27,530)) eq(start_task39,add(start_task28,492)) eq(start_task39,add(start_task29,306)) eq(start_task39,add(start_task30,519)) eq(start_task39,add(start_task31,176)) eq(start_task39,add(start_task32,354)) eq(start_task39,add(start_task33,682)) eq(start_task39,add(start_task34,428)) eq(start_task39,add(start_task35,340)) eq(start_task39,add(start_task36,119)) eq(start_task39,add(start_task37,791)) eq(start_task39,add(start_task38,167)) eq(start_task39,add(start_task39,363)) </args>
+    </group>
+  </constraints>
+  <objectives>
+    <minimize> score </minimize>
+  </objectives>
+</instance>
