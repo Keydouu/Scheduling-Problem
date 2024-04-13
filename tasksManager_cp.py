@@ -17,7 +17,6 @@ def read_input(input_file):
             tasks_array.append([task['duration'], task['machines'], task['resources']])
         else:
             tasks_array.append([task['duration'], machines_array, task['resources']])
-        worst_time_possible+=task['duration']
         tasks_numbers.append(i)
         i+=1
     
@@ -26,10 +25,13 @@ def getRessources(task_number):
         return tasks_array[task_number][2] 
     return []
 
-read_input('./t10-example.json')
+test_files=['./t10-example.json', './t20m10r3-1.json', './t40m10r3-2.json']
+read_input(test_files[0])
 worst_time_possible=15#optimize later
 tasks_ends = VarArray(size=[len(tasks_numbers)])
-time_table = VarArray(size=[worst_time_possible][len(machines_array)], dom=range(len(tasks_numbers)+len(machines_array)))
+print(worst_time_possible)
+print(len(machines_array))
+time_table = VarArray(size=[15,3], dom=range(len(tasks_numbers)+3))
 
 # tasks_ends = [ 1, 5, 4]
 # time_table = array of instints => instant = array or machines' action => machine action = [task_number, array_ressource]
@@ -45,6 +47,7 @@ satisfy(
     [If(time_table[instant_n][machine_n] < len(tasks_numbers), Then = machine_n in tasks_array[time_table[instant_n][machine_n]][1])
      for machine_n in len(machines_array) for instant_n in worst_time_possible]#each task is in a valid machine
 )
+print(solve())
 minimize([
     max(tasks_ends)]
 )

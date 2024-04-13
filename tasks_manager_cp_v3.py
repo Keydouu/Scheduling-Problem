@@ -61,21 +61,21 @@ def get_worst_time():
     print(f'R{ressources_limit} - M{machines_limit} ')
     return ressources_limit, machines_limit, max({ressources_limit, machines_limit})
 
-#read_input('./t10-example.json')
-read_input('./t20m10r3-1.json')
-#read_input('./t40m10r3-2.json')
+test_files=['./t10-example.json', './t20m10r3-1.json', './t40m10r3-2.json']
+read_input(test_files[0])
 generate_incompatibilities_by_ressources()
 ntasks=len(tasks_array)
 ressources_limit, machines_limit, maxTime = get_worst_time()
 print(f'First estimation of tasks execution time : {maxTime}')
 
-tasks_machines = VarArray(size=[ntasks], dom=range(len(machines_array)))
+tasks_machines = []
 tasks_starts= []
 tasks_ends=[]
 
 for i in range(ntasks):
     tasks_starts.append(Var(dom=range(ntasks+1), id='start_task'+str(i)))
     tasks_ends.append(Var(dom=range(tasks_array[i][0]-1,maxTime+1), id='end_task'+str(i)))
+    tasks_machines.append(Var(dom=set(tasks_array[i][1]), id='task_machine'+str(i)))
 tasks_ends.append(Var(dom={0}, id='myNull'))
 def getEnd(index):
     if tasks_starts[index]<ntasks:
@@ -87,10 +87,9 @@ def duration(i):
 #Force a task To start at 0, after another task is done, or when ressource is free
 satisfy(
 
-    tasks_starts[0]>=tasks_starts[1],#a poor man's attempt to break symmetry
+    #tasks_starts[0]>=tasks_starts[1],#a poor man's attempt to break symmetry
 
-    [machineAcceptable(i,tasks_machines[i])
-     for i in range(ntasks)],# tasks executed on valid machines
+    [tasks_starts[i]+duration(i)-1==tasks_ends[i] for i in range(ntasks)],
     
     [ ((tasks_ends[i] < tasks_ends[j]-tasks_array[j][0])
                 | (tasks_ends[i]-tasks_array[i][0]> tasks_ends[j]))
@@ -105,24 +104,36 @@ satisfy(
 
     [If(tasks_starts[i]==j, Then=tasks_ends[i]==tasks_ends[j]+tasks_array[i][0]-1) for i in range(ntasks) for j in range(ntasks+1)],#define tasks ends
 
-    [ If(tasks_starts[i]!=ntasks, Then=(Sum((tasks_starts[i]==j) for j in range(ntasks))>=1))
+    [ Sum((tasks_starts[i]==tasks_ends[j]) for j in range(ntasks+1))>0
        for i in range(ntasks)],# a task either start at t=0, or tight after the end of another task
     #[ If()]#
     
 )
 #minimize(
 #    Maximum(
-#        tasks_ends[i]
-#        for i in range(1,ntasks+1)
+#        tasks_ends
 #    )
 #)
 #how to break symetrie :
 # 1) assure one task is before another ( more than one pair may fuck up everything )
 # 2) force one machine to finish before another ?
 
-result = solve()
+result = solve(options="-t=60s")
 print(result)
 
 
 if result in (SAT, OPTIMUM):
-    print(values(tasks_starts))
+    print(f'R{ressources_limit} - M{machines_limit} ')
+    optimal_time=0
+    for i in range(len(tasks_array)):
+        optimal_time=max(optimal_time,value(tasks_starts[i])+tasks_array[i][0]-1)
+    print(f'Execution Time = {optimal_time}')
+    machines_usages=[{} for _ in range(len(machines_array))]
+    for i in range(len(tasks_array)):
+        start=values(tasks_starts)[i]
+        str_start=str(start)
+        m_indx = value(tasks_machines[i])
+        machines_usages[m_indx]['s'+str_start+' t'+str(i)+' d'+str(tasks_array[i][0])+ ' e'+str(start+tasks_array[i][0]-1)]=start
+    for machine in machines_usages:
+        #machine.sort()
+        print([key for key, value in sorted(machine.items(), key=lambda item: item[1])])

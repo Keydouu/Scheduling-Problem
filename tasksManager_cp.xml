@@ -1,0 +1,5 @@
+<instance format="XCSP3" type="CSP">
+  <variables>
+    <array id="time_table" size="[15][3]"> 0..12 </array>
+  </variables>
+</instance>

@@ -21,46 +21,46 @@ read_input('./t10-example.json')
 #read_input('./t20m10r3-1.json')
 #read_input('./t40m10r3-2.json')
 ntasks=len(tasks_array)
-def calculate_cost(order, machines):
-    ressources_free=[0 for i in range(n_ressources)]
-    machines_free=[0 for i in range(len(machines_array))]
-    free_indexs=[i for i in range(ntasks)]
-    cost=0
-    for pos in range(ntasks):#parcour order
-        for task in free_indexs:
-            if order[task]==pos:
-                m=machines[task].value
-                start_time=machines_free[m]
-                for ressource in tasks_array[task][2]:
-                    start_time=max(start_time, ressources_free[ressource])
-                for ressource in tasks_array[task][2]:
-                    ressources_free[ressource]=start_time+tasks_array[task][0]
-                cost+=start_time-machines_free[m]
-                machines_free[m]=start_time+tasks_array[task][0]
-                free_indexs.remove(task)
-                break;
-    score=max(machines_free)
-    for machine in machines_free:
-        cost+=score-machine
-    return cost
+ressources_incompatibilities=[]
+def generate_incompatibilities_by_ressources():
+    tmp = []
+    for i in range(len(tasks_array)):
+        for j in range(i+1, len(tasks_array)):
+            if not tasks_compatible(tasks_array[i], tasks_array[j]):
+                tmp.append(j)
+        ressources_incompatibilities.append(tmp)
+        tmp=[]
+def tasks_compatible(task1, task2):
+    for ressource in task1[2]:
+        if ressource in task2[2]:
+            return False
+    return True
+generate_incompatibilities_by_ressources()
 tasks_machines = []
 tasks_order= []
+ends=VarArray(size=[ntasks], dom=range(2000))
 for i in range(ntasks):
     tasks_order.append(Var(dom=range(ntasks), id='start_task'+str(i)))
-    tasks_machines.append(Var(dom=set(tasks_array[i][1]), id='task_machine'+str(i)))
+    tasks_machines.append(Var(dom=set(tasks_array[i][1]), id='atask_machine'+str(i)))
+
 satisfy(
-    AllDifferent(tasks_order)
+    AllDifferent(tasks_order),
+    [((tasks_order[i]!=0) | (end[i]==tasks_array[i][0]) )for i in range(ntasks)],
+    [if((tasks_machines[i]==tasks_machines[j]) | (j in ressources_incompatibilities[i]),
+        Then = () )
+     for i in range(ntasks) for j in range(i+1, ntasks)]
 )
-#minimize(
-#    calculate_cost(tasks_order, tasks_machines)
-#)
-result=solve()
+minimize(
+    Maximum(ends)
+    #calculate_cost(tasks_order, tasks_machines)#, Sum(tasks_order)+Sum(tasks_machines))
+)
+result=solve(options=" -varh=Dom")
 print(result)
 def calculate_starts():
     ressources_free=[0 for i in range(n_ressources)]
     machines_free=[0 for i in range(len(machines_array))]
     free_indexs=[i for i in range(ntasks)]
-    tasks_starts=[0 for i in range(ntasks)]
+    tasks_starts=[0 for _ in range(ntasks)]
     for pos in range(ntasks):#parcour order
         for task in free_indexs:
             if values(tasks_order)[task]==pos:
@@ -75,7 +75,7 @@ def calculate_starts():
                 machines_free[m]=start_time+tasks_array[task][0]
                 tasks_starts[task]=start_time
                 free_indexs.remove(task)
-                break;
+                break
     return tasks_starts
 
 if result in (SAT, OPTIMUM):

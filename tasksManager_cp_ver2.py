@@ -76,20 +76,21 @@ def csp_greedy_machines_usage(limit):
     )
     clear()
 #read_input('./t10-example.json')
-#read_input('./t20m10r3-1.json')
-read_input('./t40m10r3-2.json')
+read_input('./t20m10r3-1.json')
+#read_input('./t40m10r3-2.json')
 generate_incompatibilities_by_ressources()
 ntasks=len(tasks_array)
 ressources_limit, machines_limit, maxTime = get_worst_time()
 print(f'First estimation of tasks execution time : {maxTime}')
 
-tasks_machines = VarArray(size=[ntasks], dom=range(len(machines_array)))
+tasks_machines = []
 tasks_starts= []
 for i in range(ntasks):
     tasks_starts.append(Var(dom=range(maxTime-tasks_array[i][0]+1), id='start_task'+str(i)))
+    tasks_machines.append(Var(dom=set(tasks_array[i][1]), id='task_machine'+str(i)))
 #tasks_starts = VarArray(size=[ntasks], dom=range(maxTime))
 #Force a task To start at 0, after another task is done, or when ressource is free
-score = Var(dom=range(ressources_limit, maxTime+1))
+#score = Var(dom=range(ressources_limit, maxTime+1))
 satisfy(
 
     tasks_starts[0]>=tasks_starts[1],
@@ -97,9 +98,6 @@ satisfy(
 
     [ If(tasks_starts[i]!=0, Then=Sum((tasks_starts[i]==tasks_starts[j]+tasks_array[j][0]) for j in range(ntasks))>=1)
        for i in range(ntasks)],# a task either start at t=0, or tight after the end of another task
-
-    [machineAcceptable(i,tasks_machines[i])
-     for i in range(ntasks)],# tasks executed on valid machines
     
     [  ((tasks_starts[i]+tasks_array[i][0]-1 < tasks_starts[j])
                 | (tasks_starts[i]> tasks_starts[j]+tasks_array[j][0]-1))
@@ -112,18 +110,18 @@ satisfy(
                 | (tasks_starts[i]>= tasks_starts[j]+tasks_array[j][0])) )
     for i in range(ntasks)
     for j in range(i+1, ntasks)],# no two tasks using same machine
-    score==Maximum((tasks_starts[i]+tasks_array[i][0])
-                for i in range(ntasks))
+    #score==Maximum((tasks_starts[i]+tasks_array[i][0])
+    #            for i in range(ntasks))
 )
-if machines_limit>ressources_limit:
-    minimize(
-        score
-    )
+#if machines_limit>ressources_limit:
+#    minimize(
+#        score
+#    )
 #how to break symetrie :
 # 1) assure one task is before another ( more than one pair may fuck up everything )
 # 2) force one machine to finish before another ?
 
-if solve() in (SAT, OPTIMUM):
+if solve(options="-t=100s -p=ESAC3 -varh=Dom") in (SAT, OPTIMUM):
     optimal_time=0
     for i in range(len(tasks_array)):
         optimal_time=max(optimal_time,values(tasks_starts)[i]+tasks_array[i][0])
