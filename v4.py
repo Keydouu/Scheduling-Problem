@@ -18,7 +18,7 @@ def read_input(input_file):
             tasks_array.append([int(task['duration']), machines_array, task['resources']])
     
 test_files=['./t10-example.json', './t20m10r3-1.json', './t40m10r3-2.json']
-read_input(test_files[2])
+read_input(test_files[1])
 ressources_incompatibilities=[]
 def generate_incompatibilities_by_ressources():
     tmp = []
@@ -63,18 +63,17 @@ generate_incompatibilities_by_ressources()
 ntasks=len(tasks_array)
 ressources_limit, machines_limit, maxTime = get_worst_time()
 tasks_machines = []
-tasks_order= []
+tasks_order= VarArray(size=ntasks, dom=range(ntasks))
 tasks_starts= []
 #tasks_ends=[]*
-priorityVars= ""
+#priorityVars= ""
 for i in range(ntasks):
     nbr=str(i)
-    tasks_order.append(Var(dom=range(ntasks), id='order_task'+nbr))
     tasks_machines.append(Var(dom=set(tasks_array[i][1]), id='task_machine'+nbr))
     tasks_starts.append(Var(dom=range(maxTime-tasks_array[i][0]+1), id='start_task'+nbr))
-    priorityVars+="order_task"+nbr+","+"task_machine"+nbr+",start_task"+nbr+","
+    #priorityVars+="order_task"+nbr+","+"task_machine"+nbr+",start_task"+nbr+","
     #tasks_ends.append(Var(dom=range(maxTime), id='end_task'+str(i)))
-priorityVars=priorityVars[:-1]
+#priorityVars=priorityVars[:-1]
 satisfy(
     AllDifferent(tasks_order),
     [(If(tasks_order[0]==i, Then = tasks_starts[i]==0) )for i in range(ntasks)], #task 1 start at 0
@@ -114,7 +113,7 @@ satisfy(
 #    )
 
 #print(priorityVars)
-result=solve(options="-t=30s -pr1="+priorityVars)
+result=solve(options="-t=60s -p=ESAC3 -varh=Dom")
 print(result)
 if result in (SAT, OPTIMUM):
     optimal_time=0
@@ -127,9 +126,9 @@ if result in (SAT, OPTIMUM):
         str_start=str(start)
         m_indx = value(tasks_machines[i])
         machines_usages[m_indx]['s'+str_start+' t'+str(i)+' d'+str(tasks_array[i][0])+ ' e'+str(start+tasks_array[i][0]-1)]=start
-    for machine in machines_usages:
-        #machine.sort()
-        print([key for key, value in sorted(machine.items(), key=lambda item: item[1])])
+    for i in range(len(machines_usages)):
+        machine=machines_usages[i]
+        print(f"M{i}\t{[key for key, value in sorted(machine.items(), key=lambda item: item[1])]}")
 #order only
 # machines uses
 # calculate cost

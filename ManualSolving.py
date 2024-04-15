@@ -21,7 +21,7 @@ def read_input(input_file):
             tasks_array.append([int(task['duration']), machines_array, task['resources']])
     
 test_files=['./t10-example.json', './t20m10r3-1.json', './t40m10r3-2.json']
-read_input(test_files[1])
+read_input(test_files[2])
 def get_worst_time(indexs):
     ressources_min_times=[0 for _ in range(n_ressources)]
     machine_times_any=[]
@@ -56,13 +56,13 @@ def printSol(sol):#task id - machine - start time
         start=i[2]
         str_start=str(start)
         machines_usages[i[1]]['s'+str_start+' t'+str(task)+' d'+str(tasks_array[task][0])+ ' e'+str(start+tasks_array[task][0]-1)]=start
-    for machine in machines_usages:
-        #machine.sort()
-        print([key for key, value in sorted(machine.items(), key=lambda item: item[1])])
+    for i in range(len(machines_usages)):
+        machine=machines_usages[i]
+        print(f"M{i}\t{[key for key, value in sorted(machine.items(), key=lambda item: item[1])]}")
 
 #fullRange=sorted(range(ntasks), key=lambda i: lengths[i], reverse=True)
 
-fullRange = sorted(range(ntasks), key=lambda i: (len(tasks_array[i][1]), -len(tasks_array[i][2]),  -tasks_array[i][0]))
+fullRange = sorted(range(ntasks), key=lambda i: (-tasks_array[i][0]))
 winning_Combination = []
 
 def valuePicker(vars, machines_free, valid_machines_indexs, lastIndex=0):
@@ -103,8 +103,8 @@ def tryCombinations(ressources_free, machines_free, currentBest, unassigned_task
     newUnassigned = deepcopy(unassigned_tasks_indexs)
     local_improved=False
     
-    okay_machines_index=deepcopy(machines_array)
-    assignements=[i, deepcopy(tasks_array) for i in unassigned_tasks_indexs]
+    #okay_machines_index=deepcopy(machines_array)
+    #assignements=[i, deepcopy(tasks_array) for i in unassigned_tasks_indexs]
     
     for current_task_index in unassigned_tasks_indexs:
         newUnassigned.remove(current_task_index)
@@ -158,5 +158,5 @@ def tryCombinations(ressources_free, machines_free, currentBest, unassigned_task
     return False, local_improved, currentBest
 
 print(f"variables ordering : {fullRange}")
-_, _, myResult = tryCombinations([0 for _ in range(n_ressources)], [0 for _ in range(nMachines)], maxTime+100, fullRange, [])    
+_, _, myResult = tryCombinations([0 for _ in range(n_ressources)], [0 for _ in range(nMachines)], maxTime*2, fullRange, [])    
 printSol(winning_Combination)#task id - machine - start time
