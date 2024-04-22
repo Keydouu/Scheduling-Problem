@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from matplotlib import patheffects
 
 #for filename in os.listdir("."):
-#        if filename.endswith(".log"):
-#            os.remove("./"+filename)
+#    if filename.endswith(".log"):
+#        os.remove("./"+filename)
 
 def draw_schedule(activities, end):
     n_machines=len(activities)
@@ -26,18 +26,18 @@ def draw_schedule(activities, end):
     ax.set_yticks(range(1, n_machines + 1))
     ax.set_yticklabels([f'Machine {i}' for i in range(1, n_machines+1)])
     ax.set_xlabel('Time')
-    ax.set_title("Tasks execution took "+str(end)+" unit of time")
+    ax.set_title("Tasks execution took "+str(end)+" units of time")
     plt.grid(True)
     plt.show()
 
-machines_array = []
-tasks_array = []
-ressources_incompatibilities=[]
-n_ressources=0
 def read_input(input_file):
     file = open(input_file)
     file_data = json.load(file)
     global n_ressources
+    global machines_array
+    global tasks_array
+    machines_array = []
+    tasks_array = []
     n_ressources=file_data['nResources']
     for i in range (int(file_data['nMachines'])):
         machines_array.append(i)
@@ -49,9 +49,6 @@ def read_input(input_file):
     
 test_files=['./t10-example.json', './t20m10r3-1.json', './t40m10r3-2.json']
 read_input(test_files[2])
-ntasks=len(tasks_array)
-greedyOrder = sorted(range(ntasks), key=lambda i: (-tasks_array[i][0], len(tasks_array[i][1])))
-print(f'init : {greedyOrder}')
 ntasks=len(tasks_array)
 nMachines=len(machines_array)
 # ------------------------------------------------------ N E W ------------------------------------------------------
@@ -142,8 +139,8 @@ ressource_links_map = link_values_pairwise(ressources_users)
 
 clear()
 print(f"all batches {all_batches}")
-print(f"ressource users {ressources_users}")
-print(f"non ressources users {non_ressources_users}")
+#print(f"ressource users {ressources_users}")
+#print(f"non ressources users {non_ressources_users}")
 tasks_machines = [None for _ in range(ntasks)]
 tasks_starts= [None for _ in range(ntasks)]
 worst=1
@@ -174,29 +171,19 @@ satisfy(
      for current_index in non_ressources_users[current_batch]
      for previous_index in all_batches[current_batch-1]],
 
-     #[ If(tasks_machines[current_index]==tasks_machines[previous_index],
-     #    Then=tasks_starts[current_index]==
-     #    Maximum([tasks_starts[previous_index]+tasks_array[previous_index][0],
-     #       Maximum(ressources_users[current_batch-1][ressource] for ressource in tasks_array[current_index][2])]))
-     #for current_batch in range(1, len(all_batches))
-     #for current_index in ressources_users[current_batch]
-     #for previous_index in all_batches[current_batch-1]],
-
     score==Maximum((tasks_starts[i]+tasks_array[i][0])
                 for i in range(ntasks))
 )
 
 def link_values(array1, array2):
     result = {}
-    added_values = set()  # To keep track of added values
-
+    added_values = set()
     for val2, val1 in zip(array2, array1):
         if val1 is not None and val1 not in added_values:
             if val2 not in result:
                 result[val2] = []
             result[val2].append(val1)
             added_values.add(val1)
-
     return result
 
 
@@ -205,29 +192,32 @@ for ressource_users_batch in range(1, len(ressources_users)):
         if key == None:
             continue
         element_values = ressource_links_map[key]
-        if len(element_values)>0:
-            satisfy(
-                [If(tasks_machines[key]==tasks_machines[previous_index],
-                    Then=tasks_starts[key]==
-                    Maximum(tasks_starts[previous_index]+tasks_array[previous_index][0],
-                        [tasks_starts[new_ressource]+tasks_array[new_ressource][0]
-                                for new_ressource in element_values]))
-                for previous_index in all_batches[ressource_users_batch-1]],
-                
-                [tasks_starts[key]>=tasks_starts[new_ressource]+tasks_array[new_ressource][0]
-                for new_ressource in element_values]#juuuust in the unlikely case a macine was not used at all in previous batch
-            )
-        else :
-            satisfy(
-                [ If(tasks_machines[key]==tasks_machines[previous_index],
-                    Then=tasks_starts[key]==tasks_starts[previous_index]+tasks_array[previous_index][0])
-                for previous_index in all_batches[ressource_users_batch-1]]
-            )
+        satisfy(
+            [If(tasks_machines[key]==tasks_machines[previous_index],
+                Then=tasks_starts[key]==
+                Maximum(tasks_starts[previous_index]+tasks_array[previous_index][0],
+                    [tasks_starts[new_ressource]+tasks_array[new_ressource][0]
+                        for new_ressource in element_values]))
+            for previous_index in all_batches[ressource_users_batch-1]],
+            
+            #juuuust in the unlikely case a machine was not used at all in previous batch
+
+            [tasks_starts[key]>=tasks_starts[new_ressource]+tasks_array[new_ressource][0]
+                        for new_ressource in element_values],
+
+            [ If(tasks_machines[key]==tasks_machines[previous_index],
+                Then=tasks_starts[key]>=tasks_starts[previous_index]+tasks_array[previous_index][0])
+            for old_batch_index in range(ressource_users_batch)
+            for previous_index in all_batches[old_batch_index]]
+        )
 minimize(
-    score
+    score*100+Sum(tasks_starts)
 )
 
-result = solve(options="-t=120s")
+result = solve(options="-t=240s -p=SAC")
+
+#-----------------------------------------------------SOLVING END HERE-------------------------------------------------------------------
+
 print(result)
 
 if result in (SAT, OPTIMUM): #drawing the result
@@ -248,6 +238,8 @@ if result in (SAT, OPTIMUM): #drawing the result
             ressource_usage=" ["+ressource_usage[:-1]+"]"
         name = f't{i+1}{ressource_usage}, start_time={str_start}, duration={tasks_array[i][0]}'
         machines_usages[m_indx][name] = start
+    #for machine in machines_usages:
+        #print([key for key, value in sorted(machine.items(), key=lambda item: item[1])])
 
     activities = []
     for machine in machines_usages:
