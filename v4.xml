@@ -1,46 +1,27 @@
-<instance format="XCSP3" type="CSP">
+<instance format="XCSP3" type="COP">
   <variables>
-    <array id="tasks_order" size="[20]"> 0..19 </array>
-    <var id="task_machine0"> 0..9 </var>
-    <var id="start_task0"> 0..1452 </var>
-    <var id="task_machine1"> 0..9 </var>
-    <var id="start_task1"> 0..1861 </var>
-    <var id="task_machine2"> 0..9 </var>
-    <var id="start_task2"> 0..1610 </var>
-    <var id="task_machine3"> 0..9 </var>
-    <var id="start_task3"> 0..1098 </var>
-    <var id="task_machine4"> 0..9 </var>
-    <var id="start_task4"> 0..1441 </var>
-    <var id="task_machine5"> 0..9 </var>
-    <var id="start_task5"> 0..1449 </var>
-    <var id="task_machine6"> 0..9 </var>
-    <var id="start_task6"> 0..1703 </var>
-    <var id="task_machine7"> 0..9 </var>
-    <var id="start_task7"> 0..1454 </var>
-    <var id="task_machine8"> 0..9 </var>
-    <var id="start_task8"> 0..1621 </var>
-    <var id="task_machine9"> 0..9 </var>
-    <var id="start_task9"> 0..1204 </var>
-    <var id="task_machine10"> 0..9 </var>
-    <var id="start_task10"> 0..1548 </var>
-    <var id="task_machine11"> 0..9 </var>
-    <var id="start_task11"> 0..1613 </var>
-    <var id="task_machine12"> 3 6 </var>
-    <var id="start_task12"> 0..1221 </var>
-    <var id="task_machine13"> 0..9 </var>
-    <var id="start_task13"> 0..1134 </var>
-    <var id="task_machine14"> 2 7 </var>
-    <var id="start_task14"> 0..1512 </var>
-    <var id="task_machine15"> 3 </var>
-    <var id="start_task15"> 0..1604 </var>
-    <var id="task_machine16"> 0..9 </var>
-    <var id="start_task16"> 0..1404 </var>
-    <var id="task_machine17"> 0..9 </var>
-    <var id="start_task17"> 0..1321 </var>
-    <var id="task_machine18"> 0..9 </var>
-    <var id="start_task18"> 0..1857 </var>
-    <var id="task_machine19"> 0..9 </var>
-    <var id="start_task19"> 0..1512 </var>
+    <array id="tasks_order" size="[10]"> 0..9 </array>
+    <var id="task_machine0"> 0..2 </var>
+    <var id="start_task0"> 0..9 </var>
+    <var id="task_machine1"> 0..2 </var>
+    <var id="start_task1"> 0..7 </var>
+    <var id="task_machine2"> 0..2 </var>
+    <var id="start_task2"> 0..8 </var>
+    <var id="task_machine3"> 0..2 </var>
+    <var id="start_task3"> 0..7 </var>
+    <var id="task_machine4"> 0..2 </var>
+    <var id="start_task4"> 0..8 </var>
+    <var id="task_machine5"> 0..2 </var>
+    <var id="start_task5"> 0..9 </var>
+    <var id="task_machine6"> 0 </var>
+    <var id="start_task6"> 0..10 </var>
+    <var id="task_machine7"> 1 </var>
+    <var id="start_task7"> 0..9 </var>
+    <var id="task_machine8"> 2 </var>
+    <var id="start_task8"> 0..8 </var>
+    <var id="task_machine9"> 0 2 </var>
+    <var id="start_task9"> 0..6 </var>
+    <array id="aux_gb" note="aux_gb[i] is the ith auxiliary variable having been automatically introduced" size="[1]"> 5..11 </array>
   </variables>
   <constraints>
     <allDifferent> tasks_order[] </allDifferent>
@@ -56,647 +37,128 @@
       <args> 7 start_task7 </args>
       <args> 8 start_task8 </args>
       <args> 9 start_task9 </args>
-      <args> 10 start_task10 </args>
-      <args> 11 start_task11 </args>
-      <args> 12 start_task12 </args>
-      <args> 13 start_task13 </args>
-      <args> 14 start_task14 </args>
-      <args> 15 start_task15 </args>
-      <args> 16 start_task16 </args>
-      <args> 17 start_task17 </args>
-      <args> 18 start_task18 </args>
-      <args> 19 start_task19 </args>
-    </group>
-    <group>
-      <intension> imp(eq(add(%0,1),%1),ge(%2,%3)) </intension>
-      <args> tasks_order[0] tasks_order[0] start_task0 start_task0 </args>
-      <args> tasks_order[0] tasks_order[1] start_task1 start_task0 </args>
-      <args> tasks_order[0] tasks_order[2] start_task2 start_task0 </args>
-      <args> tasks_order[0] tasks_order[3] start_task3 start_task0 </args>
-      <args> tasks_order[0] tasks_order[4] start_task4 start_task0 </args>
-      <args> tasks_order[0] tasks_order[5] start_task5 start_task0 </args>
-      <args> tasks_order[0] tasks_order[6] start_task6 start_task0 </args>
-      <args> tasks_order[0] tasks_order[7] start_task7 start_task0 </args>
-      <args> tasks_order[0] tasks_order[8] start_task8 start_task0 </args>
-      <args> tasks_order[0] tasks_order[9] start_task9 start_task0 </args>
-      <args> tasks_order[0] tasks_order[10] start_task10 start_task0 </args>
-      <args> tasks_order[0] tasks_order[11] start_task11 start_task0 </args>
-      <args> tasks_order[0] tasks_order[12] start_task12 start_task0 </args>
-      <args> tasks_order[0] tasks_order[13] start_task13 start_task0 </args>
-      <args> tasks_order[0] tasks_order[14] start_task14 start_task0 </args>
-      <args> tasks_order[0] tasks_order[15] start_task15 start_task0 </args>
-      <args> tasks_order[0] tasks_order[16] start_task16 start_task0 </args>
-      <args> tasks_order[0] tasks_order[17] start_task17 start_task0 </args>
-      <args> tasks_order[0] tasks_order[18] start_task18 start_task0 </args>
-      <args> tasks_order[0] tasks_order[19] start_task19 start_task0 </args>
-      <args> tasks_order[1] tasks_order[1] start_task1 start_task1 </args>
-      <args> tasks_order[1] tasks_order[2] start_task2 start_task1 </args>
-      <args> tasks_order[1] tasks_order[3] start_task3 start_task1 </args>
-      <args> tasks_order[1] tasks_order[4] start_task4 start_task1 </args>
-      <args> tasks_order[1] tasks_order[5] start_task5 start_task1 </args>
-      <args> tasks_order[1] tasks_order[6] start_task6 start_task1 </args>
-      <args> tasks_order[1] tasks_order[7] start_task7 start_task1 </args>
-      <args> tasks_order[1] tasks_order[8] start_task8 start_task1 </args>
-      <args> tasks_order[1] tasks_order[9] start_task9 start_task1 </args>
-      <args> tasks_order[1] tasks_order[10] start_task10 start_task1 </args>
-      <args> tasks_order[1] tasks_order[11] start_task11 start_task1 </args>
-      <args> tasks_order[1] tasks_order[12] start_task12 start_task1 </args>
-      <args> tasks_order[1] tasks_order[13] start_task13 start_task1 </args>
-      <args> tasks_order[1] tasks_order[14] start_task14 start_task1 </args>
-      <args> tasks_order[1] tasks_order[15] start_task15 start_task1 </args>
-      <args> tasks_order[1] tasks_order[16] start_task16 start_task1 </args>
-      <args> tasks_order[1] tasks_order[17] start_task17 start_task1 </args>
-      <args> tasks_order[1] tasks_order[18] start_task18 start_task1 </args>
-      <args> tasks_order[1] tasks_order[19] start_task19 start_task1 </args>
-      <args> tasks_order[2] tasks_order[2] start_task2 start_task2 </args>
-      <args> tasks_order[2] tasks_order[3] start_task3 start_task2 </args>
-      <args> tasks_order[2] tasks_order[4] start_task4 start_task2 </args>
-      <args> tasks_order[2] tasks_order[5] start_task5 start_task2 </args>
-      <args> tasks_order[2] tasks_order[6] start_task6 start_task2 </args>
-      <args> tasks_order[2] tasks_order[7] start_task7 start_task2 </args>
-      <args> tasks_order[2] tasks_order[8] start_task8 start_task2 </args>
-      <args> tasks_order[2] tasks_order[9] start_task9 start_task2 </args>
-      <args> tasks_order[2] tasks_order[10] start_task10 start_task2 </args>
-      <args> tasks_order[2] tasks_order[11] start_task11 start_task2 </args>
-      <args> tasks_order[2] tasks_order[12] start_task12 start_task2 </args>
-      <args> tasks_order[2] tasks_order[13] start_task13 start_task2 </args>
-      <args> tasks_order[2] tasks_order[14] start_task14 start_task2 </args>
-      <args> tasks_order[2] tasks_order[15] start_task15 start_task2 </args>
-      <args> tasks_order[2] tasks_order[16] start_task16 start_task2 </args>
-      <args> tasks_order[2] tasks_order[17] start_task17 start_task2 </args>
-      <args> tasks_order[2] tasks_order[18] start_task18 start_task2 </args>
-      <args> tasks_order[2] tasks_order[19] start_task19 start_task2 </args>
-      <args> tasks_order[3] tasks_order[3] start_task3 start_task3 </args>
-      <args> tasks_order[3] tasks_order[4] start_task4 start_task3 </args>
-      <args> tasks_order[3] tasks_order[5] start_task5 start_task3 </args>
-      <args> tasks_order[3] tasks_order[6] start_task6 start_task3 </args>
-      <args> tasks_order[3] tasks_order[7] start_task7 start_task3 </args>
-      <args> tasks_order[3] tasks_order[8] start_task8 start_task3 </args>
-      <args> tasks_order[3] tasks_order[9] start_task9 start_task3 </args>
-      <args> tasks_order[3] tasks_order[10] start_task10 start_task3 </args>
-      <args> tasks_order[3] tasks_order[11] start_task11 start_task3 </args>
-      <args> tasks_order[3] tasks_order[12] start_task12 start_task3 </args>
-      <args> tasks_order[3] tasks_order[13] start_task13 start_task3 </args>
-      <args> tasks_order[3] tasks_order[14] start_task14 start_task3 </args>
-      <args> tasks_order[3] tasks_order[15] start_task15 start_task3 </args>
-      <args> tasks_order[3] tasks_order[16] start_task16 start_task3 </args>
-      <args> tasks_order[3] tasks_order[17] start_task17 start_task3 </args>
-      <args> tasks_order[3] tasks_order[18] start_task18 start_task3 </args>
-      <args> tasks_order[3] tasks_order[19] start_task19 start_task3 </args>
-      <args> tasks_order[4] tasks_order[4] start_task4 start_task4 </args>
-      <args> tasks_order[4] tasks_order[5] start_task5 start_task4 </args>
-      <args> tasks_order[4] tasks_order[6] start_task6 start_task4 </args>
-      <args> tasks_order[4] tasks_order[7] start_task7 start_task4 </args>
-      <args> tasks_order[4] tasks_order[8] start_task8 start_task4 </args>
-      <args> tasks_order[4] tasks_order[9] start_task9 start_task4 </args>
-      <args> tasks_order[4] tasks_order[10] start_task10 start_task4 </args>
-      <args> tasks_order[4] tasks_order[11] start_task11 start_task4 </args>
-      <args> tasks_order[4] tasks_order[12] start_task12 start_task4 </args>
-      <args> tasks_order[4] tasks_order[13] start_task13 start_task4 </args>
-      <args> tasks_order[4] tasks_order[14] start_task14 start_task4 </args>
-      <args> tasks_order[4] tasks_order[15] start_task15 start_task4 </args>
-      <args> tasks_order[4] tasks_order[16] start_task16 start_task4 </args>
-      <args> tasks_order[4] tasks_order[17] start_task17 start_task4 </args>
-      <args> tasks_order[4] tasks_order[18] start_task18 start_task4 </args>
-      <args> tasks_order[4] tasks_order[19] start_task19 start_task4 </args>
-      <args> tasks_order[5] tasks_order[5] start_task5 start_task5 </args>
-      <args> tasks_order[5] tasks_order[6] start_task6 start_task5 </args>
-      <args> tasks_order[5] tasks_order[7] start_task7 start_task5 </args>
-      <args> tasks_order[5] tasks_order[8] start_task8 start_task5 </args>
-      <args> tasks_order[5] tasks_order[9] start_task9 start_task5 </args>
-      <args> tasks_order[5] tasks_order[10] start_task10 start_task5 </args>
-      <args> tasks_order[5] tasks_order[11] start_task11 start_task5 </args>
-      <args> tasks_order[5] tasks_order[12] start_task12 start_task5 </args>
-      <args> tasks_order[5] tasks_order[13] start_task13 start_task5 </args>
-      <args> tasks_order[5] tasks_order[14] start_task14 start_task5 </args>
-      <args> tasks_order[5] tasks_order[15] start_task15 start_task5 </args>
-      <args> tasks_order[5] tasks_order[16] start_task16 start_task5 </args>
-      <args> tasks_order[5] tasks_order[17] start_task17 start_task5 </args>
-      <args> tasks_order[5] tasks_order[18] start_task18 start_task5 </args>
-      <args> tasks_order[5] tasks_order[19] start_task19 start_task5 </args>
-      <args> tasks_order[6] tasks_order[6] start_task6 start_task6 </args>
-      <args> tasks_order[6] tasks_order[7] start_task7 start_task6 </args>
-      <args> tasks_order[6] tasks_order[8] start_task8 start_task6 </args>
-      <args> tasks_order[6] tasks_order[9] start_task9 start_task6 </args>
-      <args> tasks_order[6] tasks_order[10] start_task10 start_task6 </args>
-      <args> tasks_order[6] tasks_order[11] start_task11 start_task6 </args>
-      <args> tasks_order[6] tasks_order[12] start_task12 start_task6 </args>
-      <args> tasks_order[6] tasks_order[13] start_task13 start_task6 </args>
-      <args> tasks_order[6] tasks_order[14] start_task14 start_task6 </args>
-      <args> tasks_order[6] tasks_order[15] start_task15 start_task6 </args>
-      <args> tasks_order[6] tasks_order[16] start_task16 start_task6 </args>
-      <args> tasks_order[6] tasks_order[17] start_task17 start_task6 </args>
-      <args> tasks_order[6] tasks_order[18] start_task18 start_task6 </args>
-      <args> tasks_order[6] tasks_order[19] start_task19 start_task6 </args>
-      <args> tasks_order[7] tasks_order[7] start_task7 start_task7 </args>
-      <args> tasks_order[7] tasks_order[8] start_task8 start_task7 </args>
-      <args> tasks_order[7] tasks_order[9] start_task9 start_task7 </args>
-      <args> tasks_order[7] tasks_order[10] start_task10 start_task7 </args>
-      <args> tasks_order[7] tasks_order[11] start_task11 start_task7 </args>
-      <args> tasks_order[7] tasks_order[12] start_task12 start_task7 </args>
-      <args> tasks_order[7] tasks_order[13] start_task13 start_task7 </args>
-      <args> tasks_order[7] tasks_order[14] start_task14 start_task7 </args>
-      <args> tasks_order[7] tasks_order[15] start_task15 start_task7 </args>
-      <args> tasks_order[7] tasks_order[16] start_task16 start_task7 </args>
-      <args> tasks_order[7] tasks_order[17] start_task17 start_task7 </args>
-      <args> tasks_order[7] tasks_order[18] start_task18 start_task7 </args>
-      <args> tasks_order[7] tasks_order[19] start_task19 start_task7 </args>
-      <args> tasks_order[8] tasks_order[8] start_task8 start_task8 </args>
-      <args> tasks_order[8] tasks_order[9] start_task9 start_task8 </args>
-      <args> tasks_order[8] tasks_order[10] start_task10 start_task8 </args>
-      <args> tasks_order[8] tasks_order[11] start_task11 start_task8 </args>
-      <args> tasks_order[8] tasks_order[12] start_task12 start_task8 </args>
-      <args> tasks_order[8] tasks_order[13] start_task13 start_task8 </args>
-      <args> tasks_order[8] tasks_order[14] start_task14 start_task8 </args>
-      <args> tasks_order[8] tasks_order[15] start_task15 start_task8 </args>
-      <args> tasks_order[8] tasks_order[16] start_task16 start_task8 </args>
-      <args> tasks_order[8] tasks_order[17] start_task17 start_task8 </args>
-      <args> tasks_order[8] tasks_order[18] start_task18 start_task8 </args>
-      <args> tasks_order[8] tasks_order[19] start_task19 start_task8 </args>
-      <args> tasks_order[9] tasks_order[9] start_task9 start_task9 </args>
-      <args> tasks_order[9] tasks_order[10] start_task10 start_task9 </args>
-      <args> tasks_order[9] tasks_order[11] start_task11 start_task9 </args>
-      <args> tasks_order[9] tasks_order[12] start_task12 start_task9 </args>
-      <args> tasks_order[9] tasks_order[13] start_task13 start_task9 </args>
-      <args> tasks_order[9] tasks_order[14] start_task14 start_task9 </args>
-      <args> tasks_order[9] tasks_order[15] start_task15 start_task9 </args>
-      <args> tasks_order[9] tasks_order[16] start_task16 start_task9 </args>
-      <args> tasks_order[9] tasks_order[17] start_task17 start_task9 </args>
-      <args> tasks_order[9] tasks_order[18] start_task18 start_task9 </args>
-      <args> tasks_order[9] tasks_order[19] start_task19 start_task9 </args>
-      <args> tasks_order[10] tasks_order[10] start_task10 start_task10 </args>
-      <args> tasks_order[10] tasks_order[11] start_task11 start_task10 </args>
-      <args> tasks_order[10] tasks_order[12] start_task12 start_task10 </args>
-      <args> tasks_order[10] tasks_order[13] start_task13 start_task10 </args>
-      <args> tasks_order[10] tasks_order[14] start_task14 start_task10 </args>
-      <args> tasks_order[10] tasks_order[15] start_task15 start_task10 </args>
-      <args> tasks_order[10] tasks_order[16] start_task16 start_task10 </args>
-      <args> tasks_order[10] tasks_order[17] start_task17 start_task10 </args>
-      <args> tasks_order[10] tasks_order[18] start_task18 start_task10 </args>
-      <args> tasks_order[10] tasks_order[19] start_task19 start_task10 </args>
-      <args> tasks_order[11] tasks_order[11] start_task11 start_task11 </args>
-      <args> tasks_order[11] tasks_order[12] start_task12 start_task11 </args>
-      <args> tasks_order[11] tasks_order[13] start_task13 start_task11 </args>
-      <args> tasks_order[11] tasks_order[14] start_task14 start_task11 </args>
-      <args> tasks_order[11] tasks_order[15] start_task15 start_task11 </args>
-      <args> tasks_order[11] tasks_order[16] start_task16 start_task11 </args>
-      <args> tasks_order[11] tasks_order[17] start_task17 start_task11 </args>
-      <args> tasks_order[11] tasks_order[18] start_task18 start_task11 </args>
-      <args> tasks_order[11] tasks_order[19] start_task19 start_task11 </args>
-      <args> tasks_order[12] tasks_order[12] start_task12 start_task12 </args>
-      <args> tasks_order[12] tasks_order[13] start_task13 start_task12 </args>
-      <args> tasks_order[12] tasks_order[14] start_task14 start_task12 </args>
-      <args> tasks_order[12] tasks_order[15] start_task15 start_task12 </args>
-      <args> tasks_order[12] tasks_order[16] start_task16 start_task12 </args>
-      <args> tasks_order[12] tasks_order[17] start_task17 start_task12 </args>
-      <args> tasks_order[12] tasks_order[18] start_task18 start_task12 </args>
-      <args> tasks_order[12] tasks_order[19] start_task19 start_task12 </args>
-      <args> tasks_order[13] tasks_order[13] start_task13 start_task13 </args>
-      <args> tasks_order[13] tasks_order[14] start_task14 start_task13 </args>
-      <args> tasks_order[13] tasks_order[15] start_task15 start_task13 </args>
-      <args> tasks_order[13] tasks_order[16] start_task16 start_task13 </args>
-      <args> tasks_order[13] tasks_order[17] start_task17 start_task13 </args>
-      <args> tasks_order[13] tasks_order[18] start_task18 start_task13 </args>
-      <args> tasks_order[13] tasks_order[19] start_task19 start_task13 </args>
-      <args> tasks_order[14] tasks_order[14] start_task14 start_task14 </args>
-      <args> tasks_order[14] tasks_order[15] start_task15 start_task14 </args>
-      <args> tasks_order[14] tasks_order[16] start_task16 start_task14 </args>
-      <args> tasks_order[14] tasks_order[17] start_task17 start_task14 </args>
-      <args> tasks_order[14] tasks_order[18] start_task18 start_task14 </args>
-      <args> tasks_order[14] tasks_order[19] start_task19 start_task14 </args>
-      <args> tasks_order[15] tasks_order[15] start_task15 start_task15 </args>
-      <args> tasks_order[15] tasks_order[16] start_task16 start_task15 </args>
-      <args> tasks_order[15] tasks_order[17] start_task17 start_task15 </args>
-      <args> tasks_order[15] tasks_order[18] start_task18 start_task15 </args>
-      <args> tasks_order[15] tasks_order[19] start_task19 start_task15 </args>
-      <args> tasks_order[16] tasks_order[16] start_task16 start_task16 </args>
-      <args> tasks_order[16] tasks_order[17] start_task17 start_task16 </args>
-      <args> tasks_order[16] tasks_order[18] start_task18 start_task16 </args>
-      <args> tasks_order[16] tasks_order[19] start_task19 start_task16 </args>
-      <args> tasks_order[17] tasks_order[17] start_task17 start_task17 </args>
-      <args> tasks_order[17] tasks_order[18] start_task18 start_task17 </args>
-      <args> tasks_order[17] tasks_order[19] start_task19 start_task17 </args>
-      <args> tasks_order[18] tasks_order[18] start_task18 start_task18 </args>
-      <args> tasks_order[18] tasks_order[19] start_task19 start_task18 </args>
-      <args> tasks_order[19] tasks_order[19] start_task19 start_task19 </args>
     </group>
     <group>
       <intension> imp(lt(%0,%1),lt(sub(add(%2,%3),1),%4)) </intension>
-      <args> tasks_order[5] tasks_order[7] 427 start_task5 start_task7 </args>
-      <args> tasks_order[5] tasks_order[16] 427 start_task5 start_task16 </args>
-      <args> tasks_order[5] tasks_order[17] 427 start_task5 start_task17 </args>
-      <args> tasks_order[7] tasks_order[5] 422 start_task7 start_task5 </args>
-      <args> tasks_order[7] tasks_order[16] 422 start_task7 start_task16 </args>
-      <args> tasks_order[7] tasks_order[17] 422 start_task7 start_task17 </args>
-      <args> tasks_order[16] tasks_order[5] 472 start_task16 start_task5 </args>
-      <args> tasks_order[16] tasks_order[7] 472 start_task16 start_task7 </args>
-      <args> tasks_order[16] tasks_order[17] 472 start_task16 start_task17 </args>
-      <args> tasks_order[17] tasks_order[5] 555 start_task17 start_task5 </args>
-      <args> tasks_order[17] tasks_order[7] 555 start_task17 start_task7 </args>
-      <args> tasks_order[17] tasks_order[16] 555 start_task17 start_task16 </args>
+      <args> tasks_order[1] tasks_order[2] 4 start_task1 start_task2 </args>
+      <args> tasks_order[1] tasks_order[3] 4 start_task1 start_task3 </args>
+      <args> tasks_order[2] tasks_order[1] 3 start_task2 start_task1 </args>
+      <args> tasks_order[2] tasks_order[3] 3 start_task2 start_task3 </args>
+      <args> tasks_order[3] tasks_order[1] 4 start_task3 start_task1 </args>
+      <args> tasks_order[3] tasks_order[2] 4 start_task3 start_task2 </args>
     </group>
     <group>
       <intension> imp(and(eq(%0,%1),lt(%2,%3)),lt(sub(add(%4,%5),1),%6)) </intension>
-      <args> task_machine0 task_machine0 tasks_order[0] tasks_order[0] 424 start_task0 start_task0 </args>
-      <args> task_machine0 task_machine1 tasks_order[0] tasks_order[1] 424 start_task0 start_task1 </args>
-      <args> task_machine0 task_machine2 tasks_order[0] tasks_order[2] 424 start_task0 start_task2 </args>
-      <args> task_machine0 task_machine3 tasks_order[0] tasks_order[3] 424 start_task0 start_task3 </args>
-      <args> task_machine0 task_machine4 tasks_order[0] tasks_order[4] 424 start_task0 start_task4 </args>
-      <args> task_machine0 task_machine5 tasks_order[0] tasks_order[5] 424 start_task0 start_task5 </args>
-      <args> task_machine0 task_machine6 tasks_order[0] tasks_order[6] 424 start_task0 start_task6 </args>
-      <args> task_machine0 task_machine7 tasks_order[0] tasks_order[7] 424 start_task0 start_task7 </args>
-      <args> task_machine0 task_machine8 tasks_order[0] tasks_order[8] 424 start_task0 start_task8 </args>
-      <args> task_machine0 task_machine9 tasks_order[0] tasks_order[9] 424 start_task0 start_task9 </args>
-      <args> task_machine0 task_machine10 tasks_order[0] tasks_order[10] 424 start_task0 start_task10 </args>
-      <args> task_machine0 task_machine11 tasks_order[0] tasks_order[11] 424 start_task0 start_task11 </args>
-      <args> task_machine0 task_machine12 tasks_order[0] tasks_order[12] 424 start_task0 start_task12 </args>
-      <args> task_machine0 task_machine13 tasks_order[0] tasks_order[13] 424 start_task0 start_task13 </args>
-      <args> task_machine0 task_machine14 tasks_order[0] tasks_order[14] 424 start_task0 start_task14 </args>
-      <args> task_machine0 task_machine15 tasks_order[0] tasks_order[15] 424 start_task0 start_task15 </args>
-      <args> task_machine0 task_machine16 tasks_order[0] tasks_order[16] 424 start_task0 start_task16 </args>
-      <args> task_machine0 task_machine17 tasks_order[0] tasks_order[17] 424 start_task0 start_task17 </args>
-      <args> task_machine0 task_machine18 tasks_order[0] tasks_order[18] 424 start_task0 start_task18 </args>
-      <args> task_machine0 task_machine19 tasks_order[0] tasks_order[19] 424 start_task0 start_task19 </args>
-      <args> task_machine1 task_machine0 tasks_order[1] tasks_order[0] 15 start_task1 start_task0 </args>
-      <args> task_machine1 task_machine1 tasks_order[1] tasks_order[1] 15 start_task1 start_task1 </args>
-      <args> task_machine1 task_machine2 tasks_order[1] tasks_order[2] 15 start_task1 start_task2 </args>
-      <args> task_machine1 task_machine3 tasks_order[1] tasks_order[3] 15 start_task1 start_task3 </args>
-      <args> task_machine1 task_machine4 tasks_order[1] tasks_order[4] 15 start_task1 start_task4 </args>
-      <args> task_machine1 task_machine5 tasks_order[1] tasks_order[5] 15 start_task1 start_task5 </args>
-      <args> task_machine1 task_machine6 tasks_order[1] tasks_order[6] 15 start_task1 start_task6 </args>
-      <args> task_machine1 task_machine7 tasks_order[1] tasks_order[7] 15 start_task1 start_task7 </args>
-      <args> task_machine1 task_machine8 tasks_order[1] tasks_order[8] 15 start_task1 start_task8 </args>
-      <args> task_machine1 task_machine9 tasks_order[1] tasks_order[9] 15 start_task1 start_task9 </args>
-      <args> task_machine1 task_machine10 tasks_order[1] tasks_order[10] 15 start_task1 start_task10 </args>
-      <args> task_machine1 task_machine11 tasks_order[1] tasks_order[11] 15 start_task1 start_task11 </args>
-      <args> task_machine1 task_machine12 tasks_order[1] tasks_order[12] 15 start_task1 start_task12 </args>
-      <args> task_machine1 task_machine13 tasks_order[1] tasks_order[13] 15 start_task1 start_task13 </args>
-      <args> task_machine1 task_machine14 tasks_order[1] tasks_order[14] 15 start_task1 start_task14 </args>
-      <args> task_machine1 task_machine15 tasks_order[1] tasks_order[15] 15 start_task1 start_task15 </args>
-      <args> task_machine1 task_machine16 tasks_order[1] tasks_order[16] 15 start_task1 start_task16 </args>
-      <args> task_machine1 task_machine17 tasks_order[1] tasks_order[17] 15 start_task1 start_task17 </args>
-      <args> task_machine1 task_machine18 tasks_order[1] tasks_order[18] 15 start_task1 start_task18 </args>
-      <args> task_machine1 task_machine19 tasks_order[1] tasks_order[19] 15 start_task1 start_task19 </args>
-      <args> task_machine2 task_machine0 tasks_order[2] tasks_order[0] 266 start_task2 start_task0 </args>
-      <args> task_machine2 task_machine1 tasks_order[2] tasks_order[1] 266 start_task2 start_task1 </args>
-      <args> task_machine2 task_machine2 tasks_order[2] tasks_order[2] 266 start_task2 start_task2 </args>
-      <args> task_machine2 task_machine3 tasks_order[2] tasks_order[3] 266 start_task2 start_task3 </args>
-      <args> task_machine2 task_machine4 tasks_order[2] tasks_order[4] 266 start_task2 start_task4 </args>
-      <args> task_machine2 task_machine5 tasks_order[2] tasks_order[5] 266 start_task2 start_task5 </args>
-      <args> task_machine2 task_machine6 tasks_order[2] tasks_order[6] 266 start_task2 start_task6 </args>
-      <args> task_machine2 task_machine7 tasks_order[2] tasks_order[7] 266 start_task2 start_task7 </args>
-      <args> task_machine2 task_machine8 tasks_order[2] tasks_order[8] 266 start_task2 start_task8 </args>
-      <args> task_machine2 task_machine9 tasks_order[2] tasks_order[9] 266 start_task2 start_task9 </args>
-      <args> task_machine2 task_machine10 tasks_order[2] tasks_order[10] 266 start_task2 start_task10 </args>
-      <args> task_machine2 task_machine11 tasks_order[2] tasks_order[11] 266 start_task2 start_task11 </args>
-      <args> task_machine2 task_machine12 tasks_order[2] tasks_order[12] 266 start_task2 start_task12 </args>
-      <args> task_machine2 task_machine13 tasks_order[2] tasks_order[13] 266 start_task2 start_task13 </args>
-      <args> task_machine2 task_machine14 tasks_order[2] tasks_order[14] 266 start_task2 start_task14 </args>
-      <args> task_machine2 task_machine15 tasks_order[2] tasks_order[15] 266 start_task2 start_task15 </args>
-      <args> task_machine2 task_machine16 tasks_order[2] tasks_order[16] 266 start_task2 start_task16 </args>
-      <args> task_machine2 task_machine17 tasks_order[2] tasks_order[17] 266 start_task2 start_task17 </args>
-      <args> task_machine2 task_machine18 tasks_order[2] tasks_order[18] 266 start_task2 start_task18 </args>
-      <args> task_machine2 task_machine19 tasks_order[2] tasks_order[19] 266 start_task2 start_task19 </args>
-      <args> task_machine3 task_machine0 tasks_order[3] tasks_order[0] 778 start_task3 start_task0 </args>
-      <args> task_machine3 task_machine1 tasks_order[3] tasks_order[1] 778 start_task3 start_task1 </args>
-      <args> task_machine3 task_machine2 tasks_order[3] tasks_order[2] 778 start_task3 start_task2 </args>
-      <args> task_machine3 task_machine3 tasks_order[3] tasks_order[3] 778 start_task3 start_task3 </args>
-      <args> task_machine3 task_machine4 tasks_order[3] tasks_order[4] 778 start_task3 start_task4 </args>
-      <args> task_machine3 task_machine5 tasks_order[3] tasks_order[5] 778 start_task3 start_task5 </args>
-      <args> task_machine3 task_machine6 tasks_order[3] tasks_order[6] 778 start_task3 start_task6 </args>
-      <args> task_machine3 task_machine7 tasks_order[3] tasks_order[7] 778 start_task3 start_task7 </args>
-      <args> task_machine3 task_machine8 tasks_order[3] tasks_order[8] 778 start_task3 start_task8 </args>
-      <args> task_machine3 task_machine9 tasks_order[3] tasks_order[9] 778 start_task3 start_task9 </args>
-      <args> task_machine3 task_machine10 tasks_order[3] tasks_order[10] 778 start_task3 start_task10 </args>
-      <args> task_machine3 task_machine11 tasks_order[3] tasks_order[11] 778 start_task3 start_task11 </args>
-      <args> task_machine3 task_machine12 tasks_order[3] tasks_order[12] 778 start_task3 start_task12 </args>
-      <args> task_machine3 task_machine13 tasks_order[3] tasks_order[13] 778 start_task3 start_task13 </args>
-      <args> task_machine3 task_machine14 tasks_order[3] tasks_order[14] 778 start_task3 start_task14 </args>
-      <args> task_machine3 task_machine15 tasks_order[3] tasks_order[15] 778 start_task3 start_task15 </args>
-      <args> task_machine3 task_machine16 tasks_order[3] tasks_order[16] 778 start_task3 start_task16 </args>
-      <args> task_machine3 task_machine17 tasks_order[3] tasks_order[17] 778 start_task3 start_task17 </args>
-      <args> task_machine3 task_machine18 tasks_order[3] tasks_order[18] 778 start_task3 start_task18 </args>
-      <args> task_machine3 task_machine19 tasks_order[3] tasks_order[19] 778 start_task3 start_task19 </args>
-      <args> task_machine4 task_machine0 tasks_order[4] tasks_order[0] 435 start_task4 start_task0 </args>
-      <args> task_machine4 task_machine1 tasks_order[4] tasks_order[1] 435 start_task4 start_task1 </args>
-      <args> task_machine4 task_machine2 tasks_order[4] tasks_order[2] 435 start_task4 start_task2 </args>
-      <args> task_machine4 task_machine3 tasks_order[4] tasks_order[3] 435 start_task4 start_task3 </args>
-      <args> task_machine4 task_machine4 tasks_order[4] tasks_order[4] 435 start_task4 start_task4 </args>
-      <args> task_machine4 task_machine5 tasks_order[4] tasks_order[5] 435 start_task4 start_task5 </args>
-      <args> task_machine4 task_machine6 tasks_order[4] tasks_order[6] 435 start_task4 start_task6 </args>
-      <args> task_machine4 task_machine7 tasks_order[4] tasks_order[7] 435 start_task4 start_task7 </args>
-      <args> task_machine4 task_machine8 tasks_order[4] tasks_order[8] 435 start_task4 start_task8 </args>
-      <args> task_machine4 task_machine9 tasks_order[4] tasks_order[9] 435 start_task4 start_task9 </args>
-      <args> task_machine4 task_machine10 tasks_order[4] tasks_order[10] 435 start_task4 start_task10 </args>
-      <args> task_machine4 task_machine11 tasks_order[4] tasks_order[11] 435 start_task4 start_task11 </args>
-      <args> task_machine4 task_machine12 tasks_order[4] tasks_order[12] 435 start_task4 start_task12 </args>
-      <args> task_machine4 task_machine13 tasks_order[4] tasks_order[13] 435 start_task4 start_task13 </args>
-      <args> task_machine4 task_machine14 tasks_order[4] tasks_order[14] 435 start_task4 start_task14 </args>
-      <args> task_machine4 task_machine15 tasks_order[4] tasks_order[15] 435 start_task4 start_task15 </args>
-      <args> task_machine4 task_machine16 tasks_order[4] tasks_order[16] 435 start_task4 start_task16 </args>
-      <args> task_machine4 task_machine17 tasks_order[4] tasks_order[17] 435 start_task4 start_task17 </args>
-      <args> task_machine4 task_machine18 tasks_order[4] tasks_order[18] 435 start_task4 start_task18 </args>
-      <args> task_machine4 task_machine19 tasks_order[4] tasks_order[19] 435 start_task4 start_task19 </args>
-      <args> task_machine5 task_machine0 tasks_order[5] tasks_order[0] 427 start_task5 start_task0 </args>
-      <args> task_machine5 task_machine1 tasks_order[5] tasks_order[1] 427 start_task5 start_task1 </args>
-      <args> task_machine5 task_machine2 tasks_order[5] tasks_order[2] 427 start_task5 start_task2 </args>
-      <args> task_machine5 task_machine3 tasks_order[5] tasks_order[3] 427 start_task5 start_task3 </args>
-      <args> task_machine5 task_machine4 tasks_order[5] tasks_order[4] 427 start_task5 start_task4 </args>
-      <args> task_machine5 task_machine5 tasks_order[5] tasks_order[5] 427 start_task5 start_task5 </args>
-      <args> task_machine5 task_machine6 tasks_order[5] tasks_order[6] 427 start_task5 start_task6 </args>
-      <args> task_machine5 task_machine7 tasks_order[5] tasks_order[7] 427 start_task5 start_task7 </args>
-      <args> task_machine5 task_machine8 tasks_order[5] tasks_order[8] 427 start_task5 start_task8 </args>
-      <args> task_machine5 task_machine9 tasks_order[5] tasks_order[9] 427 start_task5 start_task9 </args>
-      <args> task_machine5 task_machine10 tasks_order[5] tasks_order[10] 427 start_task5 start_task10 </args>
-      <args> task_machine5 task_machine11 tasks_order[5] tasks_order[11] 427 start_task5 start_task11 </args>
-      <args> task_machine5 task_machine12 tasks_order[5] tasks_order[12] 427 start_task5 start_task12 </args>
-      <args> task_machine5 task_machine13 tasks_order[5] tasks_order[13] 427 start_task5 start_task13 </args>
-      <args> task_machine5 task_machine14 tasks_order[5] tasks_order[14] 427 start_task5 start_task14 </args>
-      <args> task_machine5 task_machine15 tasks_order[5] tasks_order[15] 427 start_task5 start_task15 </args>
-      <args> task_machine5 task_machine16 tasks_order[5] tasks_order[16] 427 start_task5 start_task16 </args>
-      <args> task_machine5 task_machine17 tasks_order[5] tasks_order[17] 427 start_task5 start_task17 </args>
-      <args> task_machine5 task_machine18 tasks_order[5] tasks_order[18] 427 start_task5 start_task18 </args>
-      <args> task_machine5 task_machine19 tasks_order[5] tasks_order[19] 427 start_task5 start_task19 </args>
-      <args> task_machine6 task_machine0 tasks_order[6] tasks_order[0] 173 start_task6 start_task0 </args>
-      <args> task_machine6 task_machine1 tasks_order[6] tasks_order[1] 173 start_task6 start_task1 </args>
-      <args> task_machine6 task_machine2 tasks_order[6] tasks_order[2] 173 start_task6 start_task2 </args>
-      <args> task_machine6 task_machine3 tasks_order[6] tasks_order[3] 173 start_task6 start_task3 </args>
-      <args> task_machine6 task_machine4 tasks_order[6] tasks_order[4] 173 start_task6 start_task4 </args>
-      <args> task_machine6 task_machine5 tasks_order[6] tasks_order[5] 173 start_task6 start_task5 </args>
-      <args> task_machine6 task_machine6 tasks_order[6] tasks_order[6] 173 start_task6 start_task6 </args>
-      <args> task_machine6 task_machine7 tasks_order[6] tasks_order[7] 173 start_task6 start_task7 </args>
-      <args> task_machine6 task_machine8 tasks_order[6] tasks_order[8] 173 start_task6 start_task8 </args>
-      <args> task_machine6 task_machine9 tasks_order[6] tasks_order[9] 173 start_task6 start_task9 </args>
-      <args> task_machine6 task_machine10 tasks_order[6] tasks_order[10] 173 start_task6 start_task10 </args>
-      <args> task_machine6 task_machine11 tasks_order[6] tasks_order[11] 173 start_task6 start_task11 </args>
-      <args> task_machine6 task_machine12 tasks_order[6] tasks_order[12] 173 start_task6 start_task12 </args>
-      <args> task_machine6 task_machine13 tasks_order[6] tasks_order[13] 173 start_task6 start_task13 </args>
-      <args> task_machine6 task_machine14 tasks_order[6] tasks_order[14] 173 start_task6 start_task14 </args>
-      <args> task_machine6 task_machine15 tasks_order[6] tasks_order[15] 173 start_task6 start_task15 </args>
-      <args> task_machine6 task_machine16 tasks_order[6] tasks_order[16] 173 start_task6 start_task16 </args>
-      <args> task_machine6 task_machine17 tasks_order[6] tasks_order[17] 173 start_task6 start_task17 </args>
-      <args> task_machine6 task_machine18 tasks_order[6] tasks_order[18] 173 start_task6 start_task18 </args>
-      <args> task_machine6 task_machine19 tasks_order[6] tasks_order[19] 173 start_task6 start_task19 </args>
-      <args> task_machine7 task_machine0 tasks_order[7] tasks_order[0] 422 start_task7 start_task0 </args>
-      <args> task_machine7 task_machine1 tasks_order[7] tasks_order[1] 422 start_task7 start_task1 </args>
-      <args> task_machine7 task_machine2 tasks_order[7] tasks_order[2] 422 start_task7 start_task2 </args>
-      <args> task_machine7 task_machine3 tasks_order[7] tasks_order[3] 422 start_task7 start_task3 </args>
-      <args> task_machine7 task_machine4 tasks_order[7] tasks_order[4] 422 start_task7 start_task4 </args>
-      <args> task_machine7 task_machine5 tasks_order[7] tasks_order[5] 422 start_task7 start_task5 </args>
-      <args> task_machine7 task_machine6 tasks_order[7] tasks_order[6] 422 start_task7 start_task6 </args>
-      <args> task_machine7 task_machine7 tasks_order[7] tasks_order[7] 422 start_task7 start_task7 </args>
-      <args> task_machine7 task_machine8 tasks_order[7] tasks_order[8] 422 start_task7 start_task8 </args>
-      <args> task_machine7 task_machine9 tasks_order[7] tasks_order[9] 422 start_task7 start_task9 </args>
-      <args> task_machine7 task_machine10 tasks_order[7] tasks_order[10] 422 start_task7 start_task10 </args>
-      <args> task_machine7 task_machine11 tasks_order[7] tasks_order[11] 422 start_task7 start_task11 </args>
-      <args> task_machine7 task_machine12 tasks_order[7] tasks_order[12] 422 start_task7 start_task12 </args>
-      <args> task_machine7 task_machine13 tasks_order[7] tasks_order[13] 422 start_task7 start_task13 </args>
-      <args> task_machine7 task_machine14 tasks_order[7] tasks_order[14] 422 start_task7 start_task14 </args>
-      <args> task_machine7 task_machine15 tasks_order[7] tasks_order[15] 422 start_task7 start_task15 </args>
-      <args> task_machine7 task_machine16 tasks_order[7] tasks_order[16] 422 start_task7 start_task16 </args>
-      <args> task_machine7 task_machine17 tasks_order[7] tasks_order[17] 422 start_task7 start_task17 </args>
-      <args> task_machine7 task_machine18 tasks_order[7] tasks_order[18] 422 start_task7 start_task18 </args>
-      <args> task_machine7 task_machine19 tasks_order[7] tasks_order[19] 422 start_task7 start_task19 </args>
-      <args> task_machine8 task_machine0 tasks_order[8] tasks_order[0] 255 start_task8 start_task0 </args>
-      <args> task_machine8 task_machine1 tasks_order[8] tasks_order[1] 255 start_task8 start_task1 </args>
-      <args> task_machine8 task_machine2 tasks_order[8] tasks_order[2] 255 start_task8 start_task2 </args>
-      <args> task_machine8 task_machine3 tasks_order[8] tasks_order[3] 255 start_task8 start_task3 </args>
-      <args> task_machine8 task_machine4 tasks_order[8] tasks_order[4] 255 start_task8 start_task4 </args>
-      <args> task_machine8 task_machine5 tasks_order[8] tasks_order[5] 255 start_task8 start_task5 </args>
-      <args> task_machine8 task_machine6 tasks_order[8] tasks_order[6] 255 start_task8 start_task6 </args>
-      <args> task_machine8 task_machine7 tasks_order[8] tasks_order[7] 255 start_task8 start_task7 </args>
-      <args> task_machine8 task_machine8 tasks_order[8] tasks_order[8] 255 start_task8 start_task8 </args>
-      <args> task_machine8 task_machine9 tasks_order[8] tasks_order[9] 255 start_task8 start_task9 </args>
-      <args> task_machine8 task_machine10 tasks_order[8] tasks_order[10] 255 start_task8 start_task10 </args>
-      <args> task_machine8 task_machine11 tasks_order[8] tasks_order[11] 255 start_task8 start_task11 </args>
-      <args> task_machine8 task_machine12 tasks_order[8] tasks_order[12] 255 start_task8 start_task12 </args>
-      <args> task_machine8 task_machine13 tasks_order[8] tasks_order[13] 255 start_task8 start_task13 </args>
-      <args> task_machine8 task_machine14 tasks_order[8] tasks_order[14] 255 start_task8 start_task14 </args>
-      <args> task_machine8 task_machine15 tasks_order[8] tasks_order[15] 255 start_task8 start_task15 </args>
-      <args> task_machine8 task_machine16 tasks_order[8] tasks_order[16] 255 start_task8 start_task16 </args>
-      <args> task_machine8 task_machine17 tasks_order[8] tasks_order[17] 255 start_task8 start_task17 </args>
-      <args> task_machine8 task_machine18 tasks_order[8] tasks_order[18] 255 start_task8 start_task18 </args>
-      <args> task_machine8 task_machine19 tasks_order[8] tasks_order[19] 255 start_task8 start_task19 </args>
-      <args> task_machine9 task_machine0 tasks_order[9] tasks_order[0] 672 start_task9 start_task0 </args>
-      <args> task_machine9 task_machine1 tasks_order[9] tasks_order[1] 672 start_task9 start_task1 </args>
-      <args> task_machine9 task_machine2 tasks_order[9] tasks_order[2] 672 start_task9 start_task2 </args>
-      <args> task_machine9 task_machine3 tasks_order[9] tasks_order[3] 672 start_task9 start_task3 </args>
-      <args> task_machine9 task_machine4 tasks_order[9] tasks_order[4] 672 start_task9 start_task4 </args>
-      <args> task_machine9 task_machine5 tasks_order[9] tasks_order[5] 672 start_task9 start_task5 </args>
-      <args> task_machine9 task_machine6 tasks_order[9] tasks_order[6] 672 start_task9 start_task6 </args>
-      <args> task_machine9 task_machine7 tasks_order[9] tasks_order[7] 672 start_task9 start_task7 </args>
-      <args> task_machine9 task_machine8 tasks_order[9] tasks_order[8] 672 start_task9 start_task8 </args>
-      <args> task_machine9 task_machine9 tasks_order[9] tasks_order[9] 672 start_task9 start_task9 </args>
-      <args> task_machine9 task_machine10 tasks_order[9] tasks_order[10] 672 start_task9 start_task10 </args>
-      <args> task_machine9 task_machine11 tasks_order[9] tasks_order[11] 672 start_task9 start_task11 </args>
-      <args> task_machine9 task_machine12 tasks_order[9] tasks_order[12] 672 start_task9 start_task12 </args>
-      <args> task_machine9 task_machine13 tasks_order[9] tasks_order[13] 672 start_task9 start_task13 </args>
-      <args> task_machine9 task_machine14 tasks_order[9] tasks_order[14] 672 start_task9 start_task14 </args>
-      <args> task_machine9 task_machine15 tasks_order[9] tasks_order[15] 672 start_task9 start_task15 </args>
-      <args> task_machine9 task_machine16 tasks_order[9] tasks_order[16] 672 start_task9 start_task16 </args>
-      <args> task_machine9 task_machine17 tasks_order[9] tasks_order[17] 672 start_task9 start_task17 </args>
-      <args> task_machine9 task_machine18 tasks_order[9] tasks_order[18] 672 start_task9 start_task18 </args>
-      <args> task_machine9 task_machine19 tasks_order[9] tasks_order[19] 672 start_task9 start_task19 </args>
-      <args> task_machine10 task_machine0 tasks_order[10] tasks_order[0] 328 start_task10 start_task0 </args>
-      <args> task_machine10 task_machine1 tasks_order[10] tasks_order[1] 328 start_task10 start_task1 </args>
-      <args> task_machine10 task_machine2 tasks_order[10] tasks_order[2] 328 start_task10 start_task2 </args>
-      <args> task_machine10 task_machine3 tasks_order[10] tasks_order[3] 328 start_task10 start_task3 </args>
-      <args> task_machine10 task_machine4 tasks_order[10] tasks_order[4] 328 start_task10 start_task4 </args>
-      <args> task_machine10 task_machine5 tasks_order[10] tasks_order[5] 328 start_task10 start_task5 </args>
-      <args> task_machine10 task_machine6 tasks_order[10] tasks_order[6] 328 start_task10 start_task6 </args>
-      <args> task_machine10 task_machine7 tasks_order[10] tasks_order[7] 328 start_task10 start_task7 </args>
-      <args> task_machine10 task_machine8 tasks_order[10] tasks_order[8] 328 start_task10 start_task8 </args>
-      <args> task_machine10 task_machine9 tasks_order[10] tasks_order[9] 328 start_task10 start_task9 </args>
-      <args> task_machine10 task_machine10 tasks_order[10] tasks_order[10] 328 start_task10 start_task10 </args>
-      <args> task_machine10 task_machine11 tasks_order[10] tasks_order[11] 328 start_task10 start_task11 </args>
-      <args> task_machine10 task_machine12 tasks_order[10] tasks_order[12] 328 start_task10 start_task12 </args>
-      <args> task_machine10 task_machine13 tasks_order[10] tasks_order[13] 328 start_task10 start_task13 </args>
-      <args> task_machine10 task_machine14 tasks_order[10] tasks_order[14] 328 start_task10 start_task14 </args>
-      <args> task_machine10 task_machine15 tasks_order[10] tasks_order[15] 328 start_task10 start_task15 </args>
-      <args> task_machine10 task_machine16 tasks_order[10] tasks_order[16] 328 start_task10 start_task16 </args>
-      <args> task_machine10 task_machine17 tasks_order[10] tasks_order[17] 328 start_task10 start_task17 </args>
-      <args> task_machine10 task_machine18 tasks_order[10] tasks_order[18] 328 start_task10 start_task18 </args>
-      <args> task_machine10 task_machine19 tasks_order[10] tasks_order[19] 328 start_task10 start_task19 </args>
-      <args> task_machine11 task_machine0 tasks_order[11] tasks_order[0] 263 start_task11 start_task0 </args>
-      <args> task_machine11 task_machine1 tasks_order[11] tasks_order[1] 263 start_task11 start_task1 </args>
-      <args> task_machine11 task_machine2 tasks_order[11] tasks_order[2] 263 start_task11 start_task2 </args>
-      <args> task_machine11 task_machine3 tasks_order[11] tasks_order[3] 263 start_task11 start_task3 </args>
-      <args> task_machine11 task_machine4 tasks_order[11] tasks_order[4] 263 start_task11 start_task4 </args>
-      <args> task_machine11 task_machine5 tasks_order[11] tasks_order[5] 263 start_task11 start_task5 </args>
-      <args> task_machine11 task_machine6 tasks_order[11] tasks_order[6] 263 start_task11 start_task6 </args>
-      <args> task_machine11 task_machine7 tasks_order[11] tasks_order[7] 263 start_task11 start_task7 </args>
-      <args> task_machine11 task_machine8 tasks_order[11] tasks_order[8] 263 start_task11 start_task8 </args>
-      <args> task_machine11 task_machine9 tasks_order[11] tasks_order[9] 263 start_task11 start_task9 </args>
-      <args> task_machine11 task_machine10 tasks_order[11] tasks_order[10] 263 start_task11 start_task10 </args>
-      <args> task_machine11 task_machine11 tasks_order[11] tasks_order[11] 263 start_task11 start_task11 </args>
-      <args> task_machine11 task_machine12 tasks_order[11] tasks_order[12] 263 start_task11 start_task12 </args>
-      <args> task_machine11 task_machine13 tasks_order[11] tasks_order[13] 263 start_task11 start_task13 </args>
-      <args> task_machine11 task_machine14 tasks_order[11] tasks_order[14] 263 start_task11 start_task14 </args>
-      <args> task_machine11 task_machine15 tasks_order[11] tasks_order[15] 263 start_task11 start_task15 </args>
-      <args> task_machine11 task_machine16 tasks_order[11] tasks_order[16] 263 start_task11 start_task16 </args>
-      <args> task_machine11 task_machine17 tasks_order[11] tasks_order[17] 263 start_task11 start_task17 </args>
-      <args> task_machine11 task_machine18 tasks_order[11] tasks_order[18] 263 start_task11 start_task18 </args>
-      <args> task_machine11 task_machine19 tasks_order[11] tasks_order[19] 263 start_task11 start_task19 </args>
-      <args> task_machine12 task_machine0 tasks_order[12] tasks_order[0] 655 start_task12 start_task0 </args>
-      <args> task_machine12 task_machine1 tasks_order[12] tasks_order[1] 655 start_task12 start_task1 </args>
-      <args> task_machine12 task_machine2 tasks_order[12] tasks_order[2] 655 start_task12 start_task2 </args>
-      <args> task_machine12 task_machine3 tasks_order[12] tasks_order[3] 655 start_task12 start_task3 </args>
-      <args> task_machine12 task_machine4 tasks_order[12] tasks_order[4] 655 start_task12 start_task4 </args>
-      <args> task_machine12 task_machine5 tasks_order[12] tasks_order[5] 655 start_task12 start_task5 </args>
-      <args> task_machine12 task_machine6 tasks_order[12] tasks_order[6] 655 start_task12 start_task6 </args>
-      <args> task_machine12 task_machine7 tasks_order[12] tasks_order[7] 655 start_task12 start_task7 </args>
-      <args> task_machine12 task_machine8 tasks_order[12] tasks_order[8] 655 start_task12 start_task8 </args>
-      <args> task_machine12 task_machine9 tasks_order[12] tasks_order[9] 655 start_task12 start_task9 </args>
-      <args> task_machine12 task_machine10 tasks_order[12] tasks_order[10] 655 start_task12 start_task10 </args>
-      <args> task_machine12 task_machine11 tasks_order[12] tasks_order[11] 655 start_task12 start_task11 </args>
-      <args> task_machine12 task_machine12 tasks_order[12] tasks_order[12] 655 start_task12 start_task12 </args>
-      <args> task_machine12 task_machine13 tasks_order[12] tasks_order[13] 655 start_task12 start_task13 </args>
-      <args> task_machine12 task_machine14 tasks_order[12] tasks_order[14] 655 start_task12 start_task14 </args>
-      <args> task_machine12 task_machine15 tasks_order[12] tasks_order[15] 655 start_task12 start_task15 </args>
-      <args> task_machine12 task_machine16 tasks_order[12] tasks_order[16] 655 start_task12 start_task16 </args>
-      <args> task_machine12 task_machine17 tasks_order[12] tasks_order[17] 655 start_task12 start_task17 </args>
-      <args> task_machine12 task_machine18 tasks_order[12] tasks_order[18] 655 start_task12 start_task18 </args>
-      <args> task_machine12 task_machine19 tasks_order[12] tasks_order[19] 655 start_task12 start_task19 </args>
-      <args> task_machine13 task_machine0 tasks_order[13] tasks_order[0] 742 start_task13 start_task0 </args>
-      <args> task_machine13 task_machine1 tasks_order[13] tasks_order[1] 742 start_task13 start_task1 </args>
-      <args> task_machine13 task_machine2 tasks_order[13] tasks_order[2] 742 start_task13 start_task2 </args>
-      <args> task_machine13 task_machine3 tasks_order[13] tasks_order[3] 742 start_task13 start_task3 </args>
-      <args> task_machine13 task_machine4 tasks_order[13] tasks_order[4] 742 start_task13 start_task4 </args>
-      <args> task_machine13 task_machine5 tasks_order[13] tasks_order[5] 742 start_task13 start_task5 </args>
-      <args> task_machine13 task_machine6 tasks_order[13] tasks_order[6] 742 start_task13 start_task6 </args>
-      <args> task_machine13 task_machine7 tasks_order[13] tasks_order[7] 742 start_task13 start_task7 </args>
-      <args> task_machine13 task_machine8 tasks_order[13] tasks_order[8] 742 start_task13 start_task8 </args>
-      <args> task_machine13 task_machine9 tasks_order[13] tasks_order[9] 742 start_task13 start_task9 </args>
-      <args> task_machine13 task_machine10 tasks_order[13] tasks_order[10] 742 start_task13 start_task10 </args>
-      <args> task_machine13 task_machine11 tasks_order[13] tasks_order[11] 742 start_task13 start_task11 </args>
-      <args> task_machine13 task_machine12 tasks_order[13] tasks_order[12] 742 start_task13 start_task12 </args>
-      <args> task_machine13 task_machine13 tasks_order[13] tasks_order[13] 742 start_task13 start_task13 </args>
-      <args> task_machine13 task_machine14 tasks_order[13] tasks_order[14] 742 start_task13 start_task14 </args>
-      <args> task_machine13 task_machine15 tasks_order[13] tasks_order[15] 742 start_task13 start_task15 </args>
-      <args> task_machine13 task_machine16 tasks_order[13] tasks_order[16] 742 start_task13 start_task16 </args>
-      <args> task_machine13 task_machine17 tasks_order[13] tasks_order[17] 742 start_task13 start_task17 </args>
-      <args> task_machine13 task_machine18 tasks_order[13] tasks_order[18] 742 start_task13 start_task18 </args>
-      <args> task_machine13 task_machine19 tasks_order[13] tasks_order[19] 742 start_task13 start_task19 </args>
-      <args> task_machine14 task_machine0 tasks_order[14] tasks_order[0] 364 start_task14 start_task0 </args>
-      <args> task_machine14 task_machine1 tasks_order[14] tasks_order[1] 364 start_task14 start_task1 </args>
-      <args> task_machine14 task_machine2 tasks_order[14] tasks_order[2] 364 start_task14 start_task2 </args>
-      <args> task_machine14 task_machine3 tasks_order[14] tasks_order[3] 364 start_task14 start_task3 </args>
-      <args> task_machine14 task_machine4 tasks_order[14] tasks_order[4] 364 start_task14 start_task4 </args>
-      <args> task_machine14 task_machine5 tasks_order[14] tasks_order[5] 364 start_task14 start_task5 </args>
-      <args> task_machine14 task_machine6 tasks_order[14] tasks_order[6] 364 start_task14 start_task6 </args>
-      <args> task_machine14 task_machine7 tasks_order[14] tasks_order[7] 364 start_task14 start_task7 </args>
-      <args> task_machine14 task_machine8 tasks_order[14] tasks_order[8] 364 start_task14 start_task8 </args>
-      <args> task_machine14 task_machine9 tasks_order[14] tasks_order[9] 364 start_task14 start_task9 </args>
-      <args> task_machine14 task_machine10 tasks_order[14] tasks_order[10] 364 start_task14 start_task10 </args>
-      <args> task_machine14 task_machine11 tasks_order[14] tasks_order[11] 364 start_task14 start_task11 </args>
-      <args> task_machine14 task_machine12 tasks_order[14] tasks_order[12] 364 start_task14 start_task12 </args>
-      <args> task_machine14 task_machine13 tasks_order[14] tasks_order[13] 364 start_task14 start_task13 </args>
-      <args> task_machine14 task_machine14 tasks_order[14] tasks_order[14] 364 start_task14 start_task14 </args>
-      <args> task_machine14 task_machine15 tasks_order[14] tasks_order[15] 364 start_task14 start_task15 </args>
-      <args> task_machine14 task_machine16 tasks_order[14] tasks_order[16] 364 start_task14 start_task16 </args>
-      <args> task_machine14 task_machine17 tasks_order[14] tasks_order[17] 364 start_task14 start_task17 </args>
-      <args> task_machine14 task_machine18 tasks_order[14] tasks_order[18] 364 start_task14 start_task18 </args>
-      <args> task_machine14 task_machine19 tasks_order[14] tasks_order[19] 364 start_task14 start_task19 </args>
-      <args> task_machine15 task_machine0 tasks_order[15] tasks_order[0] 272 start_task15 start_task0 </args>
-      <args> task_machine15 task_machine1 tasks_order[15] tasks_order[1] 272 start_task15 start_task1 </args>
-      <args> task_machine15 task_machine2 tasks_order[15] tasks_order[2] 272 start_task15 start_task2 </args>
-      <args> task_machine15 task_machine3 tasks_order[15] tasks_order[3] 272 start_task15 start_task3 </args>
-      <args> task_machine15 task_machine4 tasks_order[15] tasks_order[4] 272 start_task15 start_task4 </args>
-      <args> task_machine15 task_machine5 tasks_order[15] tasks_order[5] 272 start_task15 start_task5 </args>
-      <args> task_machine15 task_machine6 tasks_order[15] tasks_order[6] 272 start_task15 start_task6 </args>
-      <args> task_machine15 task_machine7 tasks_order[15] tasks_order[7] 272 start_task15 start_task7 </args>
-      <args> task_machine15 task_machine8 tasks_order[15] tasks_order[8] 272 start_task15 start_task8 </args>
-      <args> task_machine15 task_machine9 tasks_order[15] tasks_order[9] 272 start_task15 start_task9 </args>
-      <args> task_machine15 task_machine10 tasks_order[15] tasks_order[10] 272 start_task15 start_task10 </args>
-      <args> task_machine15 task_machine11 tasks_order[15] tasks_order[11] 272 start_task15 start_task11 </args>
-      <args> task_machine15 task_machine12 tasks_order[15] tasks_order[12] 272 start_task15 start_task12 </args>
-      <args> task_machine15 task_machine13 tasks_order[15] tasks_order[13] 272 start_task15 start_task13 </args>
-      <args> task_machine15 task_machine14 tasks_order[15] tasks_order[14] 272 start_task15 start_task14 </args>
-      <args> task_machine15 task_machine15 tasks_order[15] tasks_order[15] 272 start_task15 start_task15 </args>
-      <args> task_machine15 task_machine16 tasks_order[15] tasks_order[16] 272 start_task15 start_task16 </args>
-      <args> task_machine15 task_machine17 tasks_order[15] tasks_order[17] 272 start_task15 start_task17 </args>
-      <args> task_machine15 task_machine18 tasks_order[15] tasks_order[18] 272 start_task15 start_task18 </args>
-      <args> task_machine15 task_machine19 tasks_order[15] tasks_order[19] 272 start_task15 start_task19 </args>
-      <args> task_machine16 task_machine0 tasks_order[16] tasks_order[0] 472 start_task16 start_task0 </args>
-      <args> task_machine16 task_machine1 tasks_order[16] tasks_order[1] 472 start_task16 start_task1 </args>
-      <args> task_machine16 task_machine2 tasks_order[16] tasks_order[2] 472 start_task16 start_task2 </args>
-      <args> task_machine16 task_machine3 tasks_order[16] tasks_order[3] 472 start_task16 start_task3 </args>
-      <args> task_machine16 task_machine4 tasks_order[16] tasks_order[4] 472 start_task16 start_task4 </args>
-      <args> task_machine16 task_machine5 tasks_order[16] tasks_order[5] 472 start_task16 start_task5 </args>
-      <args> task_machine16 task_machine6 tasks_order[16] tasks_order[6] 472 start_task16 start_task6 </args>
-      <args> task_machine16 task_machine7 tasks_order[16] tasks_order[7] 472 start_task16 start_task7 </args>
-      <args> task_machine16 task_machine8 tasks_order[16] tasks_order[8] 472 start_task16 start_task8 </args>
-      <args> task_machine16 task_machine9 tasks_order[16] tasks_order[9] 472 start_task16 start_task9 </args>
-      <args> task_machine16 task_machine10 tasks_order[16] tasks_order[10] 472 start_task16 start_task10 </args>
-      <args> task_machine16 task_machine11 tasks_order[16] tasks_order[11] 472 start_task16 start_task11 </args>
-      <args> task_machine16 task_machine12 tasks_order[16] tasks_order[12] 472 start_task16 start_task12 </args>
-      <args> task_machine16 task_machine13 tasks_order[16] tasks_order[13] 472 start_task16 start_task13 </args>
-      <args> task_machine16 task_machine14 tasks_order[16] tasks_order[14] 472 start_task16 start_task14 </args>
-      <args> task_machine16 task_machine15 tasks_order[16] tasks_order[15] 472 start_task16 start_task15 </args>
-      <args> task_machine16 task_machine16 tasks_order[16] tasks_order[16] 472 start_task16 start_task16 </args>
-      <args> task_machine16 task_machine17 tasks_order[16] tasks_order[17] 472 start_task16 start_task17 </args>
-      <args> task_machine16 task_machine18 tasks_order[16] tasks_order[18] 472 start_task16 start_task18 </args>
-      <args> task_machine16 task_machine19 tasks_order[16] tasks_order[19] 472 start_task16 start_task19 </args>
-      <args> task_machine17 task_machine0 tasks_order[17] tasks_order[0] 555 start_task17 start_task0 </args>
-      <args> task_machine17 task_machine1 tasks_order[17] tasks_order[1] 555 start_task17 start_task1 </args>
-      <args> task_machine17 task_machine2 tasks_order[17] tasks_order[2] 555 start_task17 start_task2 </args>
-      <args> task_machine17 task_machine3 tasks_order[17] tasks_order[3] 555 start_task17 start_task3 </args>
-      <args> task_machine17 task_machine4 tasks_order[17] tasks_order[4] 555 start_task17 start_task4 </args>
-      <args> task_machine17 task_machine5 tasks_order[17] tasks_order[5] 555 start_task17 start_task5 </args>
-      <args> task_machine17 task_machine6 tasks_order[17] tasks_order[6] 555 start_task17 start_task6 </args>
-      <args> task_machine17 task_machine7 tasks_order[17] tasks_order[7] 555 start_task17 start_task7 </args>
-      <args> task_machine17 task_machine8 tasks_order[17] tasks_order[8] 555 start_task17 start_task8 </args>
-      <args> task_machine17 task_machine9 tasks_order[17] tasks_order[9] 555 start_task17 start_task9 </args>
-      <args> task_machine17 task_machine10 tasks_order[17] tasks_order[10] 555 start_task17 start_task10 </args>
-      <args> task_machine17 task_machine11 tasks_order[17] tasks_order[11] 555 start_task17 start_task11 </args>
-      <args> task_machine17 task_machine12 tasks_order[17] tasks_order[12] 555 start_task17 start_task12 </args>
-      <args> task_machine17 task_machine13 tasks_order[17] tasks_order[13] 555 start_task17 start_task13 </args>
-      <args> task_machine17 task_machine14 tasks_order[17] tasks_order[14] 555 start_task17 start_task14 </args>
-      <args> task_machine17 task_machine15 tasks_order[17] tasks_order[15] 555 start_task17 start_task15 </args>
-      <args> task_machine17 task_machine16 tasks_order[17] tasks_order[16] 555 start_task17 start_task16 </args>
-      <args> task_machine17 task_machine17 tasks_order[17] tasks_order[17] 555 start_task17 start_task17 </args>
-      <args> task_machine17 task_machine18 tasks_order[17] tasks_order[18] 555 start_task17 start_task18 </args>
-      <args> task_machine17 task_machine19 tasks_order[17] tasks_order[19] 555 start_task17 start_task19 </args>
-      <args> task_machine18 task_machine0 tasks_order[18] tasks_order[0] 19 start_task18 start_task0 </args>
-      <args> task_machine18 task_machine1 tasks_order[18] tasks_order[1] 19 start_task18 start_task1 </args>
-      <args> task_machine18 task_machine2 tasks_order[18] tasks_order[2] 19 start_task18 start_task2 </args>
-      <args> task_machine18 task_machine3 tasks_order[18] tasks_order[3] 19 start_task18 start_task3 </args>
-      <args> task_machine18 task_machine4 tasks_order[18] tasks_order[4] 19 start_task18 start_task4 </args>
-      <args> task_machine18 task_machine5 tasks_order[18] tasks_order[5] 19 start_task18 start_task5 </args>
-      <args> task_machine18 task_machine6 tasks_order[18] tasks_order[6] 19 start_task18 start_task6 </args>
-      <args> task_machine18 task_machine7 tasks_order[18] tasks_order[7] 19 start_task18 start_task7 </args>
-      <args> task_machine18 task_machine8 tasks_order[18] tasks_order[8] 19 start_task18 start_task8 </args>
-      <args> task_machine18 task_machine9 tasks_order[18] tasks_order[9] 19 start_task18 start_task9 </args>
-      <args> task_machine18 task_machine10 tasks_order[18] tasks_order[10] 19 start_task18 start_task10 </args>
-      <args> task_machine18 task_machine11 tasks_order[18] tasks_order[11] 19 start_task18 start_task11 </args>
-      <args> task_machine18 task_machine12 tasks_order[18] tasks_order[12] 19 start_task18 start_task12 </args>
-      <args> task_machine18 task_machine13 tasks_order[18] tasks_order[13] 19 start_task18 start_task13 </args>
-      <args> task_machine18 task_machine14 tasks_order[18] tasks_order[14] 19 start_task18 start_task14 </args>
-      <args> task_machine18 task_machine15 tasks_order[18] tasks_order[15] 19 start_task18 start_task15 </args>
-      <args> task_machine18 task_machine16 tasks_order[18] tasks_order[16] 19 start_task18 start_task16 </args>
-      <args> task_machine18 task_machine17 tasks_order[18] tasks_order[17] 19 start_task18 start_task17 </args>
-      <args> task_machine18 task_machine18 tasks_order[18] tasks_order[18] 19 start_task18 start_task18 </args>
-      <args> task_machine18 task_machine19 tasks_order[18] tasks_order[19] 19 start_task18 start_task19 </args>
-      <args> task_machine19 task_machine0 tasks_order[19] tasks_order[0] 364 start_task19 start_task0 </args>
-      <args> task_machine19 task_machine1 tasks_order[19] tasks_order[1] 364 start_task19 start_task1 </args>
-      <args> task_machine19 task_machine2 tasks_order[19] tasks_order[2] 364 start_task19 start_task2 </args>
-      <args> task_machine19 task_machine3 tasks_order[19] tasks_order[3] 364 start_task19 start_task3 </args>
-      <args> task_machine19 task_machine4 tasks_order[19] tasks_order[4] 364 start_task19 start_task4 </args>
-      <args> task_machine19 task_machine5 tasks_order[19] tasks_order[5] 364 start_task19 start_task5 </args>
-      <args> task_machine19 task_machine6 tasks_order[19] tasks_order[6] 364 start_task19 start_task6 </args>
-      <args> task_machine19 task_machine7 tasks_order[19] tasks_order[7] 364 start_task19 start_task7 </args>
-      <args> task_machine19 task_machine8 tasks_order[19] tasks_order[8] 364 start_task19 start_task8 </args>
-      <args> task_machine19 task_machine9 tasks_order[19] tasks_order[9] 364 start_task19 start_task9 </args>
-      <args> task_machine19 task_machine10 tasks_order[19] tasks_order[10] 364 start_task19 start_task10 </args>
-      <args> task_machine19 task_machine11 tasks_order[19] tasks_order[11] 364 start_task19 start_task11 </args>
-      <args> task_machine19 task_machine12 tasks_order[19] tasks_order[12] 364 start_task19 start_task12 </args>
-      <args> task_machine19 task_machine13 tasks_order[19] tasks_order[13] 364 start_task19 start_task13 </args>
-      <args> task_machine19 task_machine14 tasks_order[19] tasks_order[14] 364 start_task19 start_task14 </args>
-      <args> task_machine19 task_machine15 tasks_order[19] tasks_order[15] 364 start_task19 start_task15 </args>
-      <args> task_machine19 task_machine16 tasks_order[19] tasks_order[16] 364 start_task19 start_task16 </args>
-      <args> task_machine19 task_machine17 tasks_order[19] tasks_order[17] 364 start_task19 start_task17 </args>
-      <args> task_machine19 task_machine18 tasks_order[19] tasks_order[18] 364 start_task19 start_task18 </args>
-      <args> task_machine19 task_machine19 tasks_order[19] tasks_order[19] 364 start_task19 start_task19 </args>
+      <args> task_machine0 task_machine0 tasks_order[0] tasks_order[0] 2 start_task0 start_task0 </args>
+      <args> task_machine0 task_machine1 tasks_order[0] tasks_order[1] 2 start_task0 start_task1 </args>
+      <args> task_machine0 task_machine2 tasks_order[0] tasks_order[2] 2 start_task0 start_task2 </args>
+      <args> task_machine0 task_machine3 tasks_order[0] tasks_order[3] 2 start_task0 start_task3 </args>
+      <args> task_machine0 task_machine4 tasks_order[0] tasks_order[4] 2 start_task0 start_task4 </args>
+      <args> task_machine0 task_machine5 tasks_order[0] tasks_order[5] 2 start_task0 start_task5 </args>
+      <args> task_machine0 task_machine6 tasks_order[0] tasks_order[6] 2 start_task0 start_task6 </args>
+      <args> task_machine0 task_machine7 tasks_order[0] tasks_order[7] 2 start_task0 start_task7 </args>
+      <args> task_machine0 task_machine8 tasks_order[0] tasks_order[8] 2 start_task0 start_task8 </args>
+      <args> task_machine0 task_machine9 tasks_order[0] tasks_order[9] 2 start_task0 start_task9 </args>
+      <args> task_machine1 task_machine0 tasks_order[1] tasks_order[0] 4 start_task1 start_task0 </args>
+      <args> task_machine1 task_machine1 tasks_order[1] tasks_order[1] 4 start_task1 start_task1 </args>
+      <args> task_machine1 task_machine2 tasks_order[1] tasks_order[2] 4 start_task1 start_task2 </args>
+      <args> task_machine1 task_machine3 tasks_order[1] tasks_order[3] 4 start_task1 start_task3 </args>
+      <args> task_machine1 task_machine4 tasks_order[1] tasks_order[4] 4 start_task1 start_task4 </args>
+      <args> task_machine1 task_machine5 tasks_order[1] tasks_order[5] 4 start_task1 start_task5 </args>
+      <args> task_machine1 task_machine6 tasks_order[1] tasks_order[6] 4 start_task1 start_task6 </args>
+      <args> task_machine1 task_machine7 tasks_order[1] tasks_order[7] 4 start_task1 start_task7 </args>
+      <args> task_machine1 task_machine8 tasks_order[1] tasks_order[8] 4 start_task1 start_task8 </args>
+      <args> task_machine1 task_machine9 tasks_order[1] tasks_order[9] 4 start_task1 start_task9 </args>
+      <args> task_machine2 task_machine0 tasks_order[2] tasks_order[0] 3 start_task2 start_task0 </args>
+      <args> task_machine2 task_machine1 tasks_order[2] tasks_order[1] 3 start_task2 start_task1 </args>
+      <args> task_machine2 task_machine2 tasks_order[2] tasks_order[2] 3 start_task2 start_task2 </args>
+      <args> task_machine2 task_machine3 tasks_order[2] tasks_order[3] 3 start_task2 start_task3 </args>
+      <args> task_machine2 task_machine4 tasks_order[2] tasks_order[4] 3 start_task2 start_task4 </args>
+      <args> task_machine2 task_machine5 tasks_order[2] tasks_order[5] 3 start_task2 start_task5 </args>
+      <args> task_machine2 task_machine6 tasks_order[2] tasks_order[6] 3 start_task2 start_task6 </args>
+      <args> task_machine2 task_machine7 tasks_order[2] tasks_order[7] 3 start_task2 start_task7 </args>
+      <args> task_machine2 task_machine8 tasks_order[2] tasks_order[8] 3 start_task2 start_task8 </args>
+      <args> task_machine2 task_machine9 tasks_order[2] tasks_order[9] 3 start_task2 start_task9 </args>
+      <args> task_machine3 task_machine0 tasks_order[3] tasks_order[0] 4 start_task3 start_task0 </args>
+      <args> task_machine3 task_machine1 tasks_order[3] tasks_order[1] 4 start_task3 start_task1 </args>
+      <args> task_machine3 task_machine2 tasks_order[3] tasks_order[2] 4 start_task3 start_task2 </args>
+      <args> task_machine3 task_machine3 tasks_order[3] tasks_order[3] 4 start_task3 start_task3 </args>
+      <args> task_machine3 task_machine4 tasks_order[3] tasks_order[4] 4 start_task3 start_task4 </args>
+      <args> task_machine3 task_machine5 tasks_order[3] tasks_order[5] 4 start_task3 start_task5 </args>
+      <args> task_machine3 task_machine6 tasks_order[3] tasks_order[6] 4 start_task3 start_task6 </args>
+      <args> task_machine3 task_machine7 tasks_order[3] tasks_order[7] 4 start_task3 start_task7 </args>
+      <args> task_machine3 task_machine8 tasks_order[3] tasks_order[8] 4 start_task3 start_task8 </args>
+      <args> task_machine3 task_machine9 tasks_order[3] tasks_order[9] 4 start_task3 start_task9 </args>
+      <args> task_machine4 task_machine0 tasks_order[4] tasks_order[0] 3 start_task4 start_task0 </args>
+      <args> task_machine4 task_machine1 tasks_order[4] tasks_order[1] 3 start_task4 start_task1 </args>
+      <args> task_machine4 task_machine2 tasks_order[4] tasks_order[2] 3 start_task4 start_task2 </args>
+      <args> task_machine4 task_machine3 tasks_order[4] tasks_order[3] 3 start_task4 start_task3 </args>
+      <args> task_machine4 task_machine4 tasks_order[4] tasks_order[4] 3 start_task4 start_task4 </args>
+      <args> task_machine4 task_machine5 tasks_order[4] tasks_order[5] 3 start_task4 start_task5 </args>
+      <args> task_machine4 task_machine6 tasks_order[4] tasks_order[6] 3 start_task4 start_task6 </args>
+      <args> task_machine4 task_machine7 tasks_order[4] tasks_order[7] 3 start_task4 start_task7 </args>
+      <args> task_machine4 task_machine8 tasks_order[4] tasks_order[8] 3 start_task4 start_task8 </args>
+      <args> task_machine4 task_machine9 tasks_order[4] tasks_order[9] 3 start_task4 start_task9 </args>
+      <args> task_machine5 task_machine0 tasks_order[5] tasks_order[0] 2 start_task5 start_task0 </args>
+      <args> task_machine5 task_machine1 tasks_order[5] tasks_order[1] 2 start_task5 start_task1 </args>
+      <args> task_machine5 task_machine2 tasks_order[5] tasks_order[2] 2 start_task5 start_task2 </args>
+      <args> task_machine5 task_machine3 tasks_order[5] tasks_order[3] 2 start_task5 start_task3 </args>
+      <args> task_machine5 task_machine4 tasks_order[5] tasks_order[4] 2 start_task5 start_task4 </args>
+      <args> task_machine5 task_machine5 tasks_order[5] tasks_order[5] 2 start_task5 start_task5 </args>
+      <args> task_machine5 task_machine6 tasks_order[5] tasks_order[6] 2 start_task5 start_task6 </args>
+      <args> task_machine5 task_machine7 tasks_order[5] tasks_order[7] 2 start_task5 start_task7 </args>
+      <args> task_machine5 task_machine8 tasks_order[5] tasks_order[8] 2 start_task5 start_task8 </args>
+      <args> task_machine5 task_machine9 tasks_order[5] tasks_order[9] 2 start_task5 start_task9 </args>
+      <args> task_machine6 task_machine0 tasks_order[6] tasks_order[0] 1 start_task6 start_task0 </args>
+      <args> task_machine6 task_machine1 tasks_order[6] tasks_order[1] 1 start_task6 start_task1 </args>
+      <args> task_machine6 task_machine2 tasks_order[6] tasks_order[2] 1 start_task6 start_task2 </args>
+      <args> task_machine6 task_machine3 tasks_order[6] tasks_order[3] 1 start_task6 start_task3 </args>
+      <args> task_machine6 task_machine4 tasks_order[6] tasks_order[4] 1 start_task6 start_task4 </args>
+      <args> task_machine6 task_machine5 tasks_order[6] tasks_order[5] 1 start_task6 start_task5 </args>
+      <args> task_machine6 task_machine6 tasks_order[6] tasks_order[6] 1 start_task6 start_task6 </args>
+      <args> task_machine6 task_machine7 tasks_order[6] tasks_order[7] 1 start_task6 start_task7 </args>
+      <args> task_machine6 task_machine8 tasks_order[6] tasks_order[8] 1 start_task6 start_task8 </args>
+      <args> task_machine6 task_machine9 tasks_order[6] tasks_order[9] 1 start_task6 start_task9 </args>
+      <args> task_machine7 task_machine0 tasks_order[7] tasks_order[0] 2 start_task7 start_task0 </args>
+      <args> task_machine7 task_machine1 tasks_order[7] tasks_order[1] 2 start_task7 start_task1 </args>
+      <args> task_machine7 task_machine2 tasks_order[7] tasks_order[2] 2 start_task7 start_task2 </args>
+      <args> task_machine7 task_machine3 tasks_order[7] tasks_order[3] 2 start_task7 start_task3 </args>
+      <args> task_machine7 task_machine4 tasks_order[7] tasks_order[4] 2 start_task7 start_task4 </args>
+      <args> task_machine7 task_machine5 tasks_order[7] tasks_order[5] 2 start_task7 start_task5 </args>
+      <args> task_machine7 task_machine6 tasks_order[7] tasks_order[6] 2 start_task7 start_task6 </args>
+      <args> task_machine7 task_machine7 tasks_order[7] tasks_order[7] 2 start_task7 start_task7 </args>
+      <args> task_machine7 task_machine8 tasks_order[7] tasks_order[8] 2 start_task7 start_task8 </args>
+      <args> task_machine7 task_machine9 tasks_order[7] tasks_order[9] 2 start_task7 start_task9 </args>
+      <args> task_machine8 task_machine0 tasks_order[8] tasks_order[0] 3 start_task8 start_task0 </args>
+      <args> task_machine8 task_machine1 tasks_order[8] tasks_order[1] 3 start_task8 start_task1 </args>
+      <args> task_machine8 task_machine2 tasks_order[8] tasks_order[2] 3 start_task8 start_task2 </args>
+      <args> task_machine8 task_machine3 tasks_order[8] tasks_order[3] 3 start_task8 start_task3 </args>
+      <args> task_machine8 task_machine4 tasks_order[8] tasks_order[4] 3 start_task8 start_task4 </args>
+      <args> task_machine8 task_machine5 tasks_order[8] tasks_order[5] 3 start_task8 start_task5 </args>
+      <args> task_machine8 task_machine6 tasks_order[8] tasks_order[6] 3 start_task8 start_task6 </args>
+      <args> task_machine8 task_machine7 tasks_order[8] tasks_order[7] 3 start_task8 start_task7 </args>
+      <args> task_machine8 task_machine8 tasks_order[8] tasks_order[8] 3 start_task8 start_task8 </args>
+      <args> task_machine8 task_machine9 tasks_order[8] tasks_order[9] 3 start_task8 start_task9 </args>
+      <args> task_machine9 task_machine0 tasks_order[9] tasks_order[0] 5 start_task9 start_task0 </args>
+      <args> task_machine9 task_machine1 tasks_order[9] tasks_order[1] 5 start_task9 start_task1 </args>
+      <args> task_machine9 task_machine2 tasks_order[9] tasks_order[2] 5 start_task9 start_task2 </args>
+      <args> task_machine9 task_machine3 tasks_order[9] tasks_order[3] 5 start_task9 start_task3 </args>
+      <args> task_machine9 task_machine4 tasks_order[9] tasks_order[4] 5 start_task9 start_task4 </args>
+      <args> task_machine9 task_machine5 tasks_order[9] tasks_order[5] 5 start_task9 start_task5 </args>
+      <args> task_machine9 task_machine6 tasks_order[9] tasks_order[6] 5 start_task9 start_task6 </args>
+      <args> task_machine9 task_machine7 tasks_order[9] tasks_order[7] 5 start_task9 start_task7 </args>
+      <args> task_machine9 task_machine8 tasks_order[9] tasks_order[8] 5 start_task9 start_task8 </args>
+      <args> task_machine9 task_machine9 tasks_order[9] tasks_order[9] 5 start_task9 start_task9 </args>
     </group>
+    <maximum>
+      <list> add(5,start_task9) </list>
+      <condition> (eq,aux_gb[0]) </condition>
+    </maximum>
   </constraints>
+  <objectives>
+    <minimize type="sum">
+      <list> aux_gb[0] start_task0 start_task1 start_task2 start_task3 start_task4 start_task5 start_task6 start_task7 start_task8 start_task9 </list>
+      <coeffs> 100 1x10 </coeffs>
+    </minimize>
+  </objectives>
 </instance>
