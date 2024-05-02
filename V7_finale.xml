@@ -1,9 +1,0 @@
-<instance format="XCSP3" type="CSP">
-  <variables>
-    <var id="task_machine1"> 0..9 </var>
-    <var id="task_machine23"> 0..9 </var>
-  </variables>
-  <constraints>
-    <allDifferent> task_machine1 task_machine23 </allDifferent>
-  </constraints>
-</instance>
