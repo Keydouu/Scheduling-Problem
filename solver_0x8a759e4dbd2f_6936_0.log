@@ -1,0 +1,265 @@
+
+ACE v2.1 
+
+  instance
+    name:ipykernel_launcher
+
+  Loading variables...
+
+  Loading constraints...
+
+  domains
+    types:58  values:92306  sizes:[1:126,2:211,3:3,10:29...406:68,712:10,841:45,1127:2]
+  variables
+    count:593  fixed:126  auxiliary:463  arrays:1  degrees:[2:512,3:1,13:16,16:17...56:1,59:1,65:1,81:1]
+  constraints
+    count:953  specific:489  groups:21  arities:[1:2,2:277,3:404,4:236...8:9,9:1,10:3,41:1]
+    distribution:[AllDifferentComplete:4,ConstraintIntension:464,Maximum:50,ObjVarGEu:1,ObjVarLEu:1,Reif3EQ:9,Reif3LE:9,Reif3NE:147,Sub2EQ:252,Sub2GE:16]
+    intStructures:(218,shared:246)
+    wck:0.59  cpu:1.0  mem:65M122
+  objective
+    way:min  type:ObjVarLE  bounds:1589..2300
+
+  Building solver... 
+
+  solver
+    guaranteedAC:true
+    wck:0.63  cpu:1.0  mem:72M265
+
+  preprocessing
+    effs:125  revisions:(2399,useless=2390)  values:85689  removedByAC:6617  unsat:false
+    wck:0.248  cpu:1.25  mem:73M562
+
+o 2001  0.99
+    run0  dpts:60..592  effs:1632  fails:100  wrgs:100  wck:0.00  ngds:101  bounds:1589..2000
+o 1971  1.15
+    run1  dpts:35..592  effs:7299  fails:200  wrgs:200  wck:0.42  ngds:201  bounds:1589..1970
+o 1965  1.50
+o 1959  1.56
+    run2  dpts:8..592  effs:10414  fails:300  wrgs:302  wck:0.81  ngds:303  bounds:1589..1958
+o 1944  1.61
+    run3  dpts:7..592  effs:15766  fails:400  wrgs:407  wck:0.93  ngds:396  bounds:1589..1943
+    run4  dpts:27..68  effs:26399  fails:500  wrgs:517  wck:1.25  ngds:480  bounds:1589..1943
+    run5  dpts:21..50  effs:30275  fails:610  wrgs:627  wck:1.80  ngds:590  bounds:1589..1943
+o 1919  2.81
+o 1898  2.88
+    run6  dpts:16..592  effs:35223  fails:731  wrgs:750  wck:2.12  ngds:712  bounds:1589..1897
+    run7  dpts:28..54  effs:37879  fails:831  wrgs:850  wck:2.60  ngds:812  bounds:1589..1897
+o 1897  3.58
+o 1896  3.58
+o 1889  3.60
+o 1836  3.90
+o 1829  3.93
+o 1824  3.93
+o 1823  3.93
+    run8  dpts:12..592  effs:45517  fails:941  wrgs:965  wck:2.81  ngds:852  bounds:1589..1822
+o 1807  4.31
+o 1806  4.36
+o 1805  4.36
+    run9  dpts:26..592  effs:50571  fails:1041  wrgs:1069  wck:3.52  ngds:953  bounds:1589..1804
+o 1802  7.20
+o 1801  7.20
+o 1800  7.23
+o 1799  7.23
+    run10  dpts:18..592  effs:58813  fails:1141  wrgs:1226  wck:3.84  ngds:962  bounds:1589..1798
+    run11  dpts:36..45  effs:62855  fails:1241  wrgs:1334  wck:6.64  ngds:1048  bounds:1589..1798
+    run12  dpts:23..46  effs:69748  fails:1351  wrgs:1468  wck:7.10  ngds:1101  bounds:1589..1798
+    run13  dpts:38..49  effs:73787  fails:1472  wrgs:1598  wck:7.99  ngds:1214  bounds:1589..1798
+o 1784  9.13
+    run14  dpts:8..592  effs:79263  fails:1605  wrgs:1758  wck:8.44  ngds:1336  bounds:1589..1783
+o 1782  9.78
+    run15  dpts:38..592  effs:86031  fails:1705  wrgs:1865  wck:8.98  ngds:1342  bounds:1589..1781
+o 1771  10.6
+    run16  dpts:40..592  effs:88337  fails:1805  wrgs:1967  wck:9.90  ngds:1431  bounds:1589..1770
+o 1770  10.9
+    run17  dpts:43..592  effs:94735  fails:1905  wrgs:2096  wck:10.0  ngds:1451  bounds:1589..1769
+o 1769  11.8
+o 1768  11.8
+    run18  dpts:35..592  effs:102649  fails:2005  wrgs:2240  wck:10.5  ngds:1458  bounds:1589..1767
+    run19  dpts:38..56  effs:105796  fails:2105  wrgs:2349  wck:12.1  ngds:1541  bounds:1589..1767
+    run20  dpts:32..55  effs:113235  fails:2215  wrgs:2505  wck:12.5  ngds:1606  bounds:1589..1767
+    run21  dpts:42..53  effs:115423  fails:2336  wrgs:2629  wck:13.6  ngds:1726  bounds:1589..1767
+    run22  dpts:29..64  effs:123454  fails:2469  wrgs:2824  wck:13.9  ngds:1731  bounds:1589..1767
+    run23  dpts:39..52  effs:128262  fails:2615  wrgs:2982  wck:16.0  ngds:1734  bounds:1589..1767
+    run24  dpts:45..63  effs:131460  fails:2776  wrgs:3163  wck:16.6  ngds:1883  bounds:1589..1767
+    run25  dpts:41..66  effs:135786  fails:2953  wrgs:3366  wck:16.9  ngds:1905  bounds:1589..1767
+    run26  dpts:40..64  effs:139818  fails:3147  wrgs:3584  wck:17.6  ngds:1928  bounds:1589..1767
+    run27  dpts:33..74  effs:145365  fails:3361  wrgs:3868  wck:18.0  ngds:2095  bounds:1589..1767
+    run28  dpts:55..63  effs:152887  fails:3596  wrgs:4104  wck:19.1  ngds:2329  bounds:1589..1767
+    run29  dpts:34..78  effs:162485  fails:3855  wrgs:4441  wck:19.3  ngds:2356  bounds:1589..1767
+    run30  dpts:33..59  effs:170191  fails:4140  wrgs:4756  wck:20.9  ngds:2447  bounds:1589..1767
+    run31  dpts:38..62  effs:175133  fails:4453  wrgs:5071  wck:21.6  ngds:2760  bounds:1589..1767
+    run32  dpts:38..75  effs:186189  fails:4798  wrgs:5453  wck:21.9  ngds:2860  bounds:1589..1767
+o 1765  23.2
+o 1764  23.2
+    run33  dpts:57..592  effs:192365  fails:5177  wrgs:5836  wck:22.6  ngds:3002  bounds:1589..1763
+    run34  dpts:39..77  effs:198335  fails:5277  wrgs:5979  wck:22.9  ngds:3004  bounds:1589..1763
+    run35  dpts:38..76  effs:206994  fails:5387  wrgs:6168  wck:24.1  ngds:3009  bounds:1589..1763
+    run36  dpts:38..59  effs:210305  fails:5508  wrgs:6302  wck:25.5  ngds:3120  bounds:1589..1763
+    run37  dpts:38..77  effs:213218  fails:5641  wrgs:6438  wck:25.8  ngds:3251  bounds:1589..1763
+    run38  dpts:39..57  effs:216139  fails:5787  wrgs:6590  wck:25.9  ngds:3396  bounds:1589..1763
+    run39  dpts:40..62  effs:220862  fails:5948  wrgs:6765  wck:26.0  ngds:3448  bounds:1589..1763
+o 1759  27.0
+    run40  dpts:44..592  effs:223552  fails:6125  wrgs:6951  wck:26.3  ngds:3513  bounds:1589..1758
+    run41  dpts:37..57  effs:228777  fails:6225  wrgs:7069  wck:26.6  ngds:3600  bounds:1589..1758
+o 1757  28.4
+    run42  dpts:35..592  effs:237262  fails:6335  wrgs:7227  wck:26.9  ngds:3616  bounds:1589..1756
+    run43  dpts:33..61  effs:240677  fails:6435  wrgs:7353  wck:27.9  ngds:3692  bounds:1589..1756
+    run44  dpts:23..58  effs:245952  fails:6545  wrgs:7503  wck:28.1  ngds:3763  bounds:1589..1756
+    run45  dpts:34..58  effs:249839  fails:6666  wrgs:7639  wck:29.0  ngds:3873  bounds:1589..1756
+    run46  dpts:23..59  effs:255013  fails:6799  wrgs:7804  wck:29.4  ngds:3978  bounds:1589..1756
+    run47  dpts:20..65  effs:262383  fails:6945  wrgs:8014  wck:30.1  ngds:4006  bounds:1589..1756
+    run48  dpts:22..63  effs:267274  fails:7106  wrgs:8193  wck:31.6  ngds:4137  bounds:1589..1756
+    run49  dpts:20..63  effs:285170  fails:7283  wrgs:8508  wck:32.4  ngds:4144  bounds:1589..1756
+    run50  dpts:22..59  effs:288279  fails:7477  wrgs:8712  wck:36.4  ngds:4328  bounds:1589..1756
+    run51  dpts:23..61  effs:293669  fails:7691  wrgs:8950  wck:36.8  ngds:4367  bounds:1589..1756
+    run52  dpts:25..63  effs:303420  fails:7926  wrgs:9218  wck:37.7  ngds:4389  bounds:1589..1756
+    run53  dpts:24..59  effs:315101  fails:8185  wrgs:9555  wck:39.0  ngds:4411  bounds:1589..1756
+    run54  dpts:47..76  effs:322697  fails:8470  wrgs:9870  wck:41.0  ngds:4678  bounds:1589..1756
+    run55  dpts:43..77  effs:327282  fails:8783  wrgs:10213  wck:41.4  ngds:4713  bounds:1589..1756
+    run56  dpts:20..81  effs:352108  fails:9128  wrgs:10656  wck:41.8  ngds:4743  bounds:1589..1756
+    run57  dpts:37..77  effs:378442  fails:9507  wrgs:11207  wck:44.0  ngds:4756  bounds:1589..1756
+    run58  dpts:26..75  effs:405927  fails:9924  wrgs:11786  wck:48.7  ngds:4763  bounds:1589..1756
+    run59  dpts:30..62  effs:419267  fails:10383  wrgs:12271  wck:56.8  ngds:4815  bounds:1589..1756
+    run60  dpts:26..66  effs:469932  fails:10888  wrgs:12877  wck:57.6  ngds:4878  bounds:1589..1756
+    run61  dpts:28..68  effs:489291  fails:11443  wrgs:13512  wck:62.9  ngds:4885  bounds:1589..1756
+    run62  dpts:31..51  effs:518491  fails:12054  wrgs:14165  wck:65.9  ngds:4996  bounds:1589..1756
+    run63  dpts:33..82  effs:563477  fails:12726  wrgs:14941  wck:67.5  ngds:4999  bounds:1589..1756
+    run64  dpts:45..69  effs:573319  fails:13466  wrgs:15690  wck:71.5  ngds:5604  bounds:1589..1756
+o 1756  73.7
+o 1755  73.7
+o 1754  73.7
+o 1753  73.8
+o 1752  73.8
+    run65  dpts:27..592  effs:607987  fails:14280  wrgs:16598  wck:72.2  ngds:5616  bounds:1589..1751
+    run66  dpts:42..59  effs:611098  fails:14380  wrgs:16713  wck:78.6  ngds:5695  bounds:1589..1751
+    run67  dpts:31..65  effs:617649  fails:14490  wrgs:16874  wck:79.4  ngds:5701  bounds:1589..1751
+    run68  dpts:44..52  effs:626168  fails:14611  wrgs:17041  wck:82.2  ngds:5710  bounds:1589..1751
+    run69  dpts:38..52  effs:633907  fails:14744  wrgs:17214  wck:83.0  ngds:5736  bounds:1589..1751
+    run70  dpts:30..66  effs:644368  fails:14890  wrgs:17435  wck:83.9  ngds:5743  bounds:1589..1751
+    run71  dpts:38..82  effs:652141  fails:15051  wrgs:17641  wck:89.7  ngds:5785  bounds:1589..1751
+    run72  dpts:30..82  effs:667354  fails:15228  wrgs:17914  wck:91.2  ngds:5818  bounds:1589..1751
+    run73  dpts:34..82  effs:672966  fails:15422  wrgs:18150  wck:97.7  ngds:5946  bounds:1589..1751
+    run74  dpts:36..78  effs:679910  fails:15636  wrgs:18380  wck:99.0  ngds:6131  bounds:1589..1751
+    run75  dpts:27..65  effs:698585  fails:15871  wrgs:18741  wck:102.6  ngds:6139  bounds:1589..1751
+    run76  dpts:34..68  effs:711913  fails:16130  wrgs:19059  wck:110.3  ngds:6148  bounds:1589..1751
+    run77  dpts:28..68  effs:739553  fails:16415  wrgs:19489  wck:115.3  ngds:6188  bounds:1589..1751
+    run78  dpts:31..65  effs:755521  fails:16728  wrgs:19820  wck:126.2  ngds:6218  bounds:1589..1751
+    run79  dpts:47..87  effs:782880  fails:17073  wrgs:20222  wck:127.7  ngds:6329  bounds:1589..1751
+    run80  dpts:49..87  effs:789322  fails:17452  wrgs:20627  wck:129.1  ngds:6692  bounds:1589..1751
+    run81  dpts:36..72  effs:804386  fails:17869  wrgs:21111  wck:130.0  ngds:6703  bounds:1589..1751
+    run82  dpts:36..69  effs:810989  fails:18328  wrgs:21584  wck:134.8  ngds:6970  bounds:1589..1751
+    run83  dpts:37..90  effs:828310  fails:18833  wrgs:22113  wck:136.5  ngds:7453  bounds:1589..1751
+    run84  dpts:25..64  effs:845971  fails:19388  wrgs:22720  wck:137.6  ngds:7554  bounds:1589..1751
+    run85  dpts:24..63  effs:868199  fails:19999  wrgs:23389  wck:142.9  ngds:7691  bounds:1589..1751
+    run86  dpts:22..64  effs:899951  fails:20671  wrgs:24173  wck:147.8  ngds:7723  bounds:1589..1751
+    run87  dpts:23..64  effs:923986  fails:21411  wrgs:24981  wck:154.8  ngds:8058  bounds:1589..1751
+    run88  dpts:37..65  effs:962734  fails:22225  wrgs:25821  wck:159.7  ngds:8531  bounds:1589..1751
+    run89  dpts:48..66  effs:975406  fails:23120  wrgs:26724  wck:161.5  ngds:8614  bounds:1589..1751
+o 1751  173.6
+o 1750  173.6
+o 1749  173.6
+    run90  dpts:22..592  effs:1025265  fails:23620  wrgs:27480  wck:162.2  ngds:8614  bounds:1589..1748
+
+  global
+    effs:1025265  revisions:(6462123,useless=6204332)  ngds:8614
+    stop:EXCEEDED_TIME  wrgs:27480  bound:1749  boundWck:173.599  sols:39  sol1Cpu:1.328
+    wck:180.0  cpu:177.156  mem:88M242
+
+
+  Solution 39 in JSON format:
+   {
+    task_machine1: 5,
+    start_task1: 0,
+    task_machine2: 7,
+    start_task2: 0,
+    task_machine3: 6,
+    start_task3: 0,
+    task_machine33: 8,
+    start_task33: 0,
+    task_machine37: 9,
+    start_task37: 0,
+    task_machine5: 1,
+    start_task5: 0,
+    task_machine9: 4,
+    start_task9: 0,
+    task_machine19: 3,
+    start_task19: 0,
+    task_machine20: 0,
+    start_task20: 0,
+    task_machine23: 2,
+    start_task23: 0,
+    task_machine32: 6,
+    start_task32: 709,
+    task_machine0: 5,
+    start_task0: 669,
+    task_machine4: 2,
+    start_task4: 647,
+    task_machine10: 9,
+    start_task10: 791,
+    task_machine12: 8,
+    start_task12: 682,
+    task_machine15: 3,
+    start_task15: 645,
+    task_machine17: 1,
+    start_task17: 683,
+    task_machine22: 7,
+    start_task22: 688,
+    task_machine27: 0,
+    start_task27: 624,
+    task_machine30: 4,
+    start_task30: 651,
+    task_machine34: 9,
+    start_task34: 1268,
+    task_machine35: 3,
+    start_task35: 1237,
+    task_machine39: 4,
+    start_task39: 1170,
+    task_machine13: 5,
+    start_task13: 1237,
+    task_machine16: 8,
+    start_task16: 1146,
+    task_machine21: 0,
+    start_task21: 1154,
+    task_machine24: 2,
+    start_task24: 1152,
+    task_machine25: 7,
+    start_task25: 1237,
+    task_machine26: 1,
+    start_task26: 1224,
+    task_machine28: 6,
+    start_task28: 1063,
+    task_machine38: 3,
+    start_task38: 1577,
+    task_machine7: 5,
+    start_task7: 1494,
+    task_machine8: 2,
+    start_task8: 1513,
+    task_machine6: 9,
+    start_task6: 1696,
+    task_machine11: 8,
+    start_task11: 1522,
+    task_machine14: 1,
+    start_task14: 1646,
+    task_machine18: 4,
+    start_task18: 1533,
+    task_machine29: 7,
+    start_task29: 1294,
+    task_machine31: 6,
+    start_task31: 1555,
+    task_machine36: 0,
+    start_task36: 1618,
+    score: 1749,
+    aux_gb: [669, 688, 709, 682, 791, 683, 669, 669, 669, 669, 1063, 1237, 1152, 1268, 1146, 1237, 1224, 1237, 1154, 1170, 1063, 1237, 1152, 1268, 1146, 1237, 1224, 1237, 1154, 1170, 1696, 1577, 1533, 1494, 1522, 1617, 1513, 1294, 1646, 1555, 1744, 1744, 1748, 1716, 1749, 1726, 1748, 1600, 1731]
+   }
+
+s SATISFIABLE
+
+v <instantiation id='sol39' type='solution' cost='1749'> <list> task_machine1 start_task1 task_machine2 start_task2 task_machine3 start_task3 task_machine33 start_task33 task_machine37 start_task37 task_machine5 start_task5 task_machine9 start_task9 task_machine19 start_task19 task_machine20 start_task20 task_machine23 start_task23 task_machine32 start_task32 task_machine0 start_task0 task_machine4 start_task4 task_machine10 start_task10 task_machine12 start_task12 task_machine15 start_task15 task_machine17 start_task17 task_machine22 start_task22 task_machine27 start_task27 task_machine30 start_task30 task_machine34 start_task34 task_machine35 start_task35 task_machine39 start_task39 task_machine13 start_task13 task_machine16 start_task16 task_machine21 start_task21 task_machine24 start_task24 task_machine25 start_task25 task_machine26 start_task26 task_machine28 start_task28 task_machine38 start_task38 task_machine7 start_task7 task_machine8 start_task8 task_machine6 start_task6 task_machine11 start_task11 task_machine14 start_task14 task_machine18 start_task18 task_machine29 start_task29 task_machine31 start_task31 task_machine36 start_task36 score aux_gb[] </list> <values> 5 0 7 0 6 0 8 0 9 0 1 0 4 0 3 0 0 0 2 0 6 709 5 669 2 647 9 791 8 682 3 645 1 683 7 688 0 624 4 651 9 1268 3 1237 4 1170 5 1237 8 1146 0 1154 2 1152 7 1237 1 1224 6 1063 3 1577 5 1494 2 1513 9 1696 8 1522 1 1646 4 1533 7 1294 6 1555 0 1618 1749 669 688 709 682 791 683 669x4 1063 1237 1152 1268 1146 1237 1224 1237 1154 1170 1063 1237 1152 1268 1146 1237 1224 1237 1154 1170 1696 1577 1533 1494 1522 1617 1513 1294 1646 1555 1744 1744 1748 1716 1749 1726 1748 1600 1731 </values> </instantiation>
+
+d WRONG DECISIONS 27480
+d FOUND SOLUTIONS 39
+d BOUND 1749
+d INCOMPLETE EXPLORATION
+
+c real time : 177.171

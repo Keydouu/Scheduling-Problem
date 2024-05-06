@@ -1,0 +1,688 @@
+<instance format="XCSP3" type="COP">
+  <variables>
+    <var id="task_machine1"> 0..9 </var>
+    <var id="start_task1"> 0 </var>
+    <var id="task_machine2"> 0..9 </var>
+    <var id="start_task2"> 0 </var>
+    <var id="task_machine3"> 6 </var>
+    <var id="start_task3"> 0 </var>
+    <var id="task_machine33"> 0..9 </var>
+    <var id="start_task33"> 0 </var>
+    <var id="task_machine37"> 0..9 </var>
+    <var id="start_task37"> 0 </var>
+    <var id="task_machine5"> 0..9 </var>
+    <var id="start_task5"> 0 </var>
+    <var id="task_machine9"> 0..9 </var>
+    <var id="start_task9"> 0 </var>
+    <var id="task_machine19"> 0..9 </var>
+    <var id="start_task19"> 0 </var>
+    <var id="task_machine20"> 0..9 </var>
+    <var id="start_task20"> 0 </var>
+    <var id="task_machine23"> 0..9 </var>
+    <var id="start_task23"> 0 </var>
+    <var id="task_machine32"> 0..9 </var>
+    <var id="start_task32"> 624..791 </var>
+    <var id="task_machine0"> 0..9 </var>
+    <var id="start_task0"> 624..791 </var>
+    <var id="task_machine4"> 2 </var>
+    <var id="start_task4"> 624..791 </var>
+    <var id="task_machine10"> 9 </var>
+    <var id="start_task10"> 624..791 </var>
+    <var id="task_machine12"> 0..9 </var>
+    <var id="start_task12"> 624..791 </var>
+    <var id="task_machine15"> 0..9 </var>
+    <var id="start_task15"> 624..791 </var>
+    <var id="task_machine17"> 0..9 </var>
+    <var id="start_task17"> 624..791 </var>
+    <var id="task_machine22"> 0..9 </var>
+    <var id="start_task22"> 624..791 </var>
+    <var id="task_machine27"> 0 </var>
+    <var id="start_task27"> 624..791 </var>
+    <var id="task_machine30"> 0..9 </var>
+    <var id="start_task30"> 624..791 </var>
+    <var id="task_machine34"> 0..9 </var>
+    <var id="start_task34"> 978..1383 </var>
+    <var id="task_machine35"> 0..9 </var>
+    <var id="start_task35"> 978..1383 </var>
+    <var id="task_machine39"> 0..9 </var>
+    <var id="start_task39"> 978..1383 </var>
+    <var id="task_machine13"> 0..9 </var>
+    <var id="start_task13"> 978..1383 </var>
+    <var id="task_machine16"> 8 </var>
+    <var id="start_task16"> 978..1383 </var>
+    <var id="task_machine21"> 0 </var>
+    <var id="start_task21"> 978..1383 </var>
+    <var id="task_machine24"> 0..9 </var>
+    <var id="start_task24"> 978..1383 </var>
+    <var id="task_machine25"> 0..9 </var>
+    <var id="start_task25"> 978..1383 </var>
+    <var id="task_machine26"> 0..9 </var>
+    <var id="start_task26"> 978..1383 </var>
+    <var id="task_machine28"> 0..9 </var>
+    <var id="start_task28"> 978..1383 </var>
+    <var id="task_machine38"> 0 3 8 </var>
+    <var id="start_task38"> 1035..1875 </var>
+    <var id="task_machine7"> 5 </var>
+    <var id="start_task7"> 1035..1875 </var>
+    <var id="task_machine8"> 0..9 </var>
+    <var id="start_task8"> 1035..1875 </var>
+    <var id="task_machine6"> 0..9 </var>
+    <var id="start_task6"> 1035..1875 </var>
+    <var id="task_machine11"> 0..9 </var>
+    <var id="start_task11"> 1035..1875 </var>
+    <var id="task_machine14"> 1 </var>
+    <var id="start_task14"> 1035..1875 </var>
+    <var id="task_machine18"> 0..9 </var>
+    <var id="start_task18"> 1035..1875 </var>
+    <var id="task_machine29"> 3 7 8 </var>
+    <var id="start_task29"> 1035..1875 </var>
+    <var id="task_machine31"> 0..9 </var>
+    <var id="start_task31"> 1035..1875 </var>
+    <var id="task_machine36"> 0 3 5 </var>
+    <var id="start_task36"> 1055..2181 </var>
+    <var id="score"> 1589..2300 </var>
+    <array id="aux_gb" note="aux_gb[i] is the ith auxiliary variable having been automatically introduced" size="[49]">
+      <domain for="aux_gb[0] aux_gb[6..9]"> 669 </domain>
+      <domain for="aux_gb[1]"> 688 </domain>
+      <domain for="aux_gb[2]"> 709 </domain>
+      <domain for="aux_gb[3]"> 682 </domain>
+      <domain for="aux_gb[4]"> 791 </domain>
+      <domain for="aux_gb[5]"> 683 </domain>
+      <domain for="aux_gb[10] aux_gb[20]"> 978..1145 </domain>
+      <domain for="aux_gb[11] aux_gb[21]"> 1192..1359 </domain>
+      <domain for="aux_gb[12] aux_gb[22]"> 1129..1296 </domain>
+      <domain for="aux_gb[13] aux_gb[23]"> 1101..1268 </domain>
+      <domain for="aux_gb[14] aux_gb[24]"> 1088..1255 </domain>
+      <domain for="aux_gb[15] aux_gb[25]"> 1216..1383 </domain>
+      <domain for="aux_gb[16] aux_gb[26]"> 1165..1332 </domain>
+      <domain for="aux_gb[17] aux_gb[27]"> 1173..1340 </domain>
+      <domain for="aux_gb[18] aux_gb[28]"> 1154..1321 </domain>
+      <domain for="aux_gb[19] aux_gb[29]"> 1143..1310 </domain>
+      <domain for="aux_gb[30]"> 1406..1811 </domain>
+      <domain for="aux_gb[31]"> 1318..1723 </domain>
+      <domain for="aux_gb[32]"> 1341..1746 </domain>
+      <domain for="aux_gb[33]"> 1235..1640 </domain>
+      <domain for="aux_gb[34]"> 1354..1759 </domain>
+      <domain for="aux_gb[35]"> 1441..1846 </domain>
+      <domain for="aux_gb[36]"> 1339..1744 </domain>
+      <domain for="aux_gb[37]"> 1035..1440 </domain>
+      <domain for="aux_gb[38]"> 1400..1805 </domain>
+      <domain for="aux_gb[39]"> 1470..1875 </domain>
+      <domain for="aux_gb[40..48]"> 1470..2181 </domain>
+    </array>
+  </variables>
+  <constraints>
+    <allDifferent> task_machine1 task_machine2 task_machine3 task_machine33 task_machine37 task_machine5 task_machine9 task_machine19 task_machine20 task_machine23 </allDifferent>
+    <allDifferent> task_machine32 task_machine0 task_machine4 task_machine10 task_machine12 task_machine15 task_machine17 task_machine22 task_machine27 task_machine30 </allDifferent>
+    <allDifferent> task_machine34 task_machine35 task_machine39 task_machine13 task_machine16 task_machine21 task_machine24 task_machine25 task_machine26 task_machine28 </allDifferent>
+    <allDifferent> task_machine38 task_machine7 task_machine8 task_machine6 task_machine11 task_machine14 task_machine18 task_machine29 task_machine31 </allDifferent>
+    <group>
+      <intension> imp(eq(%0,%1),eq(%2,add(%3,%4))) </intension>
+      <args> task_machine15 task_machine1 start_task15 start_task1 669 </args>
+      <args> task_machine15 task_machine2 start_task15 start_task2 688 </args>
+      <args> task_machine15 task_machine3 start_task15 start_task3 709 </args>
+      <args> task_machine15 task_machine33 start_task15 start_task33 682 </args>
+      <args> task_machine15 task_machine37 start_task15 start_task37 791 </args>
+      <args> task_machine15 task_machine5 start_task15 start_task5 683 </args>
+      <args> task_machine15 task_machine9 start_task15 start_task9 651 </args>
+      <args> task_machine15 task_machine19 start_task15 start_task19 645 </args>
+      <args> task_machine15 task_machine20 start_task15 start_task20 624 </args>
+      <args> task_machine15 task_machine23 start_task15 start_task23 647 </args>
+      <args> task_machine0 task_machine1 start_task0 start_task1 669 </args>
+      <args> task_machine0 task_machine2 start_task0 start_task2 688 </args>
+      <args> task_machine0 task_machine3 start_task0 start_task3 709 </args>
+      <args> task_machine0 task_machine33 start_task0 start_task33 682 </args>
+      <args> task_machine0 task_machine37 start_task0 start_task37 791 </args>
+      <args> task_machine0 task_machine5 start_task0 start_task5 683 </args>
+      <args> task_machine0 task_machine9 start_task0 start_task9 651 </args>
+      <args> task_machine0 task_machine19 start_task0 start_task19 645 </args>
+      <args> task_machine0 task_machine20 start_task0 start_task20 624 </args>
+      <args> task_machine0 task_machine23 start_task0 start_task23 647 </args>
+      <args> task_machine22 task_machine1 start_task22 start_task1 669 </args>
+      <args> task_machine22 task_machine2 start_task22 start_task2 688 </args>
+      <args> task_machine22 task_machine3 start_task22 start_task3 709 </args>
+      <args> task_machine22 task_machine33 start_task22 start_task33 682 </args>
+      <args> task_machine22 task_machine37 start_task22 start_task37 791 </args>
+      <args> task_machine22 task_machine5 start_task22 start_task5 683 </args>
+      <args> task_machine22 task_machine9 start_task22 start_task9 651 </args>
+      <args> task_machine22 task_machine19 start_task22 start_task19 645 </args>
+      <args> task_machine22 task_machine20 start_task22 start_task20 624 </args>
+      <args> task_machine22 task_machine23 start_task22 start_task23 647 </args>
+      <args> task_machine17 task_machine1 start_task17 start_task1 669 </args>
+      <args> task_machine17 task_machine2 start_task17 start_task2 688 </args>
+      <args> task_machine17 task_machine3 start_task17 start_task3 709 </args>
+      <args> task_machine17 task_machine33 start_task17 start_task33 682 </args>
+      <args> task_machine17 task_machine37 start_task17 start_task37 791 </args>
+      <args> task_machine17 task_machine5 start_task17 start_task5 683 </args>
+      <args> task_machine17 task_machine9 start_task17 start_task9 651 </args>
+      <args> task_machine17 task_machine19 start_task17 start_task19 645 </args>
+      <args> task_machine17 task_machine20 start_task17 start_task20 624 </args>
+      <args> task_machine17 task_machine23 start_task17 start_task23 647 </args>
+      <args> task_machine27 task_machine1 start_task27 start_task1 669 </args>
+      <args> task_machine27 task_machine2 start_task27 start_task2 688 </args>
+      <args> task_machine27 task_machine3 start_task27 start_task3 709 </args>
+      <args> task_machine27 task_machine33 start_task27 start_task33 682 </args>
+      <args> task_machine27 task_machine37 start_task27 start_task37 791 </args>
+      <args> task_machine27 task_machine5 start_task27 start_task5 683 </args>
+      <args> task_machine27 task_machine9 start_task27 start_task9 651 </args>
+      <args> task_machine27 task_machine19 start_task27 start_task19 645 </args>
+      <args> task_machine27 task_machine20 start_task27 start_task20 624 </args>
+      <args> task_machine27 task_machine23 start_task27 start_task23 647 </args>
+      <args> task_machine30 task_machine1 start_task30 start_task1 669 </args>
+      <args> task_machine30 task_machine2 start_task30 start_task2 688 </args>
+      <args> task_machine30 task_machine3 start_task30 start_task3 709 </args>
+      <args> task_machine30 task_machine33 start_task30 start_task33 682 </args>
+      <args> task_machine30 task_machine37 start_task30 start_task37 791 </args>
+      <args> task_machine30 task_machine5 start_task30 start_task5 683 </args>
+      <args> task_machine30 task_machine9 start_task30 start_task9 651 </args>
+      <args> task_machine30 task_machine19 start_task30 start_task19 645 </args>
+      <args> task_machine30 task_machine20 start_task30 start_task20 624 </args>
+      <args> task_machine30 task_machine23 start_task30 start_task23 647 </args>
+      <args> task_machine4 task_machine1 start_task4 start_task1 669 </args>
+      <args> task_machine4 task_machine2 start_task4 start_task2 688 </args>
+      <args> task_machine4 task_machine3 start_task4 start_task3 709 </args>
+      <args> task_machine4 task_machine33 start_task4 start_task33 682 </args>
+      <args> task_machine4 task_machine37 start_task4 start_task37 791 </args>
+      <args> task_machine4 task_machine5 start_task4 start_task5 683 </args>
+      <args> task_machine4 task_machine9 start_task4 start_task9 651 </args>
+      <args> task_machine4 task_machine19 start_task4 start_task19 645 </args>
+      <args> task_machine4 task_machine20 start_task4 start_task20 624 </args>
+      <args> task_machine4 task_machine23 start_task4 start_task23 647 </args>
+      <args> task_machine10 task_machine1 start_task10 start_task1 669 </args>
+      <args> task_machine10 task_machine2 start_task10 start_task2 688 </args>
+      <args> task_machine10 task_machine3 start_task10 start_task3 709 </args>
+      <args> task_machine10 task_machine33 start_task10 start_task33 682 </args>
+      <args> task_machine10 task_machine37 start_task10 start_task37 791 </args>
+      <args> task_machine10 task_machine5 start_task10 start_task5 683 </args>
+      <args> task_machine10 task_machine9 start_task10 start_task9 651 </args>
+      <args> task_machine10 task_machine19 start_task10 start_task19 645 </args>
+      <args> task_machine10 task_machine20 start_task10 start_task20 624 </args>
+      <args> task_machine10 task_machine23 start_task10 start_task23 647 </args>
+      <args> task_machine12 task_machine1 start_task12 start_task1 669 </args>
+      <args> task_machine12 task_machine2 start_task12 start_task2 688 </args>
+      <args> task_machine12 task_machine3 start_task12 start_task3 709 </args>
+      <args> task_machine12 task_machine33 start_task12 start_task33 682 </args>
+      <args> task_machine12 task_machine37 start_task12 start_task37 791 </args>
+      <args> task_machine12 task_machine5 start_task12 start_task5 683 </args>
+      <args> task_machine12 task_machine9 start_task12 start_task9 651 </args>
+      <args> task_machine12 task_machine19 start_task12 start_task19 645 </args>
+      <args> task_machine12 task_machine20 start_task12 start_task20 624 </args>
+      <args> task_machine12 task_machine23 start_task12 start_task23 647 </args>
+      <args> task_machine21 task_machine32 start_task21 start_task32 354 </args>
+      <args> task_machine21 task_machine0 start_task21 start_task0 568 </args>
+      <args> task_machine21 task_machine4 start_task21 start_task4 505 </args>
+      <args> task_machine21 task_machine10 start_task21 start_task10 477 </args>
+      <args> task_machine21 task_machine12 start_task21 start_task12 464 </args>
+      <args> task_machine21 task_machine15 start_task21 start_task15 592 </args>
+      <args> task_machine21 task_machine17 start_task21 start_task17 541 </args>
+      <args> task_machine21 task_machine22 start_task21 start_task22 549 </args>
+      <args> task_machine21 task_machine27 start_task21 start_task27 530 </args>
+      <args> task_machine21 task_machine30 start_task21 start_task30 519 </args>
+      <args> task_machine34 task_machine32 start_task34 start_task32 354 </args>
+      <args> task_machine34 task_machine0 start_task34 start_task0 568 </args>
+      <args> task_machine34 task_machine4 start_task34 start_task4 505 </args>
+      <args> task_machine34 task_machine10 start_task34 start_task10 477 </args>
+      <args> task_machine34 task_machine12 start_task34 start_task12 464 </args>
+      <args> task_machine34 task_machine15 start_task34 start_task15 592 </args>
+      <args> task_machine34 task_machine17 start_task34 start_task17 541 </args>
+      <args> task_machine34 task_machine22 start_task34 start_task22 549 </args>
+      <args> task_machine34 task_machine27 start_task34 start_task27 530 </args>
+      <args> task_machine34 task_machine30 start_task34 start_task30 519 </args>
+      <args> task_machine26 task_machine32 start_task26 start_task32 354 </args>
+      <args> task_machine26 task_machine0 start_task26 start_task0 568 </args>
+      <args> task_machine26 task_machine4 start_task26 start_task4 505 </args>
+      <args> task_machine26 task_machine10 start_task26 start_task10 477 </args>
+      <args> task_machine26 task_machine12 start_task26 start_task12 464 </args>
+      <args> task_machine26 task_machine15 start_task26 start_task15 592 </args>
+      <args> task_machine26 task_machine17 start_task26 start_task17 541 </args>
+      <args> task_machine26 task_machine22 start_task26 start_task22 549 </args>
+      <args> task_machine26 task_machine27 start_task26 start_task27 530 </args>
+      <args> task_machine26 task_machine30 start_task26 start_task30 519 </args>
+      <args> task_machine16 task_machine32 start_task16 start_task32 354 </args>
+      <args> task_machine16 task_machine0 start_task16 start_task0 568 </args>
+      <args> task_machine16 task_machine4 start_task16 start_task4 505 </args>
+      <args> task_machine16 task_machine10 start_task16 start_task10 477 </args>
+      <args> task_machine16 task_machine12 start_task16 start_task12 464 </args>
+      <args> task_machine16 task_machine15 start_task16 start_task15 592 </args>
+      <args> task_machine16 task_machine17 start_task16 start_task17 541 </args>
+      <args> task_machine16 task_machine22 start_task16 start_task22 549 </args>
+      <args> task_machine16 task_machine27 start_task16 start_task27 530 </args>
+      <args> task_machine16 task_machine30 start_task16 start_task30 519 </args>
+      <args> task_machine39 task_machine32 start_task39 start_task32 354 </args>
+      <args> task_machine39 task_machine0 start_task39 start_task0 568 </args>
+      <args> task_machine39 task_machine4 start_task39 start_task4 505 </args>
+      <args> task_machine39 task_machine10 start_task39 start_task10 477 </args>
+      <args> task_machine39 task_machine12 start_task39 start_task12 464 </args>
+      <args> task_machine39 task_machine15 start_task39 start_task15 592 </args>
+      <args> task_machine39 task_machine17 start_task39 start_task17 541 </args>
+      <args> task_machine39 task_machine22 start_task39 start_task22 549 </args>
+      <args> task_machine39 task_machine27 start_task39 start_task27 530 </args>
+      <args> task_machine39 task_machine30 start_task39 start_task30 519 </args>
+      <args> task_machine24 task_machine32 start_task24 start_task32 354 </args>
+      <args> task_machine24 task_machine0 start_task24 start_task0 568 </args>
+      <args> task_machine24 task_machine4 start_task24 start_task4 505 </args>
+      <args> task_machine24 task_machine10 start_task24 start_task10 477 </args>
+      <args> task_machine24 task_machine12 start_task24 start_task12 464 </args>
+      <args> task_machine24 task_machine15 start_task24 start_task15 592 </args>
+      <args> task_machine24 task_machine17 start_task24 start_task17 541 </args>
+      <args> task_machine24 task_machine22 start_task24 start_task22 549 </args>
+      <args> task_machine24 task_machine27 start_task24 start_task27 530 </args>
+      <args> task_machine24 task_machine30 start_task24 start_task30 519 </args>
+      <args> task_machine35 task_machine32 start_task35 start_task32 354 </args>
+      <args> task_machine35 task_machine0 start_task35 start_task0 568 </args>
+      <args> task_machine35 task_machine4 start_task35 start_task4 505 </args>
+      <args> task_machine35 task_machine10 start_task35 start_task10 477 </args>
+      <args> task_machine35 task_machine12 start_task35 start_task12 464 </args>
+      <args> task_machine35 task_machine15 start_task35 start_task15 592 </args>
+      <args> task_machine35 task_machine17 start_task35 start_task17 541 </args>
+      <args> task_machine35 task_machine22 start_task35 start_task22 549 </args>
+      <args> task_machine35 task_machine27 start_task35 start_task27 530 </args>
+      <args> task_machine35 task_machine30 start_task35 start_task30 519 </args>
+      <args> task_machine13 task_machine32 start_task13 start_task32 354 </args>
+      <args> task_machine13 task_machine0 start_task13 start_task0 568 </args>
+      <args> task_machine13 task_machine4 start_task13 start_task4 505 </args>
+      <args> task_machine13 task_machine10 start_task13 start_task10 477 </args>
+      <args> task_machine13 task_machine12 start_task13 start_task12 464 </args>
+      <args> task_machine13 task_machine15 start_task13 start_task15 592 </args>
+      <args> task_machine13 task_machine17 start_task13 start_task17 541 </args>
+      <args> task_machine13 task_machine22 start_task13 start_task22 549 </args>
+      <args> task_machine13 task_machine27 start_task13 start_task27 530 </args>
+      <args> task_machine13 task_machine30 start_task13 start_task30 519 </args>
+      <args> task_machine7 task_machine34 start_task7 start_task34 428 </args>
+      <args> task_machine7 task_machine35 start_task7 start_task35 340 </args>
+      <args> task_machine7 task_machine39 start_task7 start_task39 363 </args>
+      <args> task_machine7 task_machine13 start_task7 start_task13 257 </args>
+      <args> task_machine7 task_machine16 start_task7 start_task16 376 </args>
+      <args> task_machine7 task_machine21 start_task7 start_task21 463 </args>
+      <args> task_machine7 task_machine24 start_task7 start_task24 361 </args>
+      <args> task_machine7 task_machine25 start_task7 start_task25 57 </args>
+      <args> task_machine7 task_machine26 start_task7 start_task26 422 </args>
+      <args> task_machine7 task_machine28 start_task7 start_task28 492 </args>
+      <args> task_machine8 task_machine34 start_task8 start_task34 428 </args>
+      <args> task_machine8 task_machine35 start_task8 start_task35 340 </args>
+      <args> task_machine8 task_machine39 start_task8 start_task39 363 </args>
+      <args> task_machine8 task_machine13 start_task8 start_task13 257 </args>
+      <args> task_machine8 task_machine16 start_task8 start_task16 376 </args>
+      <args> task_machine8 task_machine21 start_task8 start_task21 463 </args>
+      <args> task_machine8 task_machine24 start_task8 start_task24 361 </args>
+      <args> task_machine8 task_machine25 start_task8 start_task25 57 </args>
+      <args> task_machine8 task_machine26 start_task8 start_task26 422 </args>
+      <args> task_machine8 task_machine28 start_task8 start_task28 492 </args>
+      <args> task_machine11 task_machine34 start_task11 start_task34 428 </args>
+      <args> task_machine11 task_machine35 start_task11 start_task35 340 </args>
+      <args> task_machine11 task_machine39 start_task11 start_task39 363 </args>
+      <args> task_machine11 task_machine13 start_task11 start_task13 257 </args>
+      <args> task_machine11 task_machine16 start_task11 start_task16 376 </args>
+      <args> task_machine11 task_machine21 start_task11 start_task21 463 </args>
+      <args> task_machine11 task_machine24 start_task11 start_task24 361 </args>
+      <args> task_machine11 task_machine25 start_task11 start_task25 57 </args>
+      <args> task_machine11 task_machine26 start_task11 start_task26 422 </args>
+      <args> task_machine11 task_machine28 start_task11 start_task28 492 </args>
+      <args> task_machine18 task_machine34 start_task18 start_task34 428 </args>
+      <args> task_machine18 task_machine35 start_task18 start_task35 340 </args>
+      <args> task_machine18 task_machine39 start_task18 start_task39 363 </args>
+      <args> task_machine18 task_machine13 start_task18 start_task13 257 </args>
+      <args> task_machine18 task_machine16 start_task18 start_task16 376 </args>
+      <args> task_machine18 task_machine21 start_task18 start_task21 463 </args>
+      <args> task_machine18 task_machine24 start_task18 start_task24 361 </args>
+      <args> task_machine18 task_machine25 start_task18 start_task25 57 </args>
+      <args> task_machine18 task_machine26 start_task18 start_task26 422 </args>
+      <args> task_machine18 task_machine28 start_task18 start_task28 492 </args>
+      <args> task_machine31 task_machine34 start_task31 start_task34 428 </args>
+      <args> task_machine31 task_machine35 start_task31 start_task35 340 </args>
+      <args> task_machine31 task_machine39 start_task31 start_task39 363 </args>
+      <args> task_machine31 task_machine13 start_task31 start_task13 257 </args>
+      <args> task_machine31 task_machine16 start_task31 start_task16 376 </args>
+      <args> task_machine31 task_machine21 start_task31 start_task21 463 </args>
+      <args> task_machine31 task_machine24 start_task31 start_task24 361 </args>
+      <args> task_machine31 task_machine25 start_task31 start_task25 57 </args>
+      <args> task_machine31 task_machine26 start_task31 start_task26 422 </args>
+      <args> task_machine31 task_machine28 start_task31 start_task28 492 </args>
+      <args> task_machine38 task_machine34 start_task38 start_task34 428 </args>
+      <args> task_machine38 task_machine35 start_task38 start_task35 340 </args>
+      <args> task_machine38 task_machine39 start_task38 start_task39 363 </args>
+      <args> task_machine38 task_machine13 start_task38 start_task13 257 </args>
+      <args> task_machine38 task_machine16 start_task38 start_task16 376 </args>
+      <args> task_machine38 task_machine21 start_task38 start_task21 463 </args>
+      <args> task_machine38 task_machine24 start_task38 start_task24 361 </args>
+      <args> task_machine38 task_machine25 start_task38 start_task25 57 </args>
+      <args> task_machine38 task_machine26 start_task38 start_task26 422 </args>
+      <args> task_machine38 task_machine28 start_task38 start_task28 492 </args>
+      <args> task_machine14 task_machine34 start_task14 start_task34 428 </args>
+      <args> task_machine14 task_machine35 start_task14 start_task35 340 </args>
+      <args> task_machine14 task_machine39 start_task14 start_task39 363 </args>
+      <args> task_machine14 task_machine13 start_task14 start_task13 257 </args>
+      <args> task_machine14 task_machine16 start_task14 start_task16 376 </args>
+      <args> task_machine14 task_machine21 start_task14 start_task21 463 </args>
+      <args> task_machine14 task_machine24 start_task14 start_task24 361 </args>
+      <args> task_machine14 task_machine25 start_task14 start_task25 57 </args>
+      <args> task_machine14 task_machine26 start_task14 start_task26 422 </args>
+      <args> task_machine14 task_machine28 start_task14 start_task28 492 </args>
+      <args> task_machine6 task_machine34 start_task6 start_task34 428 </args>
+      <args> task_machine6 task_machine35 start_task6 start_task35 340 </args>
+      <args> task_machine6 task_machine39 start_task6 start_task39 363 </args>
+      <args> task_machine6 task_machine13 start_task6 start_task13 257 </args>
+      <args> task_machine6 task_machine16 start_task6 start_task16 376 </args>
+      <args> task_machine6 task_machine21 start_task6 start_task21 463 </args>
+      <args> task_machine6 task_machine24 start_task6 start_task24 361 </args>
+      <args> task_machine6 task_machine25 start_task6 start_task25 57 </args>
+      <args> task_machine6 task_machine26 start_task6 start_task26 422 </args>
+      <args> task_machine6 task_machine28 start_task6 start_task28 492 </args>
+    </group>
+    <maximum>
+      <list> add(start_task0,568) add(start_task1,669) add(start_task2,688) add(start_task3,709) add(start_task4,505) add(start_task5,683) add(start_task6,20) add(start_task7,250) add(start_task8,235) add(start_task9,651) add(start_task10,477) add(start_task11,227) add(start_task12,464) add(start_task13,257) add(start_task14,80) add(start_task15,592) add(start_task16,376) add(start_task17,541) add(start_task18,215) add(start_task19,645) add(start_task20,624) add(start_task21,463) add(start_task22,549) add(start_task23,647) add(start_task24,361) add(start_task25,57) add(start_task26,422) add(start_task27,530) add(start_task28,492) add(start_task29,306) add(start_task30,519) add(start_task31,176) add(start_task32,354) add(start_task33,682) add(start_task34,428) add(start_task35,340) add(start_task36,119) add(start_task37,791) add(start_task38,167) add(start_task39,363) </list>
+      <condition> (eq,score) </condition>
+    </maximum>
+    <group>
+      <intension> imp(eq(task_machine32,%0),eq(%1,start_task32)) </intension>
+      <args> task_machine1 aux_gb[0] </args>
+      <args> task_machine2 aux_gb[1] </args>
+      <args> task_machine3 aux_gb[2] </args>
+      <args> task_machine33 aux_gb[3] </args>
+      <args> task_machine37 aux_gb[4] </args>
+      <args> task_machine5 aux_gb[5] </args>
+      <args> task_machine9 aux_gb[6] </args>
+      <args> task_machine19 aux_gb[7] </args>
+      <args> task_machine20 aux_gb[8] </args>
+      <args> task_machine23 aux_gb[9] </args>
+    </group>
+    <group>
+      <intension> ge(start_task32,add(%0,%1)) </intension>
+      <args> start_task23 647 </args>
+      <args> start_task20 624 </args>
+      <args> start_task1 669 </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine32,%0),ge(start_task32,add(%1,%2))) </intension>
+      <args> task_machine1 start_task1 669 </args>
+      <args> task_machine2 start_task2 688 </args>
+      <args> task_machine3 start_task3 709 </args>
+      <args> task_machine33 start_task33 682 </args>
+      <args> task_machine37 start_task37 791 </args>
+      <args> task_machine5 start_task5 683 </args>
+      <args> task_machine9 start_task9 651 </args>
+      <args> task_machine19 start_task19 645 </args>
+      <args> task_machine20 start_task20 624 </args>
+      <args> task_machine23 start_task23 647 </args>
+    </group>
+    <group>
+      <maximum>
+        <list> %... </list>
+        <condition> (eq,%0) </condition>
+      </maximum>
+      <args> aux_gb[0] add(start_task1,669) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[1] add(start_task2,688) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[2] add(start_task3,709) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[3] add(start_task33,682) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[4] add(start_task37,791) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[5] add(start_task5,683) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[6] add(start_task9,651) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[7] add(start_task19,645) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[8] add(start_task20,624) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+      <args> aux_gb[9] add(start_task23,647) add(start_task23,647) add(start_task20,624) add(start_task1,669) </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine28,%0),eq(%1,start_task28)) </intension>
+      <args> task_machine32 aux_gb[10] </args>
+      <args> task_machine0 aux_gb[11] </args>
+      <args> task_machine4 aux_gb[12] </args>
+      <args> task_machine10 aux_gb[13] </args>
+      <args> task_machine12 aux_gb[14] </args>
+      <args> task_machine15 aux_gb[15] </args>
+      <args> task_machine17 aux_gb[16] </args>
+      <args> task_machine22 aux_gb[17] </args>
+      <args> task_machine27 aux_gb[18] </args>
+      <args> task_machine30 aux_gb[19] </args>
+    </group>
+    <group>
+      <intension> ge(start_task28,add(%0,%1)) </intension>
+      <args> start_task20 624 </args>
+      <args> start_task32 354 </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine28,%0),ge(start_task28,add(%1,%2))) </intension>
+      <args> task_machine1 start_task1 669 </args>
+      <args> task_machine2 start_task2 688 </args>
+      <args> task_machine3 start_task3 709 </args>
+      <args> task_machine33 start_task33 682 </args>
+      <args> task_machine37 start_task37 791 </args>
+      <args> task_machine5 start_task5 683 </args>
+      <args> task_machine9 start_task9 651 </args>
+      <args> task_machine19 start_task19 645 </args>
+      <args> task_machine20 start_task20 624 </args>
+      <args> task_machine23 start_task23 647 </args>
+      <args> task_machine32 start_task32 354 </args>
+      <args> task_machine0 start_task0 568 </args>
+      <args> task_machine4 start_task4 505 </args>
+      <args> task_machine10 start_task10 477 </args>
+      <args> task_machine12 start_task12 464 </args>
+      <args> task_machine15 start_task15 592 </args>
+      <args> task_machine17 start_task17 541 </args>
+      <args> task_machine22 start_task22 549 </args>
+      <args> task_machine27 start_task27 530 </args>
+      <args> task_machine30 start_task30 519 </args>
+    </group>
+    <group>
+      <maximum>
+        <list> %0 %1 %2 </list>
+        <condition> (eq,%3) </condition>
+      </maximum>
+      <args> add(start_task32,354) add(start_task20,624) add(start_task32,354) aux_gb[10] </args>
+      <args> add(start_task0,568) add(start_task20,624) add(start_task32,354) aux_gb[11] </args>
+      <args> add(start_task4,505) add(start_task20,624) add(start_task32,354) aux_gb[12] </args>
+      <args> add(start_task10,477) add(start_task20,624) add(start_task32,354) aux_gb[13] </args>
+      <args> add(start_task12,464) add(start_task20,624) add(start_task32,354) aux_gb[14] </args>
+      <args> add(start_task15,592) add(start_task20,624) add(start_task32,354) aux_gb[15] </args>
+      <args> add(start_task17,541) add(start_task20,624) add(start_task32,354) aux_gb[16] </args>
+      <args> add(start_task22,549) add(start_task20,624) add(start_task32,354) aux_gb[17] </args>
+      <args> add(start_task27,530) add(start_task20,624) add(start_task32,354) aux_gb[18] </args>
+      <args> add(start_task30,519) add(start_task20,624) add(start_task32,354) aux_gb[19] </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine25,%0),eq(%1,start_task25)) </intension>
+      <args> task_machine32 aux_gb[20] </args>
+      <args> task_machine0 aux_gb[21] </args>
+      <args> task_machine4 aux_gb[22] </args>
+      <args> task_machine10 aux_gb[23] </args>
+      <args> task_machine12 aux_gb[24] </args>
+      <args> task_machine15 aux_gb[25] </args>
+      <args> task_machine17 aux_gb[26] </args>
+      <args> task_machine22 aux_gb[27] </args>
+      <args> task_machine27 aux_gb[28] </args>
+      <args> task_machine30 aux_gb[29] </args>
+    </group>
+    <group>
+      <intension> ge(start_task25,add(%0,%1)) </intension>
+      <args> start_task1 669 </args>
+      <args> start_task32 354 </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine25,%0),ge(start_task25,add(%1,%2))) </intension>
+      <args> task_machine1 start_task1 669 </args>
+      <args> task_machine2 start_task2 688 </args>
+      <args> task_machine3 start_task3 709 </args>
+      <args> task_machine33 start_task33 682 </args>
+      <args> task_machine37 start_task37 791 </args>
+      <args> task_machine5 start_task5 683 </args>
+      <args> task_machine9 start_task9 651 </args>
+      <args> task_machine19 start_task19 645 </args>
+      <args> task_machine20 start_task20 624 </args>
+      <args> task_machine23 start_task23 647 </args>
+      <args> task_machine32 start_task32 354 </args>
+      <args> task_machine0 start_task0 568 </args>
+      <args> task_machine4 start_task4 505 </args>
+      <args> task_machine10 start_task10 477 </args>
+      <args> task_machine12 start_task12 464 </args>
+      <args> task_machine15 start_task15 592 </args>
+      <args> task_machine17 start_task17 541 </args>
+      <args> task_machine22 start_task22 549 </args>
+      <args> task_machine27 start_task27 530 </args>
+      <args> task_machine30 start_task30 519 </args>
+    </group>
+    <group>
+      <maximum>
+        <list> %0 %1 %2 </list>
+        <condition> (eq,%3) </condition>
+      </maximum>
+      <args> add(start_task32,354) add(start_task1,669) add(start_task32,354) aux_gb[20] </args>
+      <args> add(start_task0,568) add(start_task1,669) add(start_task32,354) aux_gb[21] </args>
+      <args> add(start_task4,505) add(start_task1,669) add(start_task32,354) aux_gb[22] </args>
+      <args> add(start_task10,477) add(start_task1,669) add(start_task32,354) aux_gb[23] </args>
+      <args> add(start_task12,464) add(start_task1,669) add(start_task32,354) aux_gb[24] </args>
+      <args> add(start_task15,592) add(start_task1,669) add(start_task32,354) aux_gb[25] </args>
+      <args> add(start_task17,541) add(start_task1,669) add(start_task32,354) aux_gb[26] </args>
+      <args> add(start_task22,549) add(start_task1,669) add(start_task32,354) aux_gb[27] </args>
+      <args> add(start_task27,530) add(start_task1,669) add(start_task32,354) aux_gb[28] </args>
+      <args> add(start_task30,519) add(start_task1,669) add(start_task32,354) aux_gb[29] </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine29,%0),eq(%1,start_task29)) </intension>
+      <args> task_machine34 aux_gb[30] </args>
+      <args> task_machine35 aux_gb[31] </args>
+      <args> task_machine39 aux_gb[32] </args>
+      <args> task_machine13 aux_gb[33] </args>
+      <args> task_machine16 aux_gb[34] </args>
+      <args> task_machine21 aux_gb[35] </args>
+      <args> task_machine24 aux_gb[36] </args>
+      <args> task_machine25 aux_gb[37] </args>
+      <args> task_machine26 aux_gb[38] </args>
+      <args> task_machine28 aux_gb[39] </args>
+    </group>
+    <group>
+      <intension> ge(start_task29,add(%0,%1)) </intension>
+      <args> start_task1 669 </args>
+      <args> start_task32 354 </args>
+      <args> start_task25 57 </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine29,%0),ge(start_task29,add(%1,%2))) </intension>
+      <args> task_machine1 start_task1 669 </args>
+      <args> task_machine2 start_task2 688 </args>
+      <args> task_machine3 start_task3 709 </args>
+      <args> task_machine33 start_task33 682 </args>
+      <args> task_machine37 start_task37 791 </args>
+      <args> task_machine5 start_task5 683 </args>
+      <args> task_machine9 start_task9 651 </args>
+      <args> task_machine19 start_task19 645 </args>
+      <args> task_machine20 start_task20 624 </args>
+      <args> task_machine23 start_task23 647 </args>
+      <args> task_machine32 start_task32 354 </args>
+      <args> task_machine0 start_task0 568 </args>
+      <args> task_machine4 start_task4 505 </args>
+      <args> task_machine10 start_task10 477 </args>
+      <args> task_machine12 start_task12 464 </args>
+      <args> task_machine15 start_task15 592 </args>
+      <args> task_machine17 start_task17 541 </args>
+      <args> task_machine22 start_task22 549 </args>
+      <args> task_machine27 start_task27 530 </args>
+      <args> task_machine30 start_task30 519 </args>
+      <args> task_machine34 start_task34 428 </args>
+      <args> task_machine35 start_task35 340 </args>
+      <args> task_machine39 start_task39 363 </args>
+      <args> task_machine13 start_task13 257 </args>
+      <args> task_machine16 start_task16 376 </args>
+      <args> task_machine21 start_task21 463 </args>
+      <args> task_machine24 start_task24 361 </args>
+      <args> task_machine25 start_task25 57 </args>
+      <args> task_machine26 start_task26 422 </args>
+      <args> task_machine28 start_task28 492 </args>
+    </group>
+    <group>
+      <maximum>
+        <list> %... </list>
+        <condition> (eq,%0) </condition>
+      </maximum>
+      <args> aux_gb[30] add(start_task34,428) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[31] add(start_task35,340) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[32] add(start_task39,363) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[33] add(start_task13,257) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[34] add(start_task16,376) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[35] add(start_task21,463) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[36] add(start_task24,361) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[37] add(start_task25,57) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[38] add(start_task26,422) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+      <args> aux_gb[39] add(start_task28,492) add(start_task1,669) add(start_task32,354) add(start_task25,57) </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine36,%0),eq(%1,start_task36)) </intension>
+      <args> task_machine38 aux_gb[40] </args>
+      <args> task_machine7 aux_gb[41] </args>
+      <args> task_machine8 aux_gb[42] </args>
+      <args> task_machine6 aux_gb[43] </args>
+      <args> task_machine11 aux_gb[44] </args>
+      <args> task_machine14 aux_gb[45] </args>
+      <args> task_machine18 aux_gb[46] </args>
+      <args> task_machine29 aux_gb[47] </args>
+      <args> task_machine31 aux_gb[48] </args>
+    </group>
+    <group>
+      <intension> ge(start_task36,add(%0,%1)) </intension>
+      <args> start_task20 624 </args>
+      <args> start_task32 354 </args>
+      <args> start_task28 492 </args>
+      <args> start_task1 669 </args>
+      <args> start_task25 57 </args>
+      <args> start_task29 306 </args>
+    </group>
+    <group>
+      <intension> imp(eq(task_machine36,%0),ge(start_task36,add(%1,%2))) </intension>
+      <args> task_machine1 start_task1 669 </args>
+      <args> task_machine2 start_task2 688 </args>
+      <args> task_machine3 start_task3 709 </args>
+      <args> task_machine33 start_task33 682 </args>
+      <args> task_machine37 start_task37 791 </args>
+      <args> task_machine5 start_task5 683 </args>
+      <args> task_machine9 start_task9 651 </args>
+      <args> task_machine19 start_task19 645 </args>
+      <args> task_machine20 start_task20 624 </args>
+      <args> task_machine23 start_task23 647 </args>
+      <args> task_machine32 start_task32 354 </args>
+      <args> task_machine0 start_task0 568 </args>
+      <args> task_machine4 start_task4 505 </args>
+      <args> task_machine10 start_task10 477 </args>
+      <args> task_machine12 start_task12 464 </args>
+      <args> task_machine15 start_task15 592 </args>
+      <args> task_machine17 start_task17 541 </args>
+      <args> task_machine22 start_task22 549 </args>
+      <args> task_machine27 start_task27 530 </args>
+      <args> task_machine30 start_task30 519 </args>
+      <args> task_machine34 start_task34 428 </args>
+      <args> task_machine35 start_task35 340 </args>
+      <args> task_machine39 start_task39 363 </args>
+      <args> task_machine13 start_task13 257 </args>
+      <args> task_machine16 start_task16 376 </args>
+      <args> task_machine21 start_task21 463 </args>
+      <args> task_machine24 start_task24 361 </args>
+      <args> task_machine25 start_task25 57 </args>
+      <args> task_machine26 start_task26 422 </args>
+      <args> task_machine28 start_task28 492 </args>
+      <args> task_machine38 start_task38 167 </args>
+      <args> task_machine7 start_task7 250 </args>
+      <args> task_machine8 start_task8 235 </args>
+      <args> task_machine6 start_task6 20 </args>
+      <args> task_machine11 start_task11 227 </args>
+      <args> task_machine14 start_task14 80 </args>
+      <args> task_machine18 start_task18 215 </args>
+      <args> task_machine29 start_task29 306 </args>
+      <args> task_machine31 start_task31 176 </args>
+    </group>
+    <group>
+      <maximum>
+        <list> %... </list>
+        <condition> (eq,%0) </condition>
+      </maximum>
+      <args> aux_gb[40] add(start_task38,167) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[41] add(start_task7,250) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[42] add(start_task8,235) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[43] add(start_task6,20) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[44] add(start_task11,227) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[45] add(start_task14,80) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[46] add(start_task18,215) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[47] add(start_task29,306) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+      <args> aux_gb[48] add(start_task31,176) add(start_task20,624) add(start_task32,354) add(start_task28,492) add(start_task1,669) add(start_task25,57) add(start_task29,306) </args>
+    </group>
+  </constraints>
+  <objectives>
+    <minimize> score </minimize>
+  </objectives>
+</instance>
